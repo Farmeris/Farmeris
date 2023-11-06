@@ -1,0 +1,72 @@
+{% load static %}
+{% load custom_filters i18n %}
+
+<link href="{% static 'css/doprava_pridanie_display.css' %}" rel="stylesheet">
+<link href="{% static 'css/doprava_pridanie_display2.css' %}" rel="stylesheet">
+
+{% for polozka_transportloc in polozka_transportloc_list %} <!-- Iterating over TransportLoc objects -->
+<div class="doprava-display-container-holder">  
+    <div class="doprava-display-container">         
+        <div class="transport-output">
+            <label for="transport" class="doprava-first">{% trans "Transport type:" %}</label>
+            <div id="transport">
+                {% if polozka_transportloc.transport_name == 'osobne' %}
+                    {% trans "In person" %}
+                {% elif polozka_transportloc.transport_name == 'online' %}
+                    {% trans "Online" %}
+                {% elif polozka_transportloc.transport_name == 'kurier' %}
+                    {% trans "Courier" %}
+                {% elif polozka_transportloc.transport_name == 'vlastne' %}
+                    {% trans "Custom" %}
+                {% endif %}
+            </div>
+            <label for="transport_price">{% trans "Price:" %}</label>
+            <div id="transport_price">
+                {{ polozka_transportloc.price|decimal_places:2 }}
+            </div>
+
+            <!--<label for="transport_unit">Mena:</label>-->
+            <div id="currency">
+                {% if polozka_transportloc.currency == 'eur' %}
+                    EUR
+                {% elif polozka_transportloc.currency == 'czk' %}
+                    CZK
+                {% elif polozka_transportloc.currency == 'usd' %}
+                    USD
+                {% endif %}
+            </div>
+
+            <label for="unit">{% trans "Amount:" %}</label>
+            <div id="transport_amount">
+                {{ polozka_transportloc.amount|decimal_places:5 }}
+            </div>
+            <div id="unit">
+                {% if polozka_transportloc.unit == 'kg' %}
+                    kg
+                {% elif polozka_transportloc.unit == 'ks' %}
+                    ks
+                {% elif polozka_transportloc.unit == 'g' %}
+                    g
+                {% elif polozka_transportloc.unit == 'liter' %}
+                    {% trans "liter" %}
+                {% elif polozka_transportloc.unit == 'litrov' %}
+                    {% trans "litres" %}
+                {% endif %}
+            </div>
+            {% if polozka_transportloc.transport_notes %}
+                <label for="transport_notes">{% trans "Additional notes:" %}</label>
+                <div id="transport_notes">
+                    {{ polozka_transportloc.transport_notes }}
+                </div>
+            {% endif %}
+            {% if request.user == polozka.user_profile.user %}
+                <div class="deselect-button-container">
+                    <a href="{% url 'add_product_main:delete_transport_loc' username=polozka_transportloc.user_profile.user.username transportloc_id=polozka_transportloc.id %}">
+                        {% include "icons/minus_submit.html" %}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}

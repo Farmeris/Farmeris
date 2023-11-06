@@ -1,0 +1,40 @@
+{% load static %}
+{% load tz %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/polozka.css' %}" rel="stylesheet" media="screen">
+    {% block extra_css %}{% endblock %}
+    <!--<link href="../static/css/pridaj_polozku.css" rel="stylesheet" media="screen">
+  --> 
+    <meta charset="UTF-8">
+    <!--{% block pagerefresh %}{% endblock %}
+    <meta http-equiv="refresh" content="60">--> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma market</title>
+    <link rel="icon" type="image/png" href="pics/favicon/x.png">
+    <link rel="stylesheet" href="/static/css/tabler-icons.css">
+</head>
+
+
+<body>
+  <nav class="sidebar">
+    {% include 'user_profile_display.html' %}  
+    <ul>
+        <!--<li><a href="main.html">Home</a></li>-->
+        <li><a href="{% url 'search:user_search' %}">Search</a></li>
+        <li><a href="{% url 'chat_general:user_chat_general' username=user_profile.user.username %}">Chat</a></li>
+        <li><a href="{% url 'user_profile:user_profile_edit' username=user_profile.user.username %}">Add your offers</a></li>
+        <li><a href="{% url 'add_product_main:user_pridaj_dopravu' username=user_profile.user.username %}">My transport</a></li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    {% block polozka %}{% endblock %}
+  
+    <footer>
+      {% include 'footer_content.html' %}
+    </footer>
+  </div>
+</body>
+</html>

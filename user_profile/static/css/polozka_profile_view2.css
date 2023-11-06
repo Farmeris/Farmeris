@@ -1,0 +1,97 @@
+:root {
+    --product-dark-bg: #121212;
+    --product-lighter-dark-bg: #1d1d1d;
+    --product-text-primary-color: #B8B42D;
+    /*--product-primary-color-hvr: #007BFF;
+    */--secondary-color: #f7f7f7;
+    --border-color: #2c2c2c;
+    --hover-bg: #333;
+    --active-color: #a6a6a6;
+    --border-thickness: 1px;
+}
+
+.product {
+    background-color: var(--product-dark-bg);
+    border: var(--product-bd) solid var(--product-border-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.product:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.product-pic img,
+.product-pic p{
+    border: var(--product-bd) solid var(--product-border-color) !important;
+    border-radius: var(--product-pic-img-bdrds);
+}
+
+/*
+.product-pic img {
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
+}
+
+.product:hover .product-pic img {
+    filter: grayscale(0);
+}*/
+
+.product-nazov-container,
+.product-nazov-owner,
+.product-vlastnosti-container,
+.product-dostupnost {
+    /*background-color: var(--product-lighter-dark-bg);*/
+    color: var(--product-secondary-color);
+}
+.product-nazov-container,
+.product-nazov-owner{
+    background-color: var(--product-lighter-dark-bg);
+}
+
+.product-nazov h3,
+.product-pic p {
+    color: var(--product-text-primary-color);
+}
+.product-vlastnosti-buttonx{
+    color: var(--product-secondary-color);
+}
+.product-vlastnosti-buttonx:hover/*,
+.product-vlastnosti-buttonx:focus*/ {
+    color: var(--product-primary-color-hvr);    
+    border-bottom: 2px solid var(--product-primary-color-hvr); 
+}
+
+.product-vlastnosti-button1,
+.product-vlastnosti-button2,
+.product-vlastnosti-button3,
+.product-vlastnosti-button4 {
+    background-color: var(--product-text-primary-color);
+    border: 1px solid var(--product-text-primary-color);
+}
+
+.product-vlastnosti-button1:hover,
+.product-vlastnosti-button2:hover,
+.product-vlastnosti-button3:hover,
+.product-vlastnosti-button4:hover {
+    background-color: var(--hover-bg);
+}
+
+.product-vlastnosti-popup1,
+.product-vlastnosti-popup2,
+.product-vlastnosti-popup3,
+.product-vlastnosti-popup4 {
+    /*background-color: var(--product-lighter-dark-bg);*/
+    background-color: var(--product-vlastnosti-popup-bgclr);
+    color: var(--text-color);
+    border-color: var(--product-vlastnosti-popup-bdclr);
+}
+
+.user-profile-delete-btn {
+    filter: var(--delete-btn-user-profile-invert);
+}
+
+.star-icon path {
+    fill: #FFD700; /* gold color for example, you can replace with your own color */
+}
+

@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load static %}
+
+<!-- Stylesheets -->
+<link href="{% static 'css/sidebar2.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/sidebar_mobile2.css' %}" rel="stylesheet" media="screen">
+{% if user.is_authenticated %}
+    {% if user.userprofile.theme == 'dark' %}
+        <link rel="stylesheet" href="{% static 'css/dark-theme.css' %}">
+    {% else %}
+        <link rel="stylesheet" href="{% static 'css/light-theme.css' %}">
+    {% endif %}
+{% else %}
+    {% if theme == 'dark' %}
+        <link rel="stylesheet" href="{% static 'css/dark-theme.css' %}">
+    {% else %}
+        <link rel="stylesheet" href="{% static 'css/light-theme.css' %}">
+    {% endif %}
+{% endif %}
+
+<!-- Sidebar Content -->
+<label class="mobile-side-container">
+  <input type="checkbox" class="mobile-checkbox">
+  <span class="menu"> <span class="hamburger"></span> </span>
+
+  <nav class="sidebar">
+    <div class="sidebar-mobile-left">
+      {% include 'user_profile_display.html' %}
+      <div class="sidebar-menu-content3">
+        {% include 'sidebar_menu.html' %}
+      </div>
+    </div>
+    <!-- Navigation links -->
+    <div class="sidebar-butt-container">
+      <div class="sidebar-butt-widget">
+        <ul>
+          <li>
+            <a class="sidebar-button-a" href="{% url 'main:main' %}">
+              <span><i class="ti ti-home"></i>  {% trans "Home" %}</span>
+            </a>
+          </li>
+          <li><a class="sidebar-button-a" href="{% url 'search:user_search' %}"><span><i class="ti ti-search"></i>  {% trans "Search" %}</span></a></li>
+          {% if user.is_authenticated %}
+            <li><a class="sidebar-button-a" href="{% url 'chat_general:user_chat_general' username=user.username%}"> <span><i class="ti ti-messages"></i>  {% trans "Chat" %}</span></a></li>
+            <li><a class="sidebar-button-a" href="{% url 'user_profile:user_profile_edit' username=user.username %}"> <span><i class="ti ti-shopping-cart-plus"></i>  {% trans "My offers" %}</span></a></li>
+            <li><a class="sidebar-button-a" href="{% url 'add_product_main:user_pridaj_dopravu' username=user.username %}"><span><i class="ti ti-truck"></i>  {% trans "My Transport" %}</span></a></li>
+            <li><a class="sidebar-button-a" href="{% url 'edit_profile:user_profile_editing' username=user.username %}"><span><i class="ti ti-settings"></i>  {% trans "My Settings" %}</span></a></li>
+          {% else %}
+            <li><a class="sidebar-button-a" href="{% url 'account_login' %}"> <span><i class="ti ti-messages"></i>  {% trans "Login for more" %}</span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Theme switcher form -->
+    <div class="sidebar-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle" class="sidebar-menu-button"><i class="ti ti-settings"></i></label>
+      <div class="sidebar-menu-content">
+        {% include 'sidebar_menu.html' %}
+      </div>
+    </div>
+  </nav>
+</label>
+
+<!-- Scripts -->
+{% block extra_js %}
+  <script src="{% static 'js/theme_switch.js' %}"></script> 
+  <script src="{% static 'js/sidebar-scripts.js' %}"></script>
+{% endblock %}

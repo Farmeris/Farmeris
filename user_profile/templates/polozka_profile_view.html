@@ -1,0 +1,100 @@
+{% load custom_filters %}
+{% load static i18n %}
+
+<!--<link href="{% static 'css/polozka_profile_viewx.css' %}" rel="stylesheet" media="screen">-->
+  <div class="product">
+    {% if request.user == product.user_profile.user %}
+      <div class="remove-button-icon">
+        <a class="user-profile-delete-btn" href="{% url 'user_profile:delete_product' username=user_profile.user.username product_id=product.id %}?next={{ request.path }}" onclick="return confirmDelete('{{ product.nazov_produktu }}')">
+          <div class="minus-icon"></div>
+        </a>
+      </div>
+    {% endif %}
+    
+    <a class="product-click" href="{% url 'add_product_main:user_zobraz_polozku' username=product.user_profile.user.username nazov_produktu=nazov_produktu %}">
+      <div class="product-click"></div>
+    </a>
+    
+    <div class="product-pic">
+      {% if polozka.image %}
+        <img src="{{ polozka.image.url }}" alt="{{ polozka.nazov_produktu }}">
+      {% else %}
+        <p>{% trans "No picture available" %}</p>
+      {% endif %}
+    </div>
+    <div class="product-nazov-container">
+      <div class="product-nazov">
+        <!--JAJKA M size 63g/piece grassfed organic non-gmo-->
+        <h3>{{ nazov_produktu }}</h3>
+      </div>
+    </div>
+    <a href="{% url 'user_profile:user_profile' username=polozka.user_profile.user.username %}" target="_blank" class="polozka-owner-a">
+      <div class="product-nazov-owner">
+        <span>{{ polozka.user_profile.user }}</span>
+      </div>
+    </a>
+    <div class="product-dostupnost">
+      <span>{{ polozka.availability_status }}</span>
+    </div>
+    <div class="product-vlastnosti-container">
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">
+        {% for cena in polozka.ceny.all|slice:":1" %}
+          {{ cena.price|decimal_places:2 }}{{ cena.currency }}/{{ cena.unit }}
+        {% empty %}
+          {% trans "No price" %}
+        {% endfor %}
+      </button>
+      <div class="product-vlastnosti-popup1">
+        <div class="product-vlastnosti-popup-column1">
+          {% for cena in polozka.ceny.all|slice:":5" %}
+            <p class="product-vlastnosti-popup-text1">
+              <span>
+                {{ cena.price|decimal_places:2 }}{{ cena.currency }}/{{ cena.unit }}
+              </span>
+            </p>
+          {% endfor %}
+          {% if product.ceny.count > 5 %}
+            <p class="product-vlastnosti-popup-text1">
+              <span>
+                <p>{% trans "And more..." %}</p>
+              </span>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">{% trans "Transport" %}</button>
+      <div class="product-vlastnosti-popup2">
+        <div class="product-vlastnosti-popup-column2">
+          <p class="product-vlastnosti-popup-text2">{% trans "Function under the development" %}</p>
+        </div>
+        <div class="product-vlastnosti-popup-column2">
+          <p class="product-vlastnosti-popup-text2"></p>
+        </div>
+      </div>
+      <!--
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">Kvalita</button>
+      <div class="product-vlastnosti-popup3">
+        <div class="product-vlastnosti-popup-column3">
+          <p class="product-vlastnosti-popup-text3">Function under the development</p>
+        </div>
+        <div class="product-vlastnosti-popup-column3">
+          <p class="product-vlastnosti-popup-text3"></p>
+        </div>
+      </div>
+      -->
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">
+        _/5 <img src="{% static 'images/review_star.svg' %}" alt="{% trans 'review_star' %}" class="star-icon">
+      </button>
+      <div class="product-vlastnosti-popup4">
+        <div class="product-vlastnosti-popup-column4">
+          <p class="product-vlastnosti-popup-text4">{% trans "Function under the development" %}</p>
+        </div>
+        <div class="product-vlastnosti-popup-column4">
+          <p class="product-vlastnosti-popup-text4"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="{% static 'js/polozka_delete_confirmation.js' %}"></script>

@@ -1,0 +1,532 @@
+:root {
+    --primary-bg-color-user-profile: var(--snapper-user-profile-bgclr);
+    --secondary-bg-color-user-profile: rgba(255, 255, 0, 0.158);
+    --text-color-user-profile: #333;
+    --link-color-user-profile: var(--link-hover-color);
+    --link-hover-color: #007BFF;
+    --border-color: var(--pinkbd);
+    --border-color-menu-top: var(--pinkbd);
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --base-padding: 30px;
+    --small-padding: 15px;
+    --border-radius: 5px;
+    --main-content-padd: 20px;
+    --h1-user-profile: rgb(59, 59, 59);
+    --widgets: #333;
+    --h1-bgclr-user-profile: var(--widgets);
+    --profile-content-user-profile: var(--widgets);
+    --ti-user-profile-clr: rgb(163, 163, 163);
+}
+
+.main-container > * {
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--primary-bg-color-user-profile);
+    color: var(--text-color-user-profile);
+}
+
+.main-container a {
+    text-decoration: none;
+    color: var(--link-color-user-profile);
+    transition: color 0.3s;
+}
+
+.main-container a:hover {
+    color: var(--link-hover-color);
+}
+
+.main-container {
+    /*background-color: var(--secondary-bg-color-user-profile);
+    box-shadow: 0 4px 6px var(--box-shadow-color);*/
+    padding: var(--base-padding);
+    border-radius: var(--border-radius);
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+
+.profile-content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    min-height: calc(100vh - 100px - (2 * var(--main-content-padd)));
+}
+
+.tabs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.tab-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: -1px;
+}
+
+
+
+
+
+
+
+/*display logic adjustement*/
+.snapper {
+    /*display: none;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    pointer-events: none;
+    z-index: 2;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: stretch;
+    border: var(--user-profile-snapper-bd) solid var(--user-profile-snapper-bdclr);
+    border-top: 0;
+    background-color: var(--snapper-user-profile-bgclr) !important;
+    border-radius: 0 0 5px 5px;
+}
+.padding0{
+    padding: 0;
+    z-index: 0;
+}
+.tab-item{
+    /*display: none;*/
+    pointer-events: auto;
+    padding: 20px;
+    color: var(--profile-header-h1-user-profile-clr);
+}
+.snapper:target .tab-item,
+.snapper:target {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.offer-card {
+    position: relative;
+}
+
+.review-card {
+    position: relative;
+    background-color: #fff;
+}
+
+.profile-header {
+    padding: 20px;
+    background-color: var(--primary-bg-color-user-profile);
+    border-radius: var(--border-radius);
+    border: var(--profile-header-user-profile-bd) solid var(--profile-header-user-profile-bdclr);
+}
+
+.profile-header h1 {
+    font-size: 2.2em; /* A larger font size for the main title */
+    margin: 0; /* Removing default margins */
+    font-weight: 4000; /* A normal font-weight, so it's not too bold and overwhelming */
+    color: var(--profile-header-h1-user-profile-clr);
+}
+/*end of display logic adjustement*/
+
+
+
+
+
+
+
+/* Base Styles */
+.tab-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; 
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.tab-list li {
+  display: block;
+}
+
+.tab-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+  min-width: 70px;
+  max-width: 150px;
+  top: 2px;
+  pointer-events: all;
+  cursor: pointer;
+  border-bottom: 0;
+}
+.tab-item-link:last-of-type {
+    max-width: none;
+  }
+
+/* Hover State */
+.tab-item-link:hover {
+  background-color: var(--tab-item-link-hvr-bgclr);
+}
+
+/* Active State (You can modify this based on when a tab is active) */
+.tab-item-link.active {
+  top: 0; /* Reset position for active tab */
+}
+.li-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Enhanced Tab Link Styles */
+.tab-item-link.active, .tab-item-link:hover {
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+}
+
+.tab-item-link.active {
+    background-color: var(--primary-bg-color-user-profile); 
+    color: #333; 
+    border-bottom: 2px solid transparent;
+}
+
+/* Profile Content Enhancements */
+.profile-content h5, .profile-content h6 {
+    margin-top: 20px;
+    color: #2c2c2c;
+    color: var(--h5-clr);
+    font-weight: 600;
+}
+
+.profile-content p {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+#current-avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Offer Card Styling */
+.offer-card {
+    background-color: var(--secondary-bg-color-user-profile);
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px var(--box-shadow-color);
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card h6 {
+    font-weight: 600;
+    color: #2c2c2c;
+    color: var(--h5-clr);
+    font-size: 1.1em;
+}
+
+.offer-card p {
+    font-size: 0.9em;
+}
+
+/* Review Card Styling */
+.review-card {
+    background-color: var(--secondary-bg-color-user-profile);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px var(--box-shadow-color);
+    transition: all 0.3s ease;
+    color: var(--profile-header-h1-user-profile-clr);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card h6 {
+    font-weight: 600;
+    color: #2c2c2c;
+    color: var(--profile-header-h1-user-profile-clr);
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+.review-card p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+/* Pagination Enhancements */
+.offer-pagination a {
+    padding: 5px 15px;
+    margin-right: 10px;
+    background-color: var(--primary-bg-color-user-profile);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    color: var(--link-color-user-profile);
+    transition: all 0.3s;
+}
+
+
+.li-spacer{
+    border-bottom: 1px solid var(--border-color-menu-top);
+    top: 12px;
+}
+
+.main-container {
+    /*background-color: var(--secondary-bg-color-user-profile);
+    box-shadow: 0 4px 6px var(--box-shadow-color);*/
+    padding: var(--base-padding);
+    border-radius: var(--border-radius);
+    width: 100%; /* Taking full width of the container */
+    margin: 0;  /* Start from top left */
+    display: block;  /* Since we want it to start from the top-left corner */
+}
+
+/* Clearing float which is a good practice after setting up a grid system */
+.grid-cols-3::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Positioning the entire profile content to start from the top-left */
+.profile-content {
+    background-color: transparent;
+    margin: 0; /* Start from top-left */
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* Reset for images to remove any default border or spacing */
+img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Since we are making the design from the top-left, 
+   we should handle spacing using margins in our elements */
+.profile-header {
+    margin-bottom: 20px; 
+}
+
+.profile-header h1 {
+    font-size: 2.2em;
+}
+
+/* Base Styles for Tabs */
+.tab-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Removes default margin */
+  padding-left: 0; /* Removes default padding */
+}
+
+.tab-list li {
+    flex: 1;  /* Distributes space equally among the tabs */
+    text-align: center;
+}
+
+.tab-item-link {
+    display: block;
+    padding: 15px 10px;
+    color: var(--tab-user-profile-clr);
+    border-radius: 4px 4px 0 0;
+    border: var(--tab-user-profile-bd) solid var(--tab-user-profile-bdclr);
+    background-color: var(--tab-item-link-user-profile);
+    z-index: 1000 !important;
+}
+
+.tab-item-link.active {
+    border-bottom: 0px solid transparent;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+    background-color: var(--tab-active-user-profile-bgclr);
+    color: var(--tab-active-user-profile-clr);
+}
+/*removal of a border between elements*/
+.tab-list .tab-item-link:not(:first-child) {
+    border-left: none;
+}
+.tab-item-link .li-content-container .ti{
+    transition: all 0.3s;
+}
+.tab-item-link:not(.active):hover,
+.tab-item-link:not(.active):hover .li-content-container .ti {
+    color: var(--tab-user-profile-hvr-clr); 
+}
+
+
+
+
+
+
+
+
+
+/* Personal Profile Tab */
+.profile-section {
+    /*background-color: #ffffff;  
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);*/
+    padding: 20px;
+    width: auto;  /* Take full width of its parent */
+    box-sizing: border-box;  /* Makes sure padding doesn't increase width */
+}
+.profile-section h1{
+    color: var(--profile-header-h1-user-profile-clr);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;  /* Ensures the image maintains aspect ratio */
+}
+
+.profile-info h5 {
+    font-size: 1.4em;  /* Slightly bigger for more emphasis */
+    font-weight: 600;  /* Semi-bold weight */
+    margin-bottom: 7px;  /* Adjusted for balance */
+    color: #2a2a2a;  /* Darker shade for better readability */
+    color: var(--h5-clr);
+}
+
+.profile-label {
+    font-weight: 800;  /* Semi-bold weight */
+    color: var(--profile-label-user-profile);  /* A bit lighter for differentiation */
+    margin-right: 5px;  /* A bit of spacing after the label */
+}
+
+.profile-link {
+    color: var(--united-link-clr);
+    text-decoration: underline;  /* Underlined to indicate a clickable link */
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover {
+    color: var(--united-link-clr-hvr);
+    text-decoration: none;  /* Remove underline on hover for a dynamic effect */
+}
+
+.profile-details p {
+    margin-bottom: 10px;  /* Consistent spacing between detail lines */
+}
+
+.profile-bio h5 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 600;  /* Consistent weight as the profile header */
+    color: #2a2a2a;
+    color: var(--h5-clr);
+}
+
+.bio-text,
+.profile-informations {
+    display: inline-block;
+    background-color: var(--profile-info-bgclr);
+    padding: 10px 15px;
+    border-radius: 5px;
+    /*border: 1px solid #eaeaea;  /* Gentle border for a card-like feel */
+    border: var(--bio-user-profile-bd) solid var(--bio-user-profile-bdclr);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    word-wrap: break-word;
+    color: var(--text-color);
+    min-width: 150px;
+    min-height: 60px;
+}
+
+.bio-text:hover,
+.profile-informations:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+
+
+
+/*offers*/
+.offers-container{
+  /*height: 100%;*/
+  width: 100%;
+  border-radius: 5px;
+  /*background-color: var(--blue-main-bg-bgclr);
+  border: var(--blue-main-bg-bd) solid var(--blue-main-bg-bdclr);*/
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+/*end of the offers*/

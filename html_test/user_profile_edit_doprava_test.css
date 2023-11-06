@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(0, 255, 234);
+    height: 500%;
+    width: 100%;
+}
+.product-create {
+  width: 250px;
+  height: 420px;
+  background-color: gray;
+  margin: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+.product-create-doprava{
+    position: relative;
+    height: 180px;
+    width: 210px;
+    margin: 20px ;
+    margin-bottom: 0;
+    background-color: blueviolet;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.product-create-info{
+    position: relative;
+    height: 180px;
+    width: 210px;
+    margin: 20px ;
+    background-color: brown;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

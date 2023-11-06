@@ -1,0 +1,60 @@
+
+<div class="product-create">
+    <a href="{% url 'user_pridaj_polozku' username=user_profile.user.username %}"><div class="product-create-click"></div></a>
+    <div class="product-pic">
+      
+    </div>
+    <div class="product-nazov-container">
+      <div class="product-nazov">
+        Nazov produktu
+      </div>
+    </div>
+    <div class="product-nazov-owner">
+      <span>{{ polozka.user_profile.user }}</span>
+    </div>
+    <div class="product-vlastnosti-container">
+      <div class="product-vlastnosti-row1">
+          <button class="product-vlastnosti-button1">Cena</button>
+          <div class="product-vlastnosti-popup1">
+            <div class="product-vlastnosti-popup-column1">
+              <p class="product-vlastnosti-popup-text1">Popup text 1 column 1</p>
+            </div>
+            <div class="product-vlastnosti-popup-column1">
+              <p class="product-vlastnosti-popup-text1">Popup text 1 column 2</p>
+            </div>
+          </div>
+          <button class="product-vlastnosti-button2">Doprava</button>
+          <div class="product-vlastnosti-popup2">
+            <div class="product-vlastnosti-popup-column2">
+              <p class="product-vlastnosti-popup-text2">Popup text 2 column 1</p>
+            </div>
+            <div class="product-vlastnosti-popup-column2">
+              <p class="product-vlastnosti-popup-text2">Popup text 2 column 2</p>
+            </div>
+          </div>
+      </div>
+      <div class="product-vlastnosti-row2">
+        <!--
+          <button class="product-vlastnosti-button3">Kvalita</button>
+        
+          <div class="product-vlastnosti-popup3">
+              <div class="product-vlastnosti-popup-column3">
+                  <p class="product-vlastnosti-popup-text3">Popup text 3 column 1</p>
+              </div>
+            <div class="product-vlastnosti-popup-column3">
+              <p class="product-vlastnosti-popup-text3">Popup text 3 column 2</p>
+            </div>
+          </div>
+        -->
+          <button class="product-vlastnosti-button4">Stars</button>
+          <div class="product-vlastnosti-popup4">
+            <div class="product-vlastnosti-popup-column4">
+              <p class="product-vlastnosti-popup-text4">Popup text 4 column 1</p>
+            </div>
+            <div class="product-vlastnosti-popup-column4">
+              <p class="product-vlastnosti-popup-text4">Popup text 4 column 2</p>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

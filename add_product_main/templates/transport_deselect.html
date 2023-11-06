@@ -1,0 +1,4 @@
+<form method="post" action="{% url 'add_product_main:user_deselect_transport' username=user_profile.user.username transport_id=polozka_transport.transport.id nazov_produktu=nazov_produktu %}">
+    {% csrf_token %}
+    {% include "icons/minus_submit.html" %}
+</form>

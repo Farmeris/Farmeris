@@ -1,0 +1,192 @@
+@media (max-width: 600px) {
+    
+    .green-main-bg{
+        padding: 20px;
+        padding-right: 0;
+    }
+    .main-container, .profile-content{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-content{
+        flex-direction: row;
+    }
+    .profile-content,
+    .profile-header{
+        flex-direction: row;
+        overflow: hidden !important;
+        max-width: 322px;
+        margin-bottom: 15px;
+    }
+    .profile-content,
+    .main-container{
+        background-color: transparent;
+    }
+    .profile-header{
+        max-width: calc(242px + 80px - 10px);
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+    .profile-content,
+    .tab-item-link{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .tab-list{
+        max-width: 80px;
+        width: 80px;
+        min-width: 80px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start !important;
+        justify-content: baseline;
+        position: sticky;
+        height: 100%;
+        flex: 1;
+        top: 0;
+        z-index: 10;
+    }
+    .tab-list.tab-list-container{
+        height: 1000px;
+        overflow: visible !important;
+        position: relative;
+    }
+    .tabs-container{
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        min-height: 200px;
+    }
+    .snapper{
+        position: relative;
+        border-top: 1px solid black;
+        min-height: 200px;
+        padding: 10px;
+        max-width: calc(100% - 30px - 80px);
+    }
+    .tab-list .tab-item-link:not(:first-child) {
+        border-left: 1px solid var(--border-color);
+    }
+    .tab-list li,
+    .tab-item-link,
+    .li-content-container{
+        width: 70px;
+        position: relative;
+        margin: 0;
+    }
+    .li-content-container{
+        width: auto;
+        max-width: 50px;
+    }
+    .li-text-holder{
+        display: none;
+    }
+    .tab-item-link {
+        top: 0px;  
+        left: 0;
+        border-bottom: 0;
+        border-left: 1px solid var(--border-color);
+        border-radius: 0 4px 4px 0;  
+        margin-right: 15px !important;
+        left: -1px;
+    }
+    .tab-item-link-last,
+    .tab-item-link.active.tab-item-link-last{
+        border-bottom: 1px solid var(--border-color);
+    }
+    .li-spacer{
+        display: none !important;
+    }
+
+
+    .profile-section{
+        padding: 0;
+    }
+    .profile-section .doprava-display-container-holder,
+    .product{
+        padding: 9px !important;
+    }
+    .profile-section .doprava-display-container-holder:not(:last-child),
+    .offers-container .product:not(:last-child){
+        padding-bottom: 0 !important;
+    }
+
+    .doprava-display-container{
+        width: auto !important;
+    }
+    .tab-item{
+        padding: 0;
+    }
+    .offers-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .tab-item, .tabs-container, .snapper{
+        border-radius: 5px 0 5px 5px;
+        width: auto;
+    }
+    .snapper{
+        padding: 0;
+    }
+
+
+
+    /*user details*/
+    .profile-details{
+        padding: 20px;
+        max-width: 240px;
+        width: auto;
+    }
+    .profile-link{
+        max-width: 200px;
+        word-wrap: break-word;
+    }
+    /*user details, needs gpt4 adjustement*/
+    .profile-header2 {
+        flex-direction: column; /* Stack avatar and profile info vertically */
+        align-items: center; /* Align content to the left */
+        padding-bottom: 0; /* Remove bottom padding for spacing */
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 50px; /* Make the profile image smaller */
+        height: 50px;
+        margin-right: 10px; /* Reduce margin for spacing */
+    }
+
+    .profile-info h5 {
+        font-size: 1.2em; /* Make the username smaller */
+        margin-bottom: 5px; /* Adjusted for balance */
+    }
+
+    .profile-label {
+        margin-right: 3px; /* Reduce margin after the label */
+    }
+
+    .profile-details p {
+        margin-bottom: 5px; /* Reduce spacing between detail lines */
+    }
+
+    .profile-bio h5 {
+        font-size: 1.2em; /* Make the bio header smaller */
+        margin-bottom: 10px;
+    }
+
+    .bio-text {
+        padding: 5px 10px; /* Adjust padding for mobile */
+        max-width: 85%; /* Make sure bio text doesn't overflow */
+    }
+    /* end of user details*/
+
+    .tab-item-link{
+        color: var(--ti-user-profile-clr);
+    }
+}

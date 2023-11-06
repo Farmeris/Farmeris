@@ -1,0 +1,47 @@
+{% load static i18n %}
+{% load tz %}
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ user_profile.theme }}">
+<head>
+  <!---
+  <link href="{% static 'css/polozka_newx.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/root.css' %}" rel="stylesheet">
+  <link href="{% static 'css/general_mobile_styles.css' %}" rel="stylesheet">
+  <link href="{% static 'css/merged_icons.css' %}" rel="stylesheet">
+  -->
+  {% if global_css_styles %}
+    {% for css_file in global_css_styles %}
+        <link rel="stylesheet" href="{% static css_file %}">
+    {% endfor %}
+  {% endif %}
+  {% block extra_css_polozka %}{% endblock %}
+  {% block extra_css_doprava %}{% endblock %}
+  {% block extra_css_zobrazenie %}{% endblock %}
+  <meta charset="UTF-8">
+  <!--{% block pagerefresh %}{% endblock %}
+  <meta http-equiv="refresh" content="60">--> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% trans "Farmeris" %}</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/tabler-icons.css">
+</head>
+
+
+<body>
+
+  <main>
+    {% include 'sidebar.html' %}
+
+    <div class="green-main-bg" id="1">
+      <div class="blue-main-bg">
+        {% block polozka %}{% endblock %}
+      </div>
+    </div>
+    <footer>
+      {% include 'footer_content.html' %}
+    </footer>
+  </main>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

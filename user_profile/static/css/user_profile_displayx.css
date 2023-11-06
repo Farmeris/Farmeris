@@ -1,0 +1,228 @@
+
+
+.header-left-menu,
+.header-left-menu-nl{
+  top: 0;
+  left: 0;
+  background-color: var(--header-left-menu-bgclr);
+  border: var(--header-left-menu-bd) solid var(--header-left-menu-bdclr);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: var(--header-left-menu-bdrds);
+  min-width: calc(var(--header-left-menu-width) - 2 * 10px);
+  min-height: calc(var(--header-left-menu-height) - 2 * 10px);
+  width: calc(var(--header-left-menu-width) - 2 * 10px);
+  height: calc(var(--header-left-menu-height) - 2 * 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 5px var(--header-left-menu-nl-box-shadow);
+}
+.header-left-menu-container{
+  height: 200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.user-profile-nl{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.user-profile img,
+.user-profile-nl img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.user-profile h2,
+.user-profile-nl h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.user-profile p,
+.user-profile-nl p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.user-profile .login-button,
+.user-profile .signup-button,
+.user-profile-nl .login-button,
+.user-profile-nl .signup-button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 110px;
+  /*background-color: #337ab7;*/
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: var(--login-signup-bgclr);
+  border: var(--login-signup-bd) solid var(--login-signup-bdclr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px var(--login-signup-box-shadow);
+}
+
+.user-profile .login-button:hover,
+.user-profile .signup-button:hover,
+.user-profile-nl .login-button:hover,
+.user-profile-nl .signup-button:hover {
+  /*background-color: #23527c;*/
+  background-color: var(--login-signup-bgclr-hvr);
+}
+.login-register-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gray-bg {
+  background-color: #555555; /* Example gray color */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center; /* vertically center the svg */
+  justify-content: center; /* horizontally center the svg */
+  border-radius: 50%;
+}
+.gray-bg{
+  font-size: 30px;
+}
+.user-profile, .user-profile-nl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile img, .user-profile-nl img, .gray-bg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.user-profile h2, .user-profile-nl h2, .user-profile p, .user-profile-nl p {
+  text-align: center;
+}
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+  .header-left-menu-container{
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    padding: 5px;
+  }
+  .sidebar-a{
+    height: 180px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .user-profile,
+  .user-profile-nl{
+    margin: 0;
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  .login-register-container{
+    height: 180px;
+    width: 100%;
+    position: relative;
+    overflow: auto; 
+  }
+  .header-left-menu,
+  .header-left-menu-nl{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+  }
+  .header-left-menu-nl{
+    position: static;
+  }
+  .header-left-menu{
+    position: absolute;
+  }
+  .user-profile-add-avatar{
+    position: relative;
+    height: 60px;  /* adjusted to match the gray-bg size */
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-profile .login-button,
+  .user-profile .signup-button,
+  .user-profile-nl .login-button,
+  .user-profile-nl .signup-button {
+    /*display: inline-block;*/
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #337ab7;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+  }
+
+  .user-profile .login-button:hover,
+  .user-profile .signup-button:hover,
+  .user-profile-nl .login-button:hover,
+  .user-profile-nl .signup-button:hover {
+    background-color: #23527c;
+  }
+  .image-container,
+  .main-image{
+    position: relative;
+    width: 200px;
+    height: auto;
+  }
+  .custom-file-upload,
+  .main-image-container{
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  .gray-bg {
+    width: 40px;
+    height: 40px;
+  }
+  .user-profile img, .user-profile-nl img, .gray-bg {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-show {
+    display: flex;
+  }
+}

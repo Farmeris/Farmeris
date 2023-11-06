@@ -1,0 +1,127 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+{% block extra_css_zobrazenie %}
+    <link href="{% static 'css/polozka_zobrazenie.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block polozka %}
+  <div class="image-container">
+    <div class="main-image">
+      {% if polozka %}
+        <a href="{% url 'obrazky:user_obrazky' username=polozka.user_profile.user.username nazov_produktu=polozka.nazov_produktu filename=filename %}" target="_blank">
+          <div class="main-image-container">
+            {% if image_url %}
+              <div class="img-wrapper">
+                {% if is_owner %} 
+                  <a class="icon-anchor" 
+                  href="{% url 'add_product_main:delete_picture' username=user_profile.user.username product_id=polozka.id %}" 
+                  data-confirm-msg="{% trans 'Are you sure you want to delete the picture for' %} {{ polozka.nazov_produktu }}?" 
+                  onclick="return confirm(this.getAttribute('data-confirm-msg'));">
+                    {% include "icons/minus.html" %}
+                  </a>
+                {% endif %}
+                <img src="{{ image_url }}" alt="{% trans 'Main Image' %}" target="_blank">
+              </div>
+            {% else %}
+              <div class="img-wrapper">
+                {% if is_owner %} 
+                  <a class="icon-anchor" href="{% url 'add_product_main:add_picture' username=user_profile.user.username nazov_produktu=polozka.nazov_produktu %}">
+                    {% include "icons/plus.html" %}
+                  </a>
+                {% endif %}
+                <img src="https://via.placeholder.com/500x300" alt="{% trans 'Main Image' %}">
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endif %}
+      <!--{% comment %}
+      {% if polozka.image %}
+        <img src="{{ polozka.image.url }}" alt="{{ polozka.nazov_produktu }}" onclick="toggleImageSize(this)">
+      {% else %}
+        <img src="https://via.placeholder.com/500x300" alt="jajka">
+      {% endif %}
+    </div>
+    <div class="small-images">
+      {% for additional_image in polozka.additional_images.all %}
+        <div class="small-image">
+          <img src="{{ additional_image.image.url }}" alt="Additional Image" onclick="toggleImageSize(this)">
+        </div>
+      {% endfor %}
+      {% endcomment %}-->
+    </div>
+  </div>
+  <div class="product-info">
+    <h1>{{ polozka.nazov_produktu }}</h1>
+    {% url 'user_profile:user_profile' username=user_profile as user_profile_url %}
+    {% blocktrans with user_name=user_profile user_profile_link=user_profile_url %}
+      <p>Item owner: <a class="product-info-pouzivatel" href="{{ user_profile_link }}">{{ user_name }}</a></p>
+    {% endblocktrans %}
+    <span>{{ polozka.availability_status }}</span>
+    <div class="product-info-cena">
+      <p>{{ polozka.ceny.first.price|decimal_places:2 }}</p> 
+      <p>
+        {% if polozka.ceny.first.currency == 'eur' %}
+          €
+        {% elif polozka.ceny.first.currency == 'czk' %}
+          Kč
+        {% elif polozka.ceny.first.currency == 'usd' %}
+          $
+        {% endif %}/{{ polozka.ceny.first.unit }}
+      </p>
+    </div>
+  
+  </div>
+  <div class="obsah">
+    <div class="obsah-container">
+      <hr class="obsah-horna-ciarka">
+      <div class="obsah-column1">
+          <h2 class="obsah-column1-prvy-title">{{ info_nazov_produktu }}</h2>
+          <p class="obsah-column1-prvy-text">{{ info_produktu }}</p>
+          
+      </div>
+      <div class="obsah-column2">
+        <!--<a href="{% comment %}{% url 'chat_polozka:chat' username=username nazov_produktu=polozka.nazov_produktu %}{% endcomment %}">Chat</a>-->
+        {% include 'chat_polozka.html' %}
+      </div>
+      <div class="obsah-column3">
+        <div class="menu-sticker2">
+          <a href="#1" class="menu-sticker-button zob-stick-btn">
+            {% trans "Info" %}
+          </a>
+          <a href="#2" class="menu-sticker-button zob-stick-btn">
+            {% trans "Pricing" %}
+          </a>
+          <a href="#3" class="menu-sticker-button zob-stick-btn">
+            {% trans "Transport" %}
+          </a>
+          <a href="#4" class="menu-sticker-button zob-stick-btn">
+            {% trans "Reviews" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cenax" id="2">
+    <h1>{% trans "Pricing:" %}</h1>
+    {% include 'polozka_cena_display.html' %}
+    {% if request.user == user_profile.user %}
+      {% include 'polozka_cena_pridanie.html' %}
+    {% endif %}
+  </div>
+  <div class="dopravax" id="3">
+    <h1>{% trans "Transport options:" %}</h1>
+    {% include 'dopravaloc_polozka_display.html' %}
+    {% include 'doprava_polozka_display.html' %}
+    {% if request.user == user_profile.user %}
+    <div class="doprava-display-container-holder">
+      {% url 'add_product_main:user_pridaj_dopravu' username=username as doprava_url %}
+      {% blocktrans with doprava_link=doprava_url %}
+        <h2 class="dopravax-h2">Select delivery for the item: (<a href="{{ doprava_link }}" target="_blank">add more delivery types</a>)</h2>
+      {% endblocktrans %}
+    </div>
+      {% include 'doprava_pridanie_display_filtered.html' with transport_list=filtered_transport_list %}
+    {% endif %}
+  </div>
+{% endblock %}

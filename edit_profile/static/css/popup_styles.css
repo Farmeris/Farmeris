@@ -1,0 +1,82 @@
+.messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* Ensure it's on top */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual Message Style */
+.messages div {
+    max-width: 600px; /* or any preferred width */
+    width: 100%;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for positioning the close button */
+    transition: all 0.3s ease;
+}
+
+/* Close button */
+.messages div .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+/* Message Type Styles */
+.messages div.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.messages div.error {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    99% {
+        opacity: 0;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;  /* Now make it non-interactive */
+    }
+}
+
+/* Apply the animation to the message div */
+.messages div,
+.messages {
+    animation-name: fadeOut;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;       /* Duration of the fade out */
+    animation-delay: 3s;         /* Time before fade out starts */
+    animation-fill-mode: forwards; /* Keeps the end state */
+    pointer-events: none;
+}

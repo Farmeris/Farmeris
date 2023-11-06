@@ -1,0 +1,29 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+
+{% block extra_css_doprava %}
+  <link href="{% static 'css/doprava_pridanie3.css' %}" rel="stylesheet">
+  <!--
+  <link href="{% static 'css/doprava_pridaniex.css' %}" rel="stylesheet">
+  <link href="{% static 'css/doprava_pridanie2.css' %}" rel="stylesheet">
+-->
+{% endblock %}
+
+{% block polozka %}
+
+<div class="doprava-header">
+  <h1 class="doprava-h2">{% trans "Input transport option" %}</h1>
+</div>
+<a class="edit_user_profile-a-d" href="{% url 'user_profile:user_profile' username=user_profile.user.username %}"><button class="edit_user_profile2-d">{% trans "Back to the profile" %}</button></a>
+  <div class="adding-transport-container">
+    {% include 'doprava_pridanie_display.html' with deleting_items=True selecting_items=False show_checkbox=False%}      
+    <form method="post" class="doprava-input-form" action="{% url 'add_product_main:user_pridaj_dopravu' username=user_profile.user.username %}">
+      {% csrf_token %}
+    
+      <div class="main-transport">
+        {% include '2polozka_doprava_pridanie.html' with transport_add=True %}
+      </div>
+    
+    </form>
+  </div>
+{% endblock %}

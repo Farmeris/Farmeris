@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/zoznam_poloziek_user.css' %}" rel="stylesheet" media="screen">
+    <link href="../static/css/zoznam_poloziek_user.css" rel="stylesheet" media="screen">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma market</title>
+    <link rel="icon" type="image/png" href="pics/favicon/x.png">
+</head>
+
+
+<body>
+  <header class="dropdown-header">
+    <div class="search-container">
+      <input type="text" placeholder="Search.." name="search" class="search-input">
+      <button type="submit" class="search-btn">Search</button>
+      <button type="button" class="options-btn">Options</button>
+    </div>
+    <nav class="dropdown-nav">
+      <ul class="dropdown-menu">
+        <div class="V-drp1">
+          <button>Button 1</button>
+          <ul class="submenu">
+            <li><a href="#">Submenu 1-1</a></li>
+            <li><a href="#">Submenu 1-2</a></li>
+            <li><a href="#">Submenu 1-3</a></li>
+          </ul>
+        </div>
+        <div class="V-drp2">
+            <button>Button 2</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="https://www.google.com" target="_blank">google.com</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp3">
+            <button>Button 3</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp4">
+            <button>Button 4</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp5">
+            <button>Button 5</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp6">
+            <button>Button 6</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp7">
+            <button>Button 7</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+        <div class="V-drp8">
+            <button>Button 8</button>
+            <ul class="submenu">
+              <li><a href="#">Submenu 1-1</a></li>
+              <li><a href="#">Submenu 1-2</a></li>
+              <li><a href="#">Submenu 1-3</a></li>
+            </ul>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <nav class="sidebar">
+      <div class="header-left-menu">
+          <div class="user-profile">
+              <img src="pics/profile.jpg" alt="User profile picture">
+              <h2>John Doe</h2>
+              <p>Member since 2021</p>
+          </div>
+      </div>
+      <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="produkty.html">Products</a></li>
+          <li><a href="main.html">People Who Offer</a></li>
+          <li><a href="main.html">Map</a></li>
+          <li><a href="main.html">Contact</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <main>
+      {% block content %}
+      <div class="user">
+          <h1>Profil uzivatela: </h1>
+          <h1>{{ request.user.username }}</h1>
+      </div>
+      {% endblock %}
+      <div class="blue-main-bg">
+        <div class="product1">
+          <a href="surovina.html"><div class="product-click"></div></a>
+          <div class="product-pic">
+            <img src="pics/test_pics/DALL·E 2023-03-29 00.05.52 - 3eggs in a grass.png">
+          </div>
+          <div class="product-nazov-container">
+            <div class="product-nazov">
+              JAJKA M size 63g/piece grassfed organic non-gmo
+            </div>
+          </div>
+          <div class="product-vlastnosti-container">
+            <div class="product-vlastnosti-row1">
+                <button class="product-vlastnosti-button1">Button 1</button>
+                <div class="product-vlastnosti-popup1">
+                <div class="product-vlastnosti-popup-column1">
+                  <p class="product-vlastnosti-popup-text1">Popup text 1 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column1">
+                  <p class="product-vlastnosti-popup-text1">Popup text 1 column 2</p>
+                </div>
+                </div>
+                <button class="product-vlastnosti-button2">Button 2</button>
+                <div class="product-vlastnosti-popup2">
+                <div class="product-vlastnosti-popup-column2">
+                  <p class="product-vlastnosti-popup-text2">Popup text 2 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column2">
+                  <p class="product-vlastnosti-popup-text2">Popup text 2 column 2</p>
+                </div>
+                </div>
+            </div>
+            <div class="product-vlastnosti-row2">
+                <button class="product-vlastnosti-button3">Button 3</button>
+                <div class="product-vlastnosti-popup3">
+                    <div class="product-vlastnosti-popup-column3">
+                        <p class="product-vlastnosti-popup-text3">Popup text 3 column 1</p>
+                    </div>
+                <div class="product-vlastnosti-popup-column3">
+                  <p class="product-vlastnosti-popup-text3">Popup text 3 column 2</p>
+                </div>
+                </div>
+                <button class="product-vlastnosti-button4">Button 4</button>
+                <div class="product-vlastnosti-popup4">
+                <div class="product-vlastnosti-popup-column4">
+                  <p class="product-vlastnosti-popup-text4">Popup text 4 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column4">
+                  <p class="product-vlastnosti-popup-text4">Popup text 4 column 2</p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-create">
+          <a href="{% url 'pridaj_polozku' %}"><div class="product-create-click"></div></a>
+          <div class="product-pic">
+            
+          </div>
+          <div class="product-nazov-container">
+            <div class="product-nazov">
+              Nazov produktu
+            </div>
+          </div>
+          <div class="product-vlastnosti-container">
+            <div class="product-vlastnosti-row1">
+                <button class="product-vlastnosti-button1">Cena</button>
+                <div class="product-vlastnosti-popup1">
+                <div class="product-vlastnosti-popup-column1">
+                  <p class="product-vlastnosti-popup-text1">Popup text 1 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column1">
+                  <p class="product-vlastnosti-popup-text1">Popup text 1 column 2</p>
+                </div>
+                </div>
+                <button class="product-vlastnosti-button2">Doprava</button>
+                <div class="product-vlastnosti-popup2">
+                <div class="product-vlastnosti-popup-column2">
+                  <p class="product-vlastnosti-popup-text2">Popup text 2 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column2">
+                  <p class="product-vlastnosti-popup-text2">Popup text 2 column 2</p>
+                </div>
+                </div>
+            </div>
+            <div class="product-vlastnosti-row2">
+                <button class="product-vlastnosti-button3">Kvalita</button>
+                <div class="product-vlastnosti-popup3">
+                    <div class="product-vlastnosti-popup-column3">
+                        <p class="product-vlastnosti-popup-text3">Popup text 3 column 1</p>
+                    </div>
+                <div class="product-vlastnosti-popup-column3">
+                  <p class="product-vlastnosti-popup-text3">Popup text 3 column 2</p>
+                </div>
+                </div>
+                <button class="product-vlastnosti-button4">Stars</button>
+                <div class="product-vlastnosti-popup4">
+                <div class="product-vlastnosti-popup-column4">
+                  <p class="product-vlastnosti-popup-text4">Popup text 4 column 1</p>
+                </div>
+                <div class="product-vlastnosti-popup-column4">
+                  <p class="product-vlastnosti-popup-text4">Popup text 4 column 2</p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <ul>
+                  <h3>About</h3>
+                  <li>Company</li>
+                  <li>Careers</li>
+                  <li>News &amp; events</li>
+                  <li>Investor relations</li>
+                  <li>Manufacturing</li>
+                  <li>Corporate citizenship</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                  <h3>Quick links</h3>
+                  <li>Contact us</li>
+                  <li>TI E2E™ design support forums</li>
+                  <li>Customer support center</li>
+                  <li>Packaging</li>
+                  <li>Quality &amp; reliability</li>
+                  <li>myTI FAQ</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                  <h3>Buying</h3>
+                  <li>Ordering resources</li>
+                  <li>TI API suite</li>
+                  <li>Ordering help &amp; FAQs</li>
+                  <li>Cross-reference search</li>
+                  <li>Authorized distributors</li>
+                </ul>
+            </div>
+            <div class="col">
+              <h3>Follow Us</h3>
+              <ul class="social-media">
+                <li><a href="https://www.twitter" target="_blank"><input class="icons" type="Image" src="ikona_twitter2.png" width="40" height="40">  </a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><input class="icons" type="Image" src="ikona_facebook2.png" width="40" height="40"></a>  </li>
+                <li><a href="https://www.instagram.com" target="_blank"><input class="icons" type="Image" src="ikona_instagram2.png" width="40" height="40"></a>   </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <p>&copy; 2023 My Farm. All rights reserved. Licensed under 
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="cc-license.png" alt="Creative Commons License"></a></p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

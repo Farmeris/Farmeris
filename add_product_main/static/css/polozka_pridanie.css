@@ -1,0 +1,476 @@
+
+/*cena*/
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+}
+
+.price label, 
+.converted-price{
+  margin-left: 20px;
+}
+
+.price input[type="number"],
+.transport input[type="number"]{
+  width: 100px;
+  padding: 7px;
+}
+
+.price select,
+.unit select,
+.transport select,
+.transport-button{
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.transport button{
+  margin-left: 50px;
+}
+.price label.price-first,
+.transport label.doprava-first{
+  margin-left: 0;
+  padding: 0;
+}
+select{
+  cursor: pointer;
+}
+.cena-container-label{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cena-h2,
+.doprava-h2{
+  margin-bottom: 20px;
+}
+.cena-h4{
+  margin-top: 20px;
+}
+.product-info-pouzivatel{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+}
+.transport-textarea {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: both;
+  position: relative;
+  margin-left: 50px;
+  transform: translateY(50%);
+}
+
+.nice-textarea::placeholder {
+  color: #999;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+.moznost-dopravy{
+    margin-left: 350px;
+}
+.doprava-header {
+    display: flex;
+    align-items: center;
+}
+/*end of cena*/
+/*end of obsah*/
+
+
+.form-pridavanie-polozky{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*end of the main style*/
+
+
+.main-transport,
+.main-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  min-height: 150px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.transport{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.transport_notes{
+  margin-left: 15px;
+}
+.transport-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.dopravax a{
+  text-decoration: none;
+  color: yellow;
+  margin-bottom: 10px;
+}
+.transport,
+.price {
+  display: flex;
+  flex-wrap: wrap;  /* allow wrapping of elements for better responsiveness */
+  gap: 10px;        /* set a gap between each element */
+  min-height: 120px;
+}
+
+.input-wrapper-dop {
+  display: flex;  /* making it flex will ensure the children always stay in a row */
+  align-items: center;  /* vertically center the child elements */
+}
+
+.transport label,
+.price label {
+  margin-right: 10px;  /* space between label and input */
+}
+
+.transport input[type="number"],
+.price input[type="number"]{
+  flex: 1;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  appearance: none;
+  position: relative;
+  width: 120px;
+}
+
+.transport .currency-dop,
+.transport .unit-dop,
+.price .currency-dop,
+.price .unit-dop {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  width: 70px;
+  appearance: none;  
+  background: #fff url('arrow.svg') no-repeat right 10px center;  
+  padding-right: 25px;  
+}
+
+
+.transport select::after,
+.price select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #333;
+  background-color: #333;
+}
+.cenay,
+.dopravay{
+  padding: 0;
+  margin: 0;
+  width: 1250px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+  .small-images{
+    display: none;
+  }
+  .form-pridavanie-polozky,
+  .obsah-horna-ciarka,
+  .obsah-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 100px;
+  }
+  .product-info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    min-width: 200px;
+  }
+  .product-info h1, .product-info p{
+    position: relative;
+  }
+  .nazov_produktu,
+  .product-info-cena{
+    position: relative;
+    transform: translate(0);
+    height: 80px;
+    width: 80%;
+    min-width: 100px;
+    align-self: center;
+    left: 0;
+    top: 0;
+  }
+  .obsah,
+  .obsah-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    padding: 0px;
+  }
+  .obsah{
+    padding: 20px;
+  }
+  .obsah-horna-ciarka *,
+  .obsah-column1 *,
+  .obsah-column-container *,
+  .obsah-horna-ciarka,
+  .obsah-column1,
+  .obsah-column-container{
+    left: 0;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .obsah-column2{
+    border: 0;
+  }
+  .obsah-horna-ciarka{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    left: 0;
+  }
+  .obsah-column1,
+  .obsah-column-container,
+  .obsah-column2,
+  .obsah-column3{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    left: 0;
+    padding: 0;
+    height: auto;
+  }
+  .obsah-column-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: auto;
+    height: auto;
+    min-width: 100px;
+    width: 100%;
+  }
+  .menu-sticker2,
+  .menu-sticker-button,
+  .obsah-column3{
+    position: relative;
+    min-width: 60px;
+    max-width: 150px;
+    height: 75px;
+  }
+  .nazov_produktu{
+    font-size: 20px;
+    margin: 0;
+    height: 40px;
+  }
+  .product-info-cena{
+    font-size: 18px;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .product-info-cena p{
+    font-size: 18px;
+  }
+  .info_produktu{
+    min-height: 250px;
+  }
+  .info_nazov_produktu,
+  .obsah-horna-ciarka{
+    top: 0;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+  }
+  .cenax,
+  .dopravax{
+    min-width: 200px;
+  }
+  .image-container{
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+    min-width: calc(100%);
+  }
+  .main-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-height: 200px;
+    min-width: 100%;
+    padding: 20px;
+  }
+  .custom-file-upload{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+  }
+  .cenax,
+  .dopravax{
+    padding: 5px;
+  }
+  .price{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /*transport*/
+  /* Styles for the main transport div */
+  .main-transport,
+  .transport,
+  .main-price {
+    flex-direction: column;
+    min-height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 0;
+  }
+  .doprava-display-container-holder{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .transport_notes{
+    margin-left: 0;
+  }
+
+
+  /* Styles for the submit button */
+  /* Styles for the submit button */
+
+  /*.transport-textarea {
+    height: auto; 
+    margin-bottom: 3px;
+    padding: 5px;
+  }*/
+
+  .circular-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .transport-add {
+    color: white;
+    background-color: green;
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  .doprava-input-form {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .doprava-input {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dopravax .dopravax-h2{
+    margin-top: 30px;
+  }
+  .dopravax-h2{
+    margin-bottom: 5px;
+  }
+  .transport-info{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .transport-info h3{
+    margin-bottom: 10px;
+  }
+  /*end of transport*/
+  .price{
+    gap: 5px;
+  }
+  .transport{
+    flex-direction: column;
+    gap: 5px;
+    background-color: #000000;
+    border-radius: 5px;
+  }
+  .transport-add{
+    margin: 0;
+  }
+  .doprava-h2{
+    position: relative;
+    font-size: 25px;
+  }
+  .doprava-header{
+    margin-bottom: 0;
+  }
+  .edit_user_profile-a-d{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .price label{
+    margin-left: 0;
+  }
+}

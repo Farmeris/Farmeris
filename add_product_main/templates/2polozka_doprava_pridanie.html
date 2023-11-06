@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<div class="transport">
+  <label for="transport_type" class="doprava-first">{% trans "Transport type:" %}</label>
+  <select id="transport_type" name="transport_type">
+    <option value="osobne">{% trans "In person" %}</option>
+    <option value="online">{% trans "Online" %}</option>
+    <option value="kurier">{% trans "Courier" %}</option>
+    <option value="vlastne">{% trans "Custom" %}</option>
+  </select>
+  <textarea class="transport_notes" id="transport_notes" name="transport_notes" placeholder="{% trans 'Enter notes' %}"></textarea>
+
+  <label for="transport_price">{% trans "Price:" %}</label>
+  <div class="input-wrapper-dop">
+    <input type="number" id="transport_price" name="transport_price" min="0" placeholder="{% trans 'Transport price' %}" step="0.0001">
+    <select id="currency" name="currency" class="currency-dop">
+      <option value="eur">EUR</option>
+      <option value="czk">CZK</option>
+      <option value="usd">USD</option>
+    </select>
+  </div>
+  
+  <label for="unit">{% trans "Amount:" %}</label>
+  <div class="input-wrapper-dop">
+    <input type="number" id="transport_amount" name="transport_amount" min="0" placeholder="{% trans 'Till' %}" step="0.0001">
+    <select id="unit" name="unit" class="unit-dop">
+      <option value="kg">kg</option>
+      <option value="ks">ks</option>
+      <option value="g">g</option>
+      <option value="liter">{% trans "liter" %}</option>
+      <option value="litrov">{% trans "litres" %}</option>
+    </select>
+  </div>
+  {% if transport_add %}
+    <!-- Add a hidden field to store the transport_id -->
+    <input type="hidden" name="transport_id" value="{{ transport.id }}">
+    
+    <button for="transport-add" class="transport-add cena-add add-button-icon-submit">
+    <div class="plus-icon"></div>
+    </button>
+  {% endif %}
+</div>

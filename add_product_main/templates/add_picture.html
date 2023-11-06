@@ -1,0 +1,18 @@
+{% load static i18n %}
+
+<link href="{% static 'css/add_picture.css' %}" rel="stylesheet" media="screen">
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+<div class="container">
+    {% blocktrans with item_name=polozka.nazov_produktu %}
+		<h2>Add Picture to "{{ item_name }}"</h2>
+	{% endblocktrans %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-buttons">
+            <button type="submit">{% trans "Save Changes" %}</button>
+            <a href="{% url 'add_product_main:user_zobraz_polozku' username=polozka.user_profile.user.username nazov_produktu=polozka.nazov_produktu %}">{% trans "Discard Changes" %}</a>
+        </div>
+    </form>
+</div>

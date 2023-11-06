@@ -1,0 +1,33 @@
+{% load static %}
+{% load custom_filters i18n %}
+
+<div class="chat-container">
+    {% if is_owner %}
+      <div class="chats-users">
+        {% for message in chat_messages|unique_senders %}
+            {% if message.sender != request.user %}
+                <button class="chat-user-button" data-username="{{ message.sender }}">{{ message.sender }}</button>
+            {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="message-container">
+      {% for message in chat_messages %}
+          {% if message.sender == request.user or is_owner %}
+              <div class="chat-bubble {% if message.sender == request.user %}right{% else %}left{% endif %}">
+                  <p class="chat-bubble-mess">{{ message.content }}</p>
+              </div>
+          {% endif %}
+      {% endfor %}
+      <a id="bottom"></a>
+    </div>
+    <div class="input-container">
+      {% if polozka %}
+        <form method="post" action="{% url 'chat_polozka:send_message_in_polozka' username=username nazov_produktu=polozka.nazov_produktu %}" class="obsah-input-form">
+          {% csrf_token %}
+          <input class="obsah-input" type="text" name="message" placeholder="{% trans 'Type your message...' %}">
+          <button class="obsah-input-button" type="submit">{% trans "Send" %}</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>

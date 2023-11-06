@@ -1,0 +1,17 @@
+{% load static i18n %}
+{% load custom_filters %}
+
+
+<link href="{% static 'css/polozka_cena_pridanie2.css' %}" rel="stylesheet">
+<link href="{% static 'css/polozka_cena_pridanie3.css' %}" rel="stylesheet">
+
+
+<form class="form-pridavanie-polozky" method="post" action="{% url 'add_product_main:user_zobraz_polozku' username=request.user.username nazov_produktu=nazov_produktu %}">
+    {% csrf_token %}
+    <div class="cena">
+        <div class="cena-container-label">
+            <h2 class="cena-h2">{% trans "Add additional price:" %}</h2>
+        </div>
+            {% include '2polozka_cena_pridanie.html' with cena_add=True %}
+    </div>
+</form>

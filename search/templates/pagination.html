@@ -1,0 +1,57 @@
+{% load static i18n %}
+
+<!-- Pagination -->
+<div class="pagination-space-holder"></div>
+<div class="pagination-container">
+  <div class="pagination-spacer"></div>
+  <div class="pagination">
+    {% if products.paginator.num_pages > 1 %}
+      {% if products.number > 1 %}
+        <a href="?{{ query_params }}&page=1">&laquo; {% trans "First" %}</a>
+        <a href="?{{ query_params }}&page={{ products.previous_page_number }}">{% trans "Previous" %}</a>
+      {% else %}
+        <span class="disabled">&laquo; {% trans "First" %}</span>
+        <span class="disabled">{% trans "Previous" %}</span>
+      {% endif %}
+      {% if products.number > 3 %}
+        <a href="?{{ query_params }}&page=1">1</a>
+        <span class="dots">...</span>
+      {% endif %}
+      {% for i in products.paginator.page_range %}
+        {% if i == products.number %}
+          <span class="current-page">{{ i }}</span>
+        {% elif i > products.number|add:'-3' and i < products.number|add:'3' %}
+          <a href="?{{ query_params }}&page={{ i }}">{{ i }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if products.paginator.num_pages > products.number|add:'3' %}
+        <span class="dots">...</span>
+        <a href="?{{ query_params }}&page={{ products.paginator.num_pages }}">{{ products.paginator.num_pages }}</a>
+      {% endif %}
+      {% if products.has_next %}
+        <a href="?{{ query_params }}&page={{ products.next_page_number }}">{% trans "Next" %}</a>
+        <a href="?{{ query_params }}&page={{ products.paginator.num_pages }}">{% trans "Last" %} &raquo;</a>
+      {% else %}
+        <span class="disabled">{% trans "Next" %}</span>
+        <span class="disabled">{% trans "Last" %} &raquo;</span>
+      {% endif %}
+    {% else %}
+      <!--<span class="current-page">1</span>-->
+    {% endif %}
+    
+  </div>
+  <div class="items-per-page">
+    <form method="GET" class="items-per-page-form">
+      <span>{% trans "Items per page:" %}</span>
+        <select name="items_per_page" id="itemsPerPageSelect" class="items_per_page-slct">
+            <option value="5" {% if items_per_page == 5 %}selected{% endif %}>5</option>
+            <option value="10" {% if items_per_page == 10 %}selected{% endif %}>10</option>
+            <option value="20" {% if items_per_page == 20 %}selected{% endif %}>20</option>
+            <option value="50" {% if items_per_page == 50 %}selected{% endif %}>50</option>
+            <option value="100" {% if items_per_page == 100 %}selected{% endif %}>100</option>
+        </select>
+    </form>
+  </div>
+</div>
+
+<script src="{% static 'js/pagination.js' %}"></script>
