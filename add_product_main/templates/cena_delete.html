@@ -1,0 +1,4 @@
+<form method="POST" action="{% url 'add_product_main:user_delete_cena' username=user_profile.user.username nazov_produktu=polozka.nazov_produktu cena_id=cena.id %}">
+    {% csrf_token %}
+    {% include "icons/minus_submit.html" %}
+</form>

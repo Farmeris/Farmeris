@@ -1,0 +1,142 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Chat Interface" %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .chat-header .back-arrow {
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .chat-content {
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            display: flex;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .chat-message img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .chat-message .message-content {
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%;
+            position: relative;
+        }
+
+        .chat-message .nickname {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .chat-message.sender .message-content {
+            background-color: #007BFF;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-message.receiver .message-content {
+            background-color: #e0e0e0;
+        }
+
+        .chat-footer {
+            padding: 20px;
+            background-color: #e0e0e0;
+            display: flex;
+        }
+
+        .chat-footer textarea {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            resize: none;
+        }
+
+        .chat-footer button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="back-arrow">&larr;</div>
+            Chat
+        </div>
+
+        <div class="chat-content">
+            <!-- Example Sender Message -->
+            <div class="chat-message sender">
+                <img src="sender_profile.jpg" alt="Sender Profile Picture">
+                <div class="message-content">
+                    <div class="nickname">Sender</div>
+                    Hello! How are you?
+                </div>
+            </div>
+
+            <!-- Example Receiver Message -->
+            <div class="chat-message receiver">
+                <img src="receiver_profile.jpg" alt="Receiver Profile Picture">
+                <div class="message-content">
+                    <div class="nickname">Receiver</div>
+                    I'm good! Thanks for asking.
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <textarea placeholder="Type a message..."></textarea>
+            <button>Send</button>
+        </div>
+    </div>
+</body>
+
+</html>

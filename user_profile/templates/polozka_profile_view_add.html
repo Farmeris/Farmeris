@@ -1,0 +1,39 @@
+{% load custom_filters %}
+{% load static %}
+
+
+
+
+<div class="product">
+    <a class="product-create-abs" href="{% url 'add_product_main:user_pridaj_polozku' username=user_profile.user.username %}">
+      <div class="product-create-abs container-plusko-click">
+          {% include "icons/plus_raw.html" %}
+      </div>
+    </a>
+    <div class="product-pic">
+        <p>Pridaj obrázok</p>
+    </div>
+    <div class="product-nazov-container">
+      <div class="product-nazov">
+        <h3>Názov produktu</h3>
+      </div>
+    </div>
+      <div class="product-nazov-owner">
+        <span>{{ username }}</span>
+      </div>
+    <div class="product-vlastnosti-container">
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">
+        Cena
+      </button>
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">Doprava</button>
+      <!--
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">Kvalita</button>
+      -->
+      <button class="product-vlastnosti-buttonx" data-popup="product-vlastnosti-popup1">
+      _/5 <img src="{% static 'images/review_star.svg' %}" alt="review_star" class="star-icon">
+      </button>
+    </div>
+</div>
+
+
+<script src="{% static 'js/polozka_delete_confirmation.js' %}"></script>

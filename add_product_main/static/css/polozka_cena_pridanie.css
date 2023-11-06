@@ -1,0 +1,98 @@
+/*cena*/
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price label, 
+.converted-price{
+  margin-left: 20px;
+}
+
+.price input[type="number"]{
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.price select,
+.unit select{
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+.price label.price-first{
+  margin-left: 0;
+  padding: 0;
+}
+select{
+  cursor: pointer;
+}
+.cena-container-label{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cena-h2{
+  margin-bottom: 20px;
+}
+.cena-h4{
+  margin-top: 20px;
+}
+.product-info-pouzivatel{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+}
+.nice-textarea::placeholder {
+  color: #999;
+}
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.cena{
+  height: auto;
+  width: 100%;
+  background-color: #ff1b1b6b;
+  padding: 40px;
+}
+/*end of cena*/
+/*submit button*/
+.cena-add{
+  color: white;
+  background-color: green;
+  margin-left: 50px;
+  position: relative;
+  pointer-events: all;
+  cursor: pointer;
+}
+.circular-button{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/*.cena {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}*/
+
+.cena-add {
+  margin-right: 10px;
+  margin-left: 50px;
+}
+/*end of submit button*/

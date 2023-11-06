@@ -1,0 +1,127 @@
+/*pagination colors dark mode*/
+:root {
+  --pagination-background: #e9ecef;
+  --pagination-text: #1b1b1b;
+  --pagination-border: #ddd;
+  --pagination-hover: #4c4d4c;
+  --pagination-highlight: #3dbef1;
+  --pagination-disabled: #888;
+}
+
+/*light mode*/
+:root {
+  --pagination-background: #f3f4f6; 
+  --pagination-text: #333; 
+  --pagination-border: #e0e0e0; 
+  --pagination-hover: #d9d9d9; 
+  --pagination-highlight: #007BFF; 
+  --pagination-disabled: #b0b0b0; 
+}
+
+
+  
+  
+  
+:root {
+  --polozka-pridanie-bg-color: #1e1e1e;
+  --polozka-pridanie-text-color: #e5e5e5;
+  --polozka-pridanie-container-bg: #333;
+  --polozka-pridanie-border-color: var(--pinkbd);
+  --polozka-pridanie-label-color: #ddd;
+  --polozka-pridanie-textarea-bg: #444;
+  --polozka-pridanie-input-bg: #686868;
+  --polozka-pridanie-select-bg: #444;
+  --polozka-pridanie-text-colorb: #000;
+  --polozka-pridanie-button-red-bg: #f54545;
+  --polozka-pridanie-button-red-hover-bg: #d13434;
+  --polozka-pridanie-button-green-bg: #4CAF50;
+  --polozka-pridanie-button-green-hover-bg: #43A047;
+  --polozka-pridanie-menu-sticker-button-bd: 1px;
+  --polozka-pridanie-menu-sticker-button-bdclr: #555;
+}
+
+
+
+
+/*united price transport style*/
+:root{
+  --united-input-display-bgclr: #333;
+  --united-input-display-clr: rgb(138, 138, 138);
+  --united-input-display-clr: var(--polozka-pridanie-text-color);
+  --polozka-pridanie-text-reversed-color: var(--text-color);
+  --polozka-pridanie-select-option-bgclr: #444;
+  --polozka-pridanie-select-option-clr: white;
+}
+
+
+/*HLAVNE FARBICKY ZMENA*/
+:root {
+  --text-color: white;
+  --sidebar: #0e2535;/*main color*/
+  --sidebar-bgclr: #212121;/*sidebar background*/
+  /*--sidebar-bgclr: rgb(218, 72, 72);/*sidebar background*/
+  --nav-li-a-hover-bgclr: #444; /* sidebar button hover*/
+  --pinkbd: pink;/*all borders coloring*/
+}
+:root{
+  --header-background-color: var(--sidebar-bgclr);
+  --footer-background-color: var(--sidebar-bgclr);
+  --social-media-li-a-bgclr: var(--light-grey);
+  --background-color: var(--sidebar-bgclr);
+  --sidebar-menu-item-lang-bgclr: var(--sidebar-bgclr);
+  --header-left-menu-bgclr: var(--sidebar);
+}
+/*sidebar txt*/
+:root{
+  --sidebar-menu-item-lang-txtclr: rgb(199, 199, 199);
+  --login-signup-bgclr: var(--sidebar-bgclr);
+}
+:root{
+  --login-signup-bd: 1px;
+}
+/*search*/
+:root{
+  --search-btn-mrgn-hvr: 0;
+}
+
+/*:root{
+  --login-signup-bd: 1px;
+  --nav-li-a-hover-bd: 1px;
+  --sidebar-menu-button-bd-hvr: 1px;
+  --nav-li-a-hover-bd: 1px;
+  --search-btn-bd: 1px;
+}*/
+/*pagination*/
+:root{
+  --pagination-disabled:#5f5f5f;
+}
+/*polozka pridanie/zobrazenie*/
+:root{/*
+  --product-dark-bg: #717D98;
+  --product-dark-bg: #C2C9D6;
+  --product-lighter-dark-bg: #C2BDC7;
+  --product-primary-color-hvr: #007BFF;
+  --product-text-primary-color: var(--text-color);
+  */--delete-btn-user-profile-invert: invert(1);
+}
+/*profile settings*/
+:root{
+  --content-user-settings-bgclr: var(--sidebar-bgclr);
+  --content-user-settings-input-bgclr: var(--united-input-display-bgclr);
+  --content-user-settings-input-clr: var(--united-input-display-clr);
+}
+input {
+  background-color: var(--united-input-display-bgclr) !important;
+  color: var(--united-input-display-clr) !important;
+}
+/*user_profile*/
+:root{
+  --tab-item-link-user-profile: #6a686d;
+  --profile-header-h1-user-profile-clr: var(--text-color) !important;
+}
+/*polozka pridanie*/
+:root{
+  --product-form-polozka-pridanie-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  --submit-btn-polozka-pridanie-bgclr-hvr: var(--nav-li-a-hover-bgclr);
+  --submit-btn-polozka-pridanie-bd: 1px;
+}

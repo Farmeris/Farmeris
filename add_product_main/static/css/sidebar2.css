@@ -1,0 +1,210 @@
+/*:root{
+  --header-left-menu-width: calc(200px - 16px);
+  --header-left-menu-height: var(--header-left-menu-width);
+}*/
+.mobile-checkbox{
+  display: none;
+  opacity: 0;
+  z-index: -999;
+  pointer-events: none;
+}
+
+/*
+.mobile-checkbox {
+  display: block;
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  opacity: 0;
+  z-index: -999;
+  pointer-events: none;
+}*/
+.sidebar{
+  overflow-x: hidden;
+}
+.sidebar-button-a{
+  display: flex;
+  align-items: center;
+  /*background-color: #f38630;*/
+  z-index: 500;
+  padding: calc(100% - 18px) 10px;
+}
+.sidebar-button-a > * {
+  align-self: flex-start; 
+  margin: 0;
+}
+.sidebar-button-a svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px; 
+}
+
+.sidebar-button-a span {
+  margin: 0; 
+}
+.sidebar-butt-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  flex-grow: 1;
+}
+.sidebar-butt-widget{
+  position: relative;
+  height: auto;
+  width: 100%;
+  border-radius: var(--sidebar-butt-widget-bdrds);
+  border: var(--sidebar-butt-widget-bd) solid var(--sidebar-butt-widget-bdclr);
+}
+
+ul li a.sidebar-button-a i.ti {
+  font-size: 20px; 
+}
+
+/*color theme*/
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 15px;
+  background: #494949;
+  transition: background 0.4s;
+}
+
+.switch button {
+  appearance: none; /* removes browser default styling */
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.4s;
+  border: 1px solid rgb(0, 183, 255);
+}
+
+.switch .checked {
+  left: 32px;
+  background: #333;
+  border: 1px solid rgb(30, 255, 0);
+}
+
+
+/* Sidebar menu style */
+
+.sidebar-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-menu-button {
+  display: block;
+  padding: 10px 10px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0s !important;
+  background-color: #00000000;
+  margin: var(--sidebar-menu-button-bd-hvr);
+  border: var(--sidebar-menu-button-bd) solid var(--sidebar-menu-button-bdclr);
+}
+
+.sidebar-menu-content{
+  display: none;
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  left: calc((var(--sidebar-width) - var(--sidebar-width-menu-width)) / 2);
+  padding: 15px 20px;
+  gap: 5px;
+  background-color: var(--sidebar-menu-content-bgclr);
+  border: var(--sidebar-menu-content-bd) solid var(--sidebar-menu-content-bdclr);
+  border-radius: 5px;
+  overflow: hidden;
+  width: var(--sidebar-width-menu-width);
+  /*display: flex;*/
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.sidebar-menu-button:hover{
+  background-color: var(--nav-li-a-hover-bgclr);
+  border: var(--sidebar-menu-button-bd-hvr) solid var(--sidebar-menu-button-bdclr-hvr);
+  margin: 0;
+}
+
+.sidebar-menu-content3 {
+  display: none;
+}
+
+.sidebar-menu-item-lang {
+  display: block;
+  padding: 5px 5px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  width: auto;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: var(--sidebar-menu-item-lang-bgclr);
+  border: var(--sidebar-menu-item-lang-bd) solid var(--sidebar-menu-content-bdclr);
+  border-radius: var(--sidebar-menu-item-lang-bdradius);
+}
+.sidebar-menu-item-lang:focus{
+  background-color: var(--sidebar-menu-item-lang-bgclr);
+  background-color: var(--sidebar-menu-item-lang-bgclr);
+  color: var(--text-color);
+}
+
+.sidebar-menu-item-lang:hover {
+  background-color: var(--sidebar-menu-item-lang-bgclr-hvr);
+  color: var(--sidebar-menu-item-lang-txtclr-hvr);
+}
+
+#menuToggle:checked ~ .sidebar-menu-content {
+  display: flex;
+}
+
+#menuToggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sidebar-menu-button .ti{
+  font-size: 22px;
+}
+
+.ti{
+  color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+

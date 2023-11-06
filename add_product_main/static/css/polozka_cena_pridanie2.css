@@ -1,0 +1,206 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: auto;
+}
+
+/*submit polozka*/
+.submit-polozku{
+  width: 200px;
+  height: 75px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*end of submit polozka*/
+
+
+/*4tlacitka*/
+.obsah-column3-row, .obsah-column3-row:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: rgb(150, 150, 150);
+  background-color: #33333300;
+  text-decoration: none;
+  height: 25%;
+}
+
+.obsah-column3-ciarky {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 0;
+}
+/*end of obsah*/
+
+/*cena*/
+.cena-input{
+  border: var(--doprava-input-bd) solid var(--doprava-input-bdclr);
+  border-radius: var(--doprava-input-bdrd);
+}
+/*end of cena*/
+/*doprava*/
+
+.cena-input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.cena-input {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--doprava-input-bd) solid var(--doprava-input-bdclr);
+    border-radius: var(--doprava-input-bdrd);
+    padding: 20px;
+}
+/*end of doprava*/
+
+/*menu-sticker*/
+
+  .price {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+  }
+
+.cena label,
+.cena input,
+.cena select,
+.cena-button,
+.cena-add,
+.cena_notes {
+  margin-bottom: 10px;
+}
+.cena label,
+.cena-button,
+.cena-add,
+.cena_notes {
+  /*margin-right: 10px;*/
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+.cena input,
+.cena select{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 7px;
+}
+
+.cena {
+  display: flex;
+  flex-wrap: wrap;  /* allow wrapping of elements for better responsiveness */
+  gap: 10px;        /* set a gap between each element */
+}
+
+.input-wrapper-dop {
+  display: flex;  /* making it flex will ensure the children always stay in a row */
+  align-items: center;  /* vertically center the child elements */
+}
+.input-wrapper-dop select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 35px;
+  width: auto;
+  color: black !important;
+}
+.input-wrapper-dop input{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 35px;
+  color: black !important;
+}
+.cena label {
+  margin-right: 10px;  /* space between label and input */
+}
+
+.input-wrapper-dop input[type="number"],
+.cena input[type="number"]{
+  flex: 1;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  appearance: none;
+  position: relative;
+  width: 120px;
+}
+
+.input-wrapper-dop .currency-dop,
+.input-wrapper-dop .unit-dop {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  width: 70px;
+  appearance: none;  
+  background: #fff url('arrow.svg') no-repeat right 10px center;  
+  padding-right: 25px;  
+}
+
+.input-wrapper-dop select::after,
+.cena select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #000000;
+  background-color: #333;
+}
+.cena-first {
+  margin-right: 10px;
+}
+.cena{
+  padding: 20px;
+}
+.input-wrapper-dop .unit-dop {
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+  .cena{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .doprava-header{
+    margin-bottom: 0;
+  }
+  .edit_user_profile-a-d{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .cena-input,
+  .price {
+      flex-direction: column;
+      gap: 5px;
+  }
+  .cena-add {
+      margin: 0;
+  }
+  .cena-h2 {
+      position: relative;
+      font-size: 25px;
+  }
+}

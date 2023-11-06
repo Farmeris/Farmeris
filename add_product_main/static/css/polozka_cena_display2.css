@@ -1,0 +1,97 @@
+.polozka-display-container-holder{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.polozka-display-container-holder:last-child{
+    padding-bottom: 10px;
+}
+
+.polozka-display-container {
+    background-color: var(--cena-display-bgclr);
+    border: var(--cena-display-bd) solid var(--cena-display-bdclr);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--cena-display-box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polozka-output {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start; 
+    gap: 5px;
+}
+
+.polozka-output label:not(:first-child) {
+    margin-left: 20px;
+}
+
+.polozka-output label, .polozka-output div {
+    margin-bottom: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#polozka_amount, #polozka_price, #unit, #currency {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#polozka_amount {
+    font-weight: 600;
+    color: var(--cena-display-price-color);
+}
+
+#polozka_price {
+    font-weight: bold;
+    color: var(--cena-display-price-color);
+}
+
+#currency, #unit {
+    text-transform: uppercase;
+    color: var(--cena-display-currency-unit-color);
+}
+
+.deselect-button-container,
+.transport-select-container,
+.transport-delete-container {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .polozka-output {
+        flex-direction: column;
+        gap: 0;
+    }
+    .polozka-output > *{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .polozka-output label:not(:first-child) {
+        margin-left: 0;
+    }
+
+    #polozka_amount, #polozka_price, #currency, #unit {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .polozka-output label, .polozka-output div {
+        margin-bottom: 10px;
+    }
+    .deselect-button-container,
+    .transport-select-container,
+    .transport-delete-container {
+        margin: 0; 
+    }
+}

@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<div class="flex justify-center mt-6">
+  <a class="text-blue-400 hover:text-blue-500" href="/">{% trans "Home" %}</a>
+  <span class="mx-2 text-gray-300">/</span>
+  <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_login' %}">{% trans "Log In" %}</a>
+</div>

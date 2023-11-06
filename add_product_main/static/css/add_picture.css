@@ -1,0 +1,66 @@
+
+/*body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}*/
+
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 75px;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.form-buttons button[type="submit"],
+.form-buttons a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: #fff; /* Text color for "Save Changes" button */
+    font-family: Arial, sans-serif; /* Font for "Save Changes" button */
+}
+
+.form-buttons a {
+    background-color: #f8d7da;
+    border: none;
+    color: #721c24; /* Text color for "Discard Changes" link */
+    font-family: Arial, sans-serif; /* Font for "Discard Changes" link */
+}
+
+p {
+    text-align: center;
+}

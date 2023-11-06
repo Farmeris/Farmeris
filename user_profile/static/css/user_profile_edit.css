@@ -1,0 +1,7 @@
+.dropdown-header {
+  width: 100% !important;
+  left: 0 !important;
+}
+.user{
+  color: var(--text-color);
+}

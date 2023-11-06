@@ -1,0 +1,15 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+{% block extra_css_polozka %}
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block polozka %}
+    <div class="main-container">
+        <h1>Farmeris</h1>
+        <br><br>
+        <p>Pre navrhy a akekolvek pripomienky prosime o kontaktovanie podpory na </p>
+        <h3>farmeris-sk@proton.me</h3>
+    </div>
+{% endblock %}

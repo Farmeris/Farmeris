@@ -1,0 +1,18 @@
+{% load static %}
+{% block extra_css_edit %}
+    <link href="{% static 'css/user_profile_edit_doparavax.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+<div class="product-create">
+    <a href="{% url 'add_product_main:user_pridaj_dopravu' username=user_profile.user.username %}" target="_blank">
+        <div class="product-create-doprava">
+            {% include "icons/transport2_icon.html" %}
+        </div>
+    </a>
+    <a href="{% url 'edit_profile:user_profile_editing' username=user_profile.user.username %}" target="_blank">
+        <div class="product-create-info">
+            {% include "icons/settings.html" %}
+        </div>
+    </a>
+</div>

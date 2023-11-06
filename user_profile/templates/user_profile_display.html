@@ -1,0 +1,42 @@
+{% load static %}
+{% load i18n %}
+
+<link href="{% static 'css/user_profile_displayx.css' %}" rel="stylesheet">
+
+{% if user.is_anonymous %}
+    <div class="header-left-menu-container mobile-show">
+        <div class="header-left-menu-nl">
+            <div class="user-profile-nl">
+                <div class="login-register-container">
+                    <a href="{% url 'account_login' %}" class="login-button" target="_blank">{% trans "Login" %}</a>
+                    <a href="{% url 'account_signup' %}" class="signup-button" target="_blank">{% trans "Register" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="header-left-menu-container mobile-show">
+        <div class="sidebar-a">
+            <a class="sidebar-a" href="{% url 'user_profile:user_profile' username=request.user.username %}">
+                <div class="header-left-menu">
+                    <div class="user-profile">
+                        {% if avatar_url %}
+                            <img src="{{ avatar_url }}" alt="{% trans 'User profile picture' %}">
+                        {% else %}
+                            <div class="user-profile-add-avatar">
+                                <div class="gray-bg">
+                                    <i class="ti ti-camera-plus"></i>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div>
+                            <p>{% trans "Logged as:" %}</p>
+                            <h2>{{ request.user.username }}</h2>
+                            <p class="time-now">{{ now }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endif %}
