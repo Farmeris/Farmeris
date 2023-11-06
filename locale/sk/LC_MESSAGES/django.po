@@ -1,0 +1,2691 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-12 23:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
+">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+#: add_product_main/models.py:74 add_product_main/models.py:96
+msgid "Available"
+msgstr "Dostupné"
+
+#: add_product_main/models.py:90
+msgid "Available from: {}"
+msgstr "Dostupné od: {}"
+
+#: add_product_main/models.py:94
+msgid "Available to: {}"
+msgstr "Dostupné do: {}"
+
+#: add_product_main/models.py:97
+msgid "Unavailable"
+msgstr "Nedostupné"
+
+#: add_product_main/templates/2polozka_cena_pridanie.html:4
+#: add_product_main/templates/2polozka_cena_pridanie.html:6
+#: add_product_main/templates/2polozka_doprava_pridanie.html:13
+#: add_product_main/templates/doprava_polozka_display.html:23
+#: add_product_main/templates/doprava_pridanie_display.html:22
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:24
+#: add_product_main/templates/dopravaloc_polozka_display.html:23
+#: add_product_main/templates/polozka_cena_display.html:20
+msgid "Price:"
+msgstr "Cena:"
+
+#: add_product_main/templates/2polozka_cena_pridanie.html:15
+#: add_product_main/templates/2polozka_doprava_pridanie.html:23
+#: add_product_main/templates/doprava_polozka_display.html:39
+#: add_product_main/templates/doprava_pridanie_display.html:37
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:40
+#: add_product_main/templates/dopravaloc_polozka_display.html:39
+#: add_product_main/templates/polozka_cena_display.html:12
+msgid "Amount:"
+msgstr "Množstvo:"
+
+#: add_product_main/templates/2polozka_cena_pridanie.html:24
+#: add_product_main/templates/2polozka_doprava_pridanie.html:30
+#: add_product_main/templates/doprava_polozka_display.html:51
+#: add_product_main/templates/doprava_pridanie_display.html:49
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:52
+#: add_product_main/templates/dopravaloc_polozka_display.html:51
+msgid "liter"
+msgstr "liter"
+
+#: add_product_main/templates/2polozka_cena_pridanie.html:25
+#: add_product_main/templates/2polozka_doprava_pridanie.html:31
+#: add_product_main/templates/doprava_polozka_display.html:53
+#: add_product_main/templates/doprava_pridanie_display.html:51
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:54
+#: add_product_main/templates/dopravaloc_polozka_display.html:53
+msgid "litres"
+msgstr "litrov"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:4
+#: add_product_main/templates/doprava_polozka_display.html:11
+#: add_product_main/templates/doprava_pridanie_display.html:10
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:12
+#: add_product_main/templates/dopravaloc_polozka_display.html:11
+msgid "Transport type:"
+msgstr "Druh dopravy"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:6
+#: add_product_main/templates/doprava_polozka_display.html:14
+#: add_product_main/templates/doprava_pridanie_display.html:13
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:15
+#: add_product_main/templates/dopravaloc_polozka_display.html:14
+msgid "In person"
+msgstr "Osobne"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:7
+#: add_product_main/templates/doprava_polozka_display.html:16
+#: add_product_main/templates/doprava_pridanie_display.html:15
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:17
+#: add_product_main/templates/dopravaloc_polozka_display.html:16
+msgid "Online"
+msgstr "Online"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:8
+#: add_product_main/templates/doprava_polozka_display.html:18
+#: add_product_main/templates/doprava_pridanie_display.html:17
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:19
+#: add_product_main/templates/dopravaloc_polozka_display.html:18
+msgid "Courier"
+msgstr "Kuriér"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:9
+#: add_product_main/templates/doprava_polozka_display.html:20
+#: add_product_main/templates/doprava_pridanie_display.html:19
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:21
+#: add_product_main/templates/dopravaloc_polozka_display.html:20
+msgid "Custom"
+msgstr "Vlastné"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:11
+msgid "Enter notes"
+msgstr "Zadajte poznámky"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:15
+msgid "Transport price"
+msgstr "Cena dopravy"
+
+#: add_product_main/templates/2polozka_doprava_pridanie.html:25
+msgid "Till"
+msgstr "Do"
+
+#: add_product_main/templates/add_picture.html:7
+#, python-format
+msgid ""
+"\n"
+"\t\t<h2>Add Picture to \"%(item_name)s\"</h2>\n"
+"\t"
+msgstr ""
+"\n"
+"\t\t<h2>Pridať obrázok do \"%(item_name)s\"</h2>\n"
+"\t"
+
+#: add_product_main/templates/add_picture.html:14
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+#: add_product_main/templates/add_picture.html:15
+msgid "Discard Changes"
+msgstr "Zahodiť zmeny"
+
+#: add_product_main/templates/chat_polozka.html:28
+#: chat_general/templates/general_chat.html:71
+#: chat_general/templates/general_chat_mobile.html:37
+#: chat_polozka/templates/chat_polozka/chat_polozka_zobrazenie.html:27
+msgid "Type your message..."
+msgstr "Napísať správu sem..."
+
+#: add_product_main/templates/chat_polozka.html:29
+#: chat_general/templates/general_chat.html:72
+#: chat_general/templates/general_chat_mobile.html:38
+#: chat_polozka/templates/chat_polozka/chat_polozka_zobrazenie.html:28
+msgid "Send"
+msgstr "Poslať"
+
+#: add_product_main/templates/doprava_polozka_display.html:57
+#: add_product_main/templates/doprava_pridanie_display.html:55
+#: add_product_main/templates/doprava_pridanie_display_filtered.html:58
+#: add_product_main/templates/dopravaloc_polozka_display.html:57
+msgid "Additional notes:"
+msgstr "Poznámky"
+
+#: add_product_main/templates/doprava_pridanie.html:15
+msgid "Input transport option"
+msgstr "Uveďte spôsob dopravy"
+
+#: add_product_main/templates/doprava_pridanie.html:17
+msgid "Back to the profile"
+msgstr "Návrat na profil"
+
+#: add_product_main/templates/doprava_pridanie_display.html:72
+msgid "Include:"
+msgstr "Zahrnúť:"
+
+#: add_product_main/templates/polozka_cena_pridanie.html:13
+msgid "Add additional price:"
+msgstr "Pridanie ďalších cien:"
+
+#: add_product_main/templates/polozka_new.html:25
+#: search/templates/search.html:23
+#: user_profile/templates/user_profile_edit.html:21
+msgid "Farmeris"
+msgstr "Farmeris"
+
+#: add_product_main/templates/polozka_pridanie.html:15
+msgid "Add image (max.1)"
+msgstr "Pridaj obrázok (max.1)"
+
+#: add_product_main/templates/polozka_pridanie.html:21
+#: add_product_main/templates/polozka_pridanie.html:22
+msgid "Title"
+msgstr "Názov"
+
+#: add_product_main/templates/polozka_pridanie.html:27
+#: add_product_main/templates/polozka_pridanie.html:28
+msgid "Subtitle"
+msgstr "Podnázov"
+
+#: add_product_main/templates/polozka_pridanie.html:33
+msgid "Description"
+msgstr "Popis"
+
+#: add_product_main/templates/polozka_pridanie.html:34
+msgid "Input here description"
+msgstr "Sem pridajte popis"
+
+#: add_product_main/templates/polozka_pridanie.html:38
+msgid "Add price"
+msgstr "Pridajte cenu"
+
+#: add_product_main/templates/polozka_pridanie.html:45
+#, python-format
+msgid ""
+"\n"
+"          *Adding next prices via <a class=\"product-info-pouzivatel\" "
+"href=\"%(profile_url)s\" target=\"_blank\">profile</a>\n"
+"          "
+msgstr ""
+"\n"
+"          *Pridanie ďalších cien cez <a class=\"product-info-pouzivatel\" "
+"href=\"%(profile_url)s\" target=\"_blank\">profil</a>\n"
+"          "
+
+#: add_product_main/templates/polozka_pridanie.html:51
+msgid "Add transport"
+msgstr "Pridaj dopravu"
+
+#: add_product_main/templates/polozka_pridanie.html:56
+msgid "Adding other options of transport from global options:"
+msgstr "Pridanie ďalších možností dopravy z globálnych:"
+
+#: add_product_main/templates/polozka_pridanie.html:61
+msgid "Add availability"
+msgstr "Pridaj dostupnosť"
+
+#: add_product_main/templates/polozka_pridanie.html:65
+msgid "Availability start date"
+msgstr "Dátum začiatku dostupnosti"
+
+#: add_product_main/templates/polozka_pridanie.html:66
+msgid "Availability start (optional)"
+msgstr "Začiatok dostupnosti (voliteľné)"
+
+#: add_product_main/templates/polozka_pridanie.html:71
+msgid "Availability end date"
+msgstr "Dátum konca dostupnosti"
+
+#: add_product_main/templates/polozka_pridanie.html:72
+msgid "Availability end (optional)"
+msgstr "Koniec dostupnosti (voliteľné)"
+
+#: add_product_main/templates/polozka_pridanie.html:77
+msgid "Amount in the stock"
+msgstr "Množstvo na sklade"
+
+#: add_product_main/templates/polozka_pridanie.html:78
+msgid "Amount (optional)"
+msgstr "Množstvo (voliteľné)"
+
+#: add_product_main/templates/polozka_pridanie.html:83
+msgid "Available till out of stock?"
+msgstr "Dostupné až do vyčerpania zásob?"
+
+#: add_product_main/templates/polozka_pridanie.html:88
+msgid "Add item"
+msgstr "Pridanie položky"
+
+#: add_product_main/templates/polozka_zobrazenie.html:19
+msgid "Are you sure you want to delete the picture for"
+msgstr "Ste si istý, že chcete vymazať obrázok pre"
+
+#: add_product_main/templates/polozka_zobrazenie.html:24
+#: add_product_main/templates/polozka_zobrazenie.html:33
+msgid "Main Image"
+msgstr "Hlavný obrázok"
+
+#: add_product_main/templates/polozka_zobrazenie.html:59
+#, python-format
+msgid ""
+"\n"
+"      <p>Item owner: <a class=\"product-info-pouzivatel\" "
+"href=\"%(user_profile_link)s\">%(user_name)s</a></p>\n"
+"    "
+msgstr ""
+"\n"
+"    <p>Položka používateľa: <a class=\"product-info-pouzivatel\" "
+"href=\"%(user_profile_link)s\">%(user_name)s</a></p>\n"
+"    "
+
+#: add_product_main/templates/polozka_zobrazenie.html:93
+msgid "Info"
+msgstr "Informácie"
+
+#: add_product_main/templates/polozka_zobrazenie.html:96
+msgid "Pricing"
+msgstr "Cenník"
+
+#: add_product_main/templates/polozka_zobrazenie.html:99
+#: user_profile/templates/polozka_profile_view.html:65
+msgid "Transport"
+msgstr "Doprava"
+
+#: add_product_main/templates/polozka_zobrazenie.html:102
+#: user_profile/templates/user_profile.html:44
+msgid "Reviews"
+msgstr "Recenzie"
+
+#: add_product_main/templates/polozka_zobrazenie.html:109
+msgid "Pricing:"
+msgstr "Cenník:"
+
+#: add_product_main/templates/polozka_zobrazenie.html:116
+msgid "Transport options:"
+msgstr "Možnosti dopravy"
+
+#: add_product_main/templates/polozka_zobrazenie.html:122
+#, python-format
+msgid ""
+"\n"
+"        <h2 class=\"dopravax-h2\">Select delivery for the item: (<a "
+"href=\"%(doprava_link)s\" target=\"_blank\">add more delivery types</a>)</"
+"h2>\n"
+"      "
+msgstr ""
+"\n"
+"        <h2 class=\"dopravax-h2\">Vyberte dopravu pre položku: (<a "
+"href=\"%(doprava_link)s\" target=\"_blank\">pridajte ďalšie druhy dopravy</"
+"a>)</h2>\n"
+"      "
+
+#: add_product_main/templates/sidebar.html:33 templates/account/_links.html:4
+msgid "Home"
+msgstr "Domov"
+
+#: add_product_main/templates/sidebar.html:36
+#: chat_general/templates/general_chat.html:16
+#: env/lib/python3.7/site-packages/haystack/forms.py:24
+#: search/templates/search_header.html:7
+msgid "Search"
+msgstr "Hľadať"
+
+#: add_product_main/templates/sidebar.html:38
+msgid "Chat"
+msgstr "Chat"
+
+#: add_product_main/templates/sidebar.html:39
+msgid "My offers"
+msgstr "Moje ponuky"
+
+#: add_product_main/templates/sidebar.html:40
+msgid "My Transport"
+msgstr "Moja doprava"
+
+#: add_product_main/templates/sidebar.html:41
+msgid "My Settings"
+msgstr "Moje nastavenia"
+
+#: add_product_main/templates/sidebar.html:43
+msgid "Login for more"
+msgstr "Prihlásiť sa pre viac"
+
+#: add_product_main/templates/sidebar.html:64
+msgid "Change Language"
+msgstr "Zmeniť jazyk"
+
+#: chat_general/templates/chat_konkretny.html:9
+msgid "Chat Interface"
+msgstr "Chatovacie prostredie"
+
+#: chat_general/templates/general_chat.html:15
+msgid "Search usernames..."
+msgstr "Vyhľadať mená..."
+
+#: chat_general/templates/general_chat.html:21
+msgid "Your Chats"
+msgstr "Moje chaty"
+
+#: chat_general/templates/general_chat.html:41
+msgid "No chats found."
+msgstr "Nenájdené žiadne chaty"
+
+#: chat_general/templates/general_chat.html:52
+msgid "Chatting with: "
+msgstr "Chatovanie s:"
+
+#: chat_general/templates/general_chat_mobile.html:20
+msgid "Chat:"
+msgstr "Chat:"
+
+#: edit_profile/templates/settings_edit.html:21
+msgid " Profile Settings"
+msgstr " Profilové nastavenia"
+
+#: edit_profile/templates/settings_edit.html:28
+#: edit_profile/templates/settings_edit.html:51
+msgid " Profile Information"
+msgstr " Profilové informácie"
+
+#: edit_profile/templates/settings_edit.html:31
+msgid " Address"
+msgstr " Adresa"
+
+#: edit_profile/templates/settings_edit.html:34
+msgid " Email"
+msgstr " Email"
+
+#: edit_profile/templates/settings_edit.html:37
+msgid " Password"
+msgstr " Heslo"
+
+#: edit_profile/templates/settings_edit.html:40
+msgid " Account Actions"
+msgstr " Operácie s účtom"
+
+#: edit_profile/templates/settings_edit.html:52
+#: edit_profile/templates/settings_edit.html:107
+msgid "Save changes"
+msgstr "Uložiť zmeny"
+
+#: edit_profile/templates/settings_edit.html:55
+msgid "Username:"
+msgstr "Používateľské meno:"
+
+#: edit_profile/templates/settings_edit.html:58
+msgid "Current profile picture"
+msgstr "Aktuálny profilový obrázok"
+
+#: edit_profile/templates/settings_edit.html:66
+msgid "Profile Picture:"
+msgstr "Profilový obrázok"
+
+#: edit_profile/templates/settings_edit.html:69
+#: user_profile/templates/user_profile.html:99
+msgid "Website:"
+msgstr "Webstránka:"
+
+#: edit_profile/templates/settings_edit.html:70
+msgid "https://yourwebsite.com"
+msgstr "https://tvojastranka.sk"
+
+#: edit_profile/templates/settings_edit.html:72
+#: user_profile/templates/user_profile.html:103
+msgid "Social Media:"
+msgstr "Sociálne médiá:"
+
+#: edit_profile/templates/settings_edit.html:73
+msgid "https://twitter.com/yourhandle"
+msgstr "https://twitter.com/tvojprofil"
+
+#: edit_profile/templates/settings_edit.html:75
+msgid "Phone Number:"
+msgstr "Telefónne číslo"
+
+#: edit_profile/templates/settings_edit.html:76
+msgid "123-456-7890"
+msgstr "0951 555 111"
+
+#: edit_profile/templates/settings_edit.html:78
+#: user_profile/templates/user_profile.html:111
+msgid "Languages:"
+msgstr "Jazyky:"
+
+#: edit_profile/templates/settings_edit.html:79
+msgid "EN, etc..."
+msgstr "SK, atď..."
+
+#: edit_profile/templates/settings_edit.html:81
+#: user_profile/templates/user_profile.html:83
+msgid "Location:"
+msgstr "Sídlo:"
+
+#: edit_profile/templates/settings_edit.html:82
+msgid "City, Country"
+msgstr "Mesto, Štát"
+
+#: edit_profile/templates/settings_edit.html:84
+msgid "Bio:"
+msgstr "Biografia:"
+
+#: edit_profile/templates/settings_edit.html:85
+msgid "Tell something about yourself"
+msgstr "Povedzte nám niečo o sebe"
+
+#: edit_profile/templates/settings_edit.html:89
+msgid "Address"
+msgstr "Adresa"
+
+#: edit_profile/templates/settings_edit.html:92
+msgid "Street Address:"
+msgstr "Ulica"
+
+#: edit_profile/templates/settings_edit.html:93
+msgid "1234 Main St"
+msgstr "Nádražná 3"
+
+#: edit_profile/templates/settings_edit.html:95
+msgid "City:"
+msgstr "Mesto"
+
+#: edit_profile/templates/settings_edit.html:96
+msgid "Anytown"
+msgstr "Bratislava"
+
+#: edit_profile/templates/settings_edit.html:98
+msgid "State/Province:"
+msgstr "Kraj/Okres"
+
+#: edit_profile/templates/settings_edit.html:99
+msgid "State"
+msgstr "Štát"
+
+#: edit_profile/templates/settings_edit.html:101
+msgid "Zip/Postal Code:"
+msgstr "Zip kód"
+
+#: edit_profile/templates/settings_edit.html:102
+msgid "12345"
+msgstr "010 00"
+
+#: edit_profile/templates/settings_edit.html:104
+msgid "Country:"
+msgstr "Krajina:"
+
+#: edit_profile/templates/settings_edit.html:105
+msgid "Country"
+msgstr "Krajina"
+
+#: edit_profile/templates/settings_edit.html:121
+msgid "Email"
+msgstr "Email"
+
+#: edit_profile/templates/settings_edit.html:122
+msgid "Email settings"
+msgstr "Emailové nastavenia"
+
+#: edit_profile/templates/settings_edit.html:126
+msgid "Password"
+msgstr "Heslo"
+
+#: edit_profile/templates/settings_edit.html:127
+msgid "Change password"
+msgstr "Zmeniť heslo"
+
+#: edit_profile/templates/settings_edit.html:131
+msgid "Account Actions"
+msgstr "Akcie účtu"
+
+#: edit_profile/templates/settings_edit.html:132
+msgid ""
+"Are you sure you want to delete your account? This action cannot be undone."
+msgstr "Ste si istý, že chcete vymazať svoj účet? Táto akcia je nevratná."
+
+#: edit_profile/templates/settings_edit.html:133
+msgid "Confirm Delete"
+msgstr "Potvrdiť zmazanie"
+
+#: env/lib/python3.7/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr "Správy"
+
+#: env/lib/python3.7/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr "Mapy stránok"
+
+#: env/lib/python3.7/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr "Syndikácia"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: env/lib/python3.7/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: env/lib/python3.7/site-packages/django/core/paginator.py:51
+msgid "That page number is not an integer"
+msgstr "Toto číslo strany nie je celé číslo"
+
+#: env/lib/python3.7/site-packages/django/core/paginator.py:53
+msgid "That page number is less than 1"
+msgstr "Toto číslo strany je menšie ako 1"
+
+#: env/lib/python3.7/site-packages/django/core/paginator.py:58
+msgid "That page contains no results"
+msgstr "Táto strana neobsahuje žiadne výsledky"
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr "Zadajte platnú hodnotu."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:93
+#: env/lib/python3.7/site-packages/django/forms/fields.py:678
+msgid "Enter a valid URL."
+msgstr "Zadajte platnú URL."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:151
+msgid "Enter a valid integer."
+msgstr "Zadajte platné celé číslo."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:162
+msgid "Enter a valid email address."
+msgstr "Zadajte platnú emailovú adresu."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: env/lib/python3.7/site-packages/django/core/validators.py:265
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Zadajte platný „slug“, ktorý sa skladá z písmen, čísel, podčiarovníkov alebo "
+"pomlčiek."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:272
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"Zadajte platný „slug“, ktorý sa skladá z písmen Unicode, čísel, "
+"podčiarovníkov alebo pomlčiek."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:281
+#: env/lib/python3.7/site-packages/django/core/validators.py:291
+#: env/lib/python3.7/site-packages/django/core/validators.py:314
+msgid "Enter a valid IPv4 address."
+msgstr "Zadajte platnú IPv4 adresu."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:299
+#: env/lib/python3.7/site-packages/django/core/validators.py:315
+msgid "Enter a valid IPv6 address."
+msgstr "Zadajte platnú IPv6 adresu."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:309
+#: env/lib/python3.7/site-packages/django/core/validators.py:313
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr "Zadajte platnú IPv4 alebo IPv6 adresu."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:343
+msgid "Enter only digits separated by commas."
+msgstr "Zadajte iba číslice oddelené čiarkami."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:349
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "Uistite sa, že táto hodnota je %(limit_value)s (je %(show_value)s)."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:382
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Uistite sa, že táto hodnota je menšia alebo rovná %(limit_value)s."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:391
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Uistite sa, že táto hodnota je väčšia alebo rovná %(limit_value)s."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:401
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:416
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:435
+#: env/lib/python3.7/site-packages/django/forms/fields.py:292
+#: env/lib/python3.7/site-packages/django/forms/fields.py:327
+msgid "Enter a number."
+msgstr "Zadajte číslo."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:437
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:442
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:447
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:509
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"Prípona súboru „%(extension)s“ nie je povolená. Povolené prípony sú: "
+"%(allowed_extensions)s."
+
+#: env/lib/python3.7/site-packages/django/core/validators.py:562
+msgid "Null characters are not allowed."
+msgstr "Nulové znaky nie sú povolené."
+
+#: env/lib/python3.7/site-packages/django/db/models/base.py:1210
+#: env/lib/python3.7/site-packages/django/forms/models.py:768
+msgid "and"
+msgstr "a"
+
+#: env/lib/python3.7/site-packages/django/db/models/base.py:1212
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s s týmto %(field_labels)s už existuje."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:100
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "Hodnota %(value)r nie je platnou voľbou."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:101
+msgid "This field cannot be null."
+msgstr "Toto pole nemôže byť prázdne."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:102
+msgid "This field cannot be blank."
+msgstr "Toto pole nemôže byť prázdne."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:103
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s s týmto %(field_label)s už existuje."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s musí byť jedinečné pre %(date_field_label)s %(lookup_type)s."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:126
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Pole typu: %(field_type)s"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:958
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "Hodnota „%(value)s“ musí byť buď True alebo False."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:959
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "Hodnota „%(value)s“ musí byť buď True, False alebo None."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:961
+msgid "Boolean (Either True or False)"
+msgstr "Booleovská hodnota (Buď True alebo False)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1002
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Reťazec (do %(max_length)s znakov)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1096
+msgid "Comma-separated integers"
+msgstr "Čísla oddelené čiarkou"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1145
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"Hodnota „%(value)s“ má neplatný formát dátumu. Musí byť vo formáte YYYY-MM-"
+"DD."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1147
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1290
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"Hodnota „%(value)s“ má správny formát (YYYY-MM-DD), ale je neplatným dátumom."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1150
+msgid "Date (without time)"
+msgstr "Dátum (bez času)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1288
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+"Hodnota „%(value)s“ má neplatný formát. Musí byť vo formáte YYYY-MM-DD HH:"
+"MM[:ss[.uuuuuu]][TZ]."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1292
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+"Hodnota „%(value)s“ má správny formát (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]), "
+"ale je neplatným dátumom/časom."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1296
+msgid "Date (with time)"
+msgstr "Dátum (s časom)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1444
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "Hodnota „%(value)s“ musí byť desatinné číslo."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1446
+msgid "Decimal number"
+msgstr "Desatinné číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1585
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+"Hodnota „%(value)s“ má neplatný formát. Musí byť vo formáte [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1588
+msgid "Duration"
+msgstr "Trvanie"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1638
+msgid "Email address"
+msgstr "Emailová adresa"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1661
+msgid "File path"
+msgstr "Cesta k súboru"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1727
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "Hodnota „%(value)s“ musí byť desatinné číslo."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1729
+msgid "Floating point number"
+msgstr "Desatinné číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1767
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "Hodnota „%(value)s“ musí byť celé číslo."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1769
+msgid "Integer"
+msgstr "Celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1852
+msgid "Big (8 byte) integer"
+msgstr "Veľké (8 bajtové) celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1867
+msgid "Small integer"
+msgstr "Malé celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1875
+msgid "IPv4 address"
+msgstr "IPv4 adresa"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1906
+msgid "IP address"
+msgstr "IP adresa"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1986
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1987
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "Hodnota „%(value)s“ musí byť buď None, True alebo False."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1989
+msgid "Boolean (Either True, False or None)"
+msgstr "Booleovská hodnota (Buď True, False alebo None)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2043
+msgid "Positive big integer"
+msgstr "Kladné veľké celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2056
+msgid "Positive integer"
+msgstr "Kladné celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2069
+msgid "Positive small integer"
+msgstr "Kladné malé celé číslo"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2083
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (do %(max_length)s znakov)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2115
+msgid "Text"
+msgstr "Text"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2181
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"Hodnota „%(value)s“ má neplatný formát. Musí byť vo formáte HH:MM[:ss[."
+"uuuuuu]]."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2183
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"Hodnota „%(value)s“ má správny formát (HH:MM[:ss[.uuuuuu]]), ale je "
+"neplatným časom."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2186
+#: env/lib/python3.7/site-packages/haystack/templates/panels/haystack.html:8
+msgid "Time"
+msgstr "Čas"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2312
+msgid "URL"
+msgstr "URL adresa"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2334
+msgid "Raw binary data"
+msgstr "Surový binárny dátový súbor"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2399
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "Hodnota „%(value)s“ nie je platný UUID."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2401
+msgid "Universally unique identifier"
+msgstr "Univerzálne jedinečný identifikátor"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/files.py:226
+msgid "File"
+msgstr "Súbor"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/files.py:375
+msgid "Image"
+msgstr "Obrázok"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/json.py:18
+msgid "A JSON object"
+msgstr "JSON objekt"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/json.py:20
+msgid "Value must be valid JSON."
+msgstr "Hodnota musí byť platný JSON."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:790
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "Inštancia %(model)s s %(field)s %(value)r neexistuje."
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:792
+msgid "Foreign Key (type determined by related field)"
+msgstr "Foreign Key (typ určený príslušným poľom)"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:1045
+msgid "One-to-one relationship"
+msgstr "Vzťah jeden-ku-jednému"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:1099
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "Vzťah %(from)s-%(to)s"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:1100
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "Vzťahy %(from)s-%(to)s"
+
+#: env/lib/python3.7/site-packages/django/db/models/fields/related.py:1142
+msgid "Many-to-many relationship"
+msgstr "Vzťah viacerých-ku-viacerým"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: env/lib/python3.7/site-packages/django/forms/boundfield.py:150
+msgid ":?.!"
+msgstr ":?.!"
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:54
+msgid "This field is required."
+msgstr "Toto pole je povinné."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:247
+msgid "Enter a whole number."
+msgstr "Zadajte celé číslo."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:402
+#: env/lib/python3.7/site-packages/django/forms/fields.py:1146
+msgid "Enter a valid date."
+msgstr "Zadajte platný dátum."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:426
+#: env/lib/python3.7/site-packages/django/forms/fields.py:1147
+msgid "Enter a valid time."
+msgstr "Zadajte platný čas."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:454
+msgid "Enter a valid date/time."
+msgstr "Zadajte platný dátum/čas."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:488
+msgid "Enter a valid duration."
+msgstr "Zadajte platnú trvanie."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:489
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "Počet dní musí byť medzi {min_days} a {max_days}."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:552
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "Žiadny súbor nebol odoslaný. Skontrolujte kódovanie formulára."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:553
+msgid "No file was submitted."
+msgstr "Žiadny súbor nebol odoslaný."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:554
+msgid "The submitted file is empty."
+msgstr "Odoslaný súbor je prázdny."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:556
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Uistite sa, že názov súboru má najviac %(max)d znak (obsahuje %(length)d)."
+msgstr[1] ""
+"Uistite sa, že názov súboru má najviac %(max)d znakov (obsahuje %(length)d)."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:559
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+"Prosím, buďte taký dobrý a buďte odoslať súbor alebo zaškrtnite "
+"začiarkavacie políčko „clear“, ale nie oboje."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:620
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Nahrajte platný obrázok. Súbor, ktorý ste nahrali, buď nie je obrázok alebo "
+"je poškodený."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:782
+#: env/lib/python3.7/site-packages/django/forms/fields.py:872
+#: env/lib/python3.7/site-packages/django/forms/models.py:1309
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Vyberte platný výber. %(value)s nie je medzi dostupnými možnosťami."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:873
+#: env/lib/python3.7/site-packages/django/forms/fields.py:988
+#: env/lib/python3.7/site-packages/django/forms/models.py:1308
+msgid "Enter a list of values."
+msgstr "Zadajte zoznam hodnôt."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:989
+msgid "Enter a complete value."
+msgstr "Zadajte úplnú hodnotu."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:1205
+msgid "Enter a valid UUID."
+msgstr "Zadajte platné UUID."
+
+#: env/lib/python3.7/site-packages/django/forms/fields.py:1235
+msgid "Enter a valid JSON."
+msgstr "Zadajte platný JSON."
+
+#. Translators: This is the default suffix added to form field labels
+#: env/lib/python3.7/site-packages/django/forms/forms.py:76
+msgid ":"
+msgstr ":"
+
+#: env/lib/python3.7/site-packages/django/forms/forms.py:203
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Skryté pole %(name)s) %(error)s"
+
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"Chýbajú údaje ManagementForm alebo boli narušené. Chýbajúce polia: "
+"%(field_names)s. Ak sa problém nevyrieši, môžete podať správu o chybe."
+
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:370
+#, python-format
+msgid "Please submit at most %d form."
+msgid_plural "Please submit at most %d forms."
+msgstr[0] "Odošlite najviac %d formulár."
+msgstr[1] "Odošlite najviac %d formulárov."
+
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:377
+#, python-format
+msgid "Please submit at least %d form."
+msgid_plural "Please submit at least %d forms."
+msgstr[0] "Odošlite aspoň %d formulár."
+msgstr[1] "Odošlite aspoň %d formulárov."
+
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:405
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:412
+msgid "Order"
+msgstr "Poradie"
+
+#: env/lib/python3.7/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr "Vymazať"
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:763
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "Opravte prosím duplicitné údaje pre %(field)s."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:767
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+"Opravte prosím duplicitné údaje pre %(field)s, ktoré musia byť jedinečné."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:773
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Opravte prosím duplicitné údaje pre %(field_name)s, ktoré musia byť "
+"jedinečné pre %(lookup)s v %(date_field)s."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:782
+msgid "Please correct the duplicate values below."
+msgstr "Opravte prosím nižšie uvedené duplicitné hodnoty."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:1109
+msgid "The inline value did not match the parent instance."
+msgstr "Hodnota inline nezodpovedala nadradenej inštancii."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:1193
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Vyberte platnú voľbu. Táto voľba nie je medzi dostupnými možnosťami."
+
+#: env/lib/python3.7/site-packages/django/forms/models.py:1311
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "„%(pk)s“ nie je platnou hodnotou."
+
+#: env/lib/python3.7/site-packages/django/forms/utils.py:172
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s sa nedalo interpretovať v časovej zóne %(current_timezone)s; "
+"môže to byť nejednoznačné alebo neexistovať."
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:427
+msgid "Clear"
+msgstr "Zmazať"
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:428
+msgid "Currently"
+msgstr "Momentálne"
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:429
+msgid "Change"
+msgstr "Zmeniť"
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:738
+msgid "Unknown"
+msgstr "Neznáme"
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:739
+msgid "Yes"
+msgstr "Áno"
+
+#: env/lib/python3.7/site-packages/django/forms/widgets.py:740
+msgid "No"
+msgstr "Nie"
+
+#. Translators: Please do not add spaces around commas.
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:817
+msgid "yes,no,maybe"
+msgstr "áno, nie, možno"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:846
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:863
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d bajt"
+msgstr[1] "%(size)d bajty"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:865
+#, python-format
+msgid "%s KB"
+msgstr "%s kB"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:867
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:869
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:871
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: env/lib/python3.7/site-packages/django/template/defaultfilters.py:873
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:66
+msgid "p.m."
+msgstr "pm"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:67
+msgid "a.m."
+msgstr "am"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:72
+msgid "PM"
+msgstr "PM"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:73
+msgid "AM"
+msgstr "AM"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:146
+msgid "midnight"
+msgstr "polnoc"
+
+#: env/lib/python3.7/site-packages/django/utils/dateformat.py:148
+msgid "noon"
+msgstr "poludnie"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr "pondelok"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr "utorok"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr "streda"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr "štvrtok"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr "piatok"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr "sobota"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr "nedeľa"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr "po"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr "ut"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr "st"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr "št"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr "pi"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr "so"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr "ne"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "January"
+msgstr "január"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "February"
+msgstr "február"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "March"
+msgstr "marec"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "April"
+msgstr "apríl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "May"
+msgstr "máj"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:14
+msgid "June"
+msgstr "jún"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:15
+msgid "July"
+msgstr "júl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:15
+msgid "August"
+msgstr "august"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:15
+msgid "September"
+msgstr "september"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:15
+msgid "October"
+msgstr "október"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:15
+msgid "November"
+msgstr "november"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:16
+msgid "December"
+msgstr "december"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "jan"
+msgstr "jan"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "feb"
+msgstr "feb"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "mar"
+msgstr "mar"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "apr"
+msgstr "apr"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "may"
+msgstr "máj"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:19
+msgid "jun"
+msgstr "jún"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "jul"
+msgstr "júl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "aug"
+msgstr "aug"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "sep"
+msgstr "sep"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "oct"
+msgstr "okt"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "nov"
+msgstr "nov"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:20
+msgid "dec"
+msgstr "dec"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "jan."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "feb."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "marec"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "apríl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "máj"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "jún"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "júl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "aug."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "sept."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "okt."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "nov."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "dec."
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr "Január"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr "Február"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr "Marec"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr "Apríl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr "Máj"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr "Jún"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr "Júl"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr "August"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr "September"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr "Október"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr "November"
+
+#: env/lib/python3.7/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr "December"
+
+#: env/lib/python3.7/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr "Toto nie je platná IPv6 adresa."
+
+#: env/lib/python3.7/site-packages/django/utils/text.py:71
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s…"
+
+#: env/lib/python3.7/site-packages/django/utils/text.py:240
+msgid "or"
+msgstr "alebo"
+
+#. Translators: This string is used as a separator between list elements
+#: env/lib/python3.7/site-packages/django/utils/text.py:259
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:94
+msgid ", "
+msgstr ", "
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d rok"
+msgstr[1] "%d roky"
+msgstr[2] "%d rokov"
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mesiac"
+msgstr[1] "%d mesiace"
+msgstr[2] "%d mesiacov"
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d týždeň"
+msgstr[1] "%d týždne"
+msgstr[2] "%d týždňov"
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d deň"
+msgstr[1] "%d dni"
+msgstr[2] "%d dní"
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hodina"
+msgstr[1] "%d hodiny"
+msgstr[2] "%d hodín"
+
+#: env/lib/python3.7/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minúta"
+msgstr[1] "%d minúty"
+msgstr[2] "%d minút"
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:110
+msgid "Forbidden"
+msgstr "Zakázané"
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr "Overenie CSRF zlyhalo. Požiadavka bola zrušená."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Túto správu vidíte, pretože táto HTTPS stránka vyžaduje od vášho webového "
+"prehliadača zaslanie „Referer hlavičky“, ale nebol zaslaný žiadny. Táto "
+"hlavička je potrebná z bezpečnostných dôvodov, aby sa zabezpečilo, že váš "
+"prehliadač nie je zneužívaný tretími stranami."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:120
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"Ak ste nastavili váš prehliadač tak, aby zablokoval „Referer“ hlavičky, "
+"prosím znovu ich povolte, aspoň pre túto stránku alebo pre HTTPS pripojenia "
+"alebo pre „same-origin“ požiadavky."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"Ak používate značku <meta name=\"referrer\" content=\"no-referrer\"> alebo "
+"zahrnutie hlavičky „Referrer-Policy: no-referrer“, prosím odstráňte ich. "
+"Ochrana CSRF vyžaduje „Referer“ hlavičku na striktné overenie referera. Ak "
+"sa obávate o svoju súkromnosť, použite alternatívy ako <a rel=\"noreferrer\" "
+"…> pre odkazy na tretie strany."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Túto správu vidíte, pretože táto stránka vyžaduje CSRF cookie pri odosielaní "
+"formulárov. Tento cookie je potrebný z bezpečnostných dôvodov, aby sa "
+"zabezpečilo, že váš prehliadač nie je zneužívaný tretími stranami."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"Ak ste nastavili váš prehliadač tak, aby blokoval cookies, prosím znovu ich "
+"povolte, aspoň pre túto stránku alebo pre požiadavky „same-origin“."
+
+#: env/lib/python3.7/site-packages/django/views/csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr "Viac informácií je dostupných s DEBUG=True."
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:41
+msgid "No year specified"
+msgstr "Nezadaný rok"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:61
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:111
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:208
+msgid "Date out of range"
+msgstr "Dátum mimo rozsah"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:90
+msgid "No month specified"
+msgstr "Nezadaný mesiac"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:142
+msgid "No day specified"
+msgstr "Nezadaný deň"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:188
+msgid "No week specified"
+msgstr "Nezadaný týždeň"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:338
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "Žiadne dostupné %(verbose_name_plural)s"
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:594
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+"Budúcnosť %(verbose_name_plural)s nie je dostupná, pretože %(class_name)s."
+"allow_future je False."
+
+#: env/lib/python3.7/site-packages/django/views/generic/dates.py:628
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr "Neplatný reťazec dátumu „%(datestr)s“ v danom formáte „%(format)s“"
+
+#: env/lib/python3.7/site-packages/django/views/generic/detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "Nebol nájdený žiadny %(verbose_name)s vyhovujúci dotazu"
+
+#: env/lib/python3.7/site-packages/django/views/generic/list.py:67
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "Stránka nie je „posledná“, ani ju nie je možné premeniť na celé číslo."
+
+#: env/lib/python3.7/site-packages/django/views/generic/list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "Neplatná stránka (%(page_number)s): %(message)s"
+
+#: env/lib/python3.7/site-packages/django/views/generic/list.py:154
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "Zoznam je prázdny a „%(class_name)s.allow_empty“ je False."
+
+#: env/lib/python3.7/site-packages/django/views/static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr "Adresárové indexy nie sú povolené tu."
+
+#: env/lib/python3.7/site-packages/django/views/static.py:42
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "„%(path)s“ neexistuje"
+
+#: env/lib/python3.7/site-packages/django/views/static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Index adresára %(directory)s"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:7
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr "Inštalácia bola úspešná! Gratulujeme!"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"Pozrite si <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/"
+"\" target=\"_blank\" rel=\"noopener\">poznámky k verzii</a> pre Django "
+"%(version)s"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"Túto stránku vidíte, pretože v súbore s nastaveniami máte nastavenú hodnotu "
+"<a href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/"
+"#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> a nekonfigurovali "
+"ste žiadne URL."
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:230
+msgid "Django Documentation"
+msgstr "Django Dokumentácia"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr "Témy, odkazy a návody"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr "Návod: Anketová aplikácia"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:240
+msgid "Get started with Django"
+msgstr "Začnite s Django"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:248
+msgid "Django Community"
+msgstr "Django Komunita"
+
+#: env/lib/python3.7/site-packages/django/views/templates/default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr "Pripojte sa, získajte pomoc alebo prispievajte"
+
+#: env/lib/python3.7/site-packages/haystack/admin.py:120
+#, python-format
+msgid "0 of %(count)d selected"
+msgid_plural "of %(count)d selected"
+msgstr[0] "0 z %(count)d vybraných"
+msgstr[1] "0 z %(count)d vybraných"
+msgstr[2] "0 z %(count)d vybraných"
+
+#: env/lib/python3.7/site-packages/haystack/admin.py:125
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] "%(total_count)s vybraný"
+msgstr[1] "Všetky %(total_count)s vybrané"
+msgstr[2] "Všetky %(total_count)s vybrané"
+
+#: env/lib/python3.7/site-packages/haystack/forms.py:102
+msgid "Search In"
+msgstr "Hľadať v"
+
+#: env/lib/python3.7/site-packages/haystack/panels.py:28
+msgid "Haystack"
+msgstr "Seník"
+
+#: env/lib/python3.7/site-packages/haystack/panels.py:52
+msgid "Search Queries"
+msgstr "Hľadané Dotazy"
+
+#: env/lib/python3.7/site-packages/haystack/templates/panels/haystack.html:5
+msgid "Query"
+msgstr "Dopyt"
+
+#: env/lib/python3.7/site-packages/haystack/templates/panels/haystack.html:6
+msgid "Backend Alias"
+msgstr "Alias Pozadia"
+
+#: env/lib/python3.7/site-packages/haystack/templates/panels/haystack.html:7
+msgid "Timeline"
+msgstr "Časová Os"
+
+#: env/lib/python3.7/site-packages/haystack/templates/panels/haystack.html:9
+msgid "Kwargs"
+msgstr "Kwargs"
+
+#: login_app/models.py:32
+msgid "website"
+msgstr "webová stránka"
+
+#: login_app/models.py:33
+msgid "social media"
+msgstr "sociálne médiá"
+
+#: login_app/models.py:34
+msgid "phone number"
+msgstr "telefónne číslo"
+
+#: login_app/models.py:35
+msgid "languages"
+msgstr "jazyky"
+
+#: login_app/models.py:36
+msgid "location"
+msgstr "umiestnenie"
+
+#: login_app/models.py:37
+msgid "bio"
+msgstr "životopis"
+
+#: login_app/models.py:40
+msgid "street-address"
+msgstr "ulica"
+
+#: login_app/models.py:41
+msgid "city"
+msgstr "mesto"
+
+#: login_app/models.py:42
+msgid "state"
+msgstr "štát"
+
+#: login_app/models.py:43
+msgid "zipcode"
+msgstr "PSČ"
+
+#: login_app/models.py:44
+msgid "country"
+msgstr "krajina"
+
+#: login_app/models.py:51 login_project/settings.py:87
+msgid "Slovak"
+msgstr "Slovenčina"
+
+#: login_app/models.py:52 login_project/settings.py:89
+msgid "English"
+msgstr "Angličtina"
+
+#: login_app/models.py:53 login_project/settings.py:88
+msgid "Czech"
+msgstr "Čeština"
+
+#: login_app/models.py:55
+msgid "preferred language"
+msgstr ""
+
+#: search/templates/footer_content.html:7
+msgid "About"
+msgstr "O nás"
+
+#: search/templates/footer_content.html:8
+msgid "Company"
+msgstr "Spoločnosť"
+
+#: search/templates/footer_content.html:9
+msgid "Careers"
+msgstr "Kariéra"
+
+#: search/templates/footer_content.html:10
+msgid "News &amp; events"
+msgstr "Novinky a udalosti"
+
+#: search/templates/footer_content.html:11
+msgid "Investor relations"
+msgstr "Investorské vzťahy"
+
+#: search/templates/footer_content.html:12
+msgid "Manufacturing"
+msgstr "Výroba"
+
+#: search/templates/footer_content.html:13
+msgid "Corporate citizenship"
+msgstr "Firemná občianskosť"
+
+#: search/templates/footer_content.html:19
+msgid "Current Stats"
+msgstr "Momentálne štatistiky"
+
+#: search/templates/footer_content.html:20
+#, python-format
+msgid "Total registered users: %(total_users)s"
+msgstr "Celkový počet registrovaných používateľov: %(total_users)s"
+
+#: search/templates/footer_content.html:25
+msgid "Legal"
+msgstr "Právne informácie"
+
+#: search/templates/footer_content.html:26
+msgid "Ordering resources"
+msgstr "Zdroje pre objednávku"
+
+#: search/templates/footer_content.html:27
+msgid "TI API suite"
+msgstr "TI sada API"
+
+#: search/templates/footer_content.html:28
+msgid "Ordering help &amp; FAQs"
+msgstr "Pomoc pri objednávke a Často kladené otázky"
+
+#: search/templates/footer_content.html:29
+msgid "Cross-reference search"
+msgstr "Vyhľadávanie krížových odkazov"
+
+#: search/templates/footer_content.html:30
+msgid "Authorized distributors"
+msgstr "Autorizovaní distribútori"
+
+#: search/templates/footer_content.html:32
+msgid "Privacy policy"
+msgstr "Zásady ochrany osobných údajov"
+
+#: search/templates/footer_content.html:36
+msgid "Follow Us"
+msgstr "Sledujte nás"
+
+#: search/templates/footer_content.html:38
+msgid "Twitter Icon"
+msgstr "Ikona Twitteru"
+
+#: search/templates/footer_content.html:39
+msgid "Facebook Icon"
+msgstr "Ikona Facebooku"
+
+#: search/templates/footer_content.html:40
+msgid "Instagram Icon"
+msgstr "Ikona Instagramu"
+
+#: search/templates/pagination.html:10 search/templates/pagination.html:13
+msgid "First"
+msgstr "Prvá"
+
+#: search/templates/pagination.html:11 search/templates/pagination.html:14
+msgid "Previous"
+msgstr "Predchádzajúca"
+
+#: search/templates/pagination.html:32 search/templates/pagination.html:35
+msgid "Next"
+msgstr "Ďalšia"
+
+#: search/templates/pagination.html:33 search/templates/pagination.html:36
+msgid "Last"
+msgstr "Posledná"
+
+#: search/templates/pagination.html:45
+msgid "Items per page:"
+msgstr "Položiek na stranu:"
+
+#: search/templates/search_header.html:6
+msgid "Search.."
+msgstr "Hľadať.."
+
+#: search/templates/search_header.html:8
+msgid "Options"
+msgstr "Viac"
+
+#: templates/account/_button.html:28
+msgid "Button clicked"
+msgstr "Tlačidlo stlačené"
+
+#: templates/account/_links.html:6
+msgid "Log In"
+msgstr "Prihlásenie"
+
+#: templates/account/account_inactive.html:5
+#: templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "Neaktívny Účet"
+
+#: templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "Tento účet je neaktívny."
+
+#: templates/account/email.html:7 templates/account/email.html:16
+msgid "Email Addresses"
+msgstr "Emailové Adresy"
+
+#: templates/account/email.html:19
+msgid "The following email addresses are associated with your account:"
+msgstr "Nasledujúce emailové adresy sú spojené s vaším účtom:"
+
+#: templates/account/email.html:31
+msgid "Verified"
+msgstr "Overený"
+
+#: templates/account/email.html:31
+msgid "Unverified"
+msgstr "Neoverený"
+
+#: templates/account/email.html:33
+msgid "Primary"
+msgstr "Hlavný"
+
+#: templates/account/email.html:40
+msgid "Make Primary"
+msgstr "Nastaviť ako Hlavný"
+
+#: templates/account/email.html:41 templates/account/email_change.html:23
+msgid "Re-send Verification"
+msgstr "Znovu odoslať overenie"
+
+#: templates/account/email.html:42
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: templates/account/email.html:50
+msgid "Add Email Address"
+msgstr "Pridať Emailovú Adresu"
+
+#: templates/account/email.html:67
+msgid "Add Email"
+msgstr "Pridať Email"
+
+#: templates/account/email.html:75
+msgid "Do you really want to remove the selected email address?"
+msgstr "Naozaj chcete odstrániť vybranú emailovú adresu?"
+
+#: templates/account/email/account_already_exists_message.txt:4
+#, python-format
+msgid ""
+"You are receiving this email because you or someone else tried to signup for "
+"an\n"
+"account using email address:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"However, an account using that email address already exists.  In case you "
+"have\n"
+"forgotten about this, please use the password forgotten procedure to "
+"recover\n"
+"your account:\n"
+"\n"
+"%(password_reset_url)s"
+msgstr ""
+"Dostali ste tento email, pretože vy alebo niekto iný sa pokúsil registrovať "
+"účet\n"
+"s použitím tejto emailovej adresy:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"Avšak účet s touto emailovou adresou už existuje. Ak ste na toto zabudli,\n"
+"prosím, použite postup pre obnovu zabudnutého hesla na obnovenie\n"
+"vášho účtu:\n"
+"\n"
+"%(password_reset_url)s"
+
+#: templates/account/email/account_already_exists_subject.txt:3
+msgid "Account Already Exists"
+msgstr "Účet Už Existuje"
+
+#: templates/account/email/base_message.txt:1
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr "Ahojte od %(site_name)s!"
+
+#: templates/account/email/base_message.txt:5
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+"Ďakujeme vám za používanie %(site_name)s!\n"
+"%(site_domain)s"
+
+#: templates/account/email/email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"You're receiving this email because user %(user_display)s has given your "
+"email address to register an account on %(site_domain)s.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+"Dostávate tento e-mail, pretože používateľ %(user_display)s dal vašu "
+"emailovú adresu na registráciu účtu na %(site_domain)s.\n"
+"\n"
+"Pre potvrdenie tohto faktu prejdite na %(activate_url)s"
+
+#: templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your Email Address"
+msgstr "Prosím, potvrďte svoju emailovú adresu"
+
+#: templates/account/email/password_reset_key_message.txt:4
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password reset for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"Dostávate tento e-mail, pretože vy alebo niekto iný požiadal o obnovenie "
+"hesla pre váš používateľský účet.\n"
+"Môžete ho bezpečne ignorovať, ak ste nežiadali o obnovenie hesla. Kliknite "
+"na nasledujúci odkaz pre obnovenie hesla."
+
+#: templates/account/email/password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr "V prípade, že ste zabudli, vaše používateľské meno je %(username)s."
+
+#: templates/account/email/password_reset_key_subject.txt:3
+#: templates/account/email/unknown_account_subject.txt:3
+msgid "Password Reset Email"
+msgstr "E-mail pre obnovenie hesla"
+
+#: templates/account/email/unknown_account_message.txt:4
+#, python-format
+msgid ""
+"You are receiving this email because you or someone else has requested a\n"
+"password for your user account. However, we do not have any record of a "
+"user\n"
+"with email %(email)s in our database.\n"
+"\n"
+"This mail can be safely ignored if you did not request a password reset.\n"
+"\n"
+"If it was you, you can sign up for an account using the link below."
+msgstr ""
+"Dostávate tento e-mail, pretože vy alebo niekto iný požiadal o obnovenie\n"
+"hesla pre váš používateľský účet. Avšak, nemáme žiadne záznamy o "
+"používateľovi\n"
+"s emailom %(email)s v našej databáze.\n"
+"\n"
+"Tento e-mail môžete bezpečne ignorovať, ak ste nežiadali o obnovenie hesla.\n"
+"\n"
+"Ak ste to boli vy, môžete sa zaregistrovať na účet pomocou nasledujúceho "
+"odkazu."
+
+#: templates/account/email_change.html:5 templates/account/email_change.html:9
+msgid "Email Address"
+msgstr "Emailová Adresa"
+
+#: templates/account/email_change.html:13
+msgid "The following email address is associated with your account:"
+msgstr "S nasledujúcou emailovou adresou je spojený váš účet:"
+
+#: templates/account/email_change.html:18
+msgid "Your email address is still pending verification:"
+msgstr "Vaša emailová adresa ešte stále čaká na overenie:"
+
+#: templates/account/email_change.html:29
+msgid "Change Email Address"
+msgstr "Zmeniť Emailovú Adresu"
+
+#: templates/account/email_change.html:33
+msgid "Change Email"
+msgstr "Zmeniť Email"
+
+#: templates/account/email_confirm.html:6
+#: templates/account/email_confirm.html:9
+msgid "Confirm E-mail Address"
+msgstr "Potvrďte Emailovú Adresu"
+
+#: templates/account/email_confirm.html:12
+#, python-format
+msgid ""
+"\n"
+"  Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s.\n"
+"  "
+msgstr ""
+"\n"
+"  Potvrďte, prosím, že <a href=\"mailto:%(email)s\">%(email)s</a> je "
+"emailová adresa pre používateľa %(user_display)s.\n"
+"  "
+
+#: templates/account/email_confirm.html:22
+#, python-format
+msgid ""
+"\n"
+"  This e-mail confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new e-mail confirmation request.</a>\n"
+"  "
+msgstr ""
+"\n"
+"  Tento odkaz na potvrdenie e-mailu vypršal alebo je neplatný. Prosím, <a "
+"href=\"%(email_url)s\">vydajte novú požiadavku na potvrdenie e-mailu.</a>\n"
+"  "
+
+#: templates/account/login.html:8 templates/account/login.html:12
+msgid "Sign in"
+msgstr "Prihlásenie"
+
+#: templates/account/login.html:40
+msgid "Forgot Password"
+msgstr "Zabudnuté heslo"
+
+#: templates/account/login.html:42 templates/socialaccount/signup.html:5
+#: templates/socialaccount/signup.html:8
+msgid "Sign Up"
+msgstr "Registrácia"
+
+#: templates/account/login.html:53
+msgid "OR"
+msgstr "ALEBO"
+
+#: templates/account/login.html:57
+msgid "Sign in with a third party"
+msgstr "Prihlásenie sa pomocou tretej strany"
+
+#: templates/account/logout.html:4
+msgid "Sign out"
+msgstr "Odhlásenie"
+
+#: templates/account/logout.html:9
+msgid "Are you sure you want to sign out?"
+msgstr "Ste si istý, že sa chcete odhlásiť?"
+
+#: templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary email address (%(email)s)."
+msgstr "Nemôžete odstrániť svoju hlavnú emailovú adresu (%(email)s)."
+
+#: templates/account/messages/email_confirmation_failed.txt:2
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr "Nemožno potvrdiť %(email)s, pretože už je potvrdený iným účtom."
+
+#: templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation email sent to %(email)s."
+msgstr "Potvrdenie e-mailu odoslané na %(email)s."
+
+#: templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr "Potvrdili ste %(email)s."
+
+#: templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed email address %(email)s."
+msgstr "Odstránená emailová adresa %(email)s."
+
+#: templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr "Úspešne ste sa prihlásili ako %(name)s."
+
+#: templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr "Odhlásili ste sa."
+
+#: templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "Heslo úspešne zmenené."
+
+#: templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "Heslo úspešne nastavené."
+
+#: templates/account/messages/primary_email_set.txt:2
+msgid "Primary email address set."
+msgstr "Hlavná emailová adresa nastavená."
+
+#: templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary email address must be verified."
+msgstr "Vaša hlavná emailová adresa musí byť overená."
+
+#: templates/account/password_change.html:7
+#: templates/account/password_change.html:15
+#: templates/account/password_change.html:35
+#: templates/account/password_reset_from_key.html:8
+msgid "Change Password"
+msgstr "Zmeniť Heslo"
+
+#: templates/account/password_change.html:36
+msgid "Forgot Password?"
+msgstr "Zabudli ste heslo?"
+
+#: templates/account/password_reset.html:4
+#: templates/account/password_reset.html:7
+#: templates/account/password_reset_done.html:4
+msgid "Password Reset"
+msgstr "Resetovanie hesla"
+
+#: templates/account/password_reset.html:9
+msgid ""
+" Enter your user account's verified email address and we will send you a "
+"password reset link."
+msgstr ""
+" Zadajte overenú e-mailovú adresu vášho užívateľského účtu a pošleme vám "
+"odkaz na obnovenie hesla."
+
+#: templates/account/password_reset_done.html:9
+msgid "Reset email sent"
+msgstr "Resetovací mail odoslaný"
+
+#: templates/account/password_reset_done.html:12
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Poslali sme vám e-mail. Prosím, kontaktujte nás, ak ak ho neobdržíte do "
+"niekoľkých minút."
+
+#: templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Chybný Token"
+
+#: templates/account/password_reset_from_key.html:14
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. <br>\n"
+"        Please request a\n"
+"        <a class=\"text-blue-400 hover:text-blue-500\" "
+"href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr ""
+"Odkaz na obnovenie hesla bol neplatný, pravdepodobne preto, že už bol "
+"použitý. <br>\n"
+"Prosím, požiadajte o\n"
+"<a class=\"text-blue-400 hover:text-blue-500\" "
+"href=\"%(passwd_reset_url)s\">nové obnovenie hesla</a>."
+
+#: templates/account/password_reset_from_key.html:26
+#: templates/account/password_reset_from_key_done.html:11
+msgid "Your password is now changed."
+msgstr "Vaše heslo bolo úspešne zmenené."
+
+#: templates/account/password_reset_from_key_done.html:5
+#: templates/account/password_reset_from_key_done.html:10
+msgid "Changed Password"
+msgstr "Heslo Zmenené"
+
+#: templates/account/password_set.html:7 templates/account/password_set.html:15
+#: templates/account/password_set.html:23
+msgid "Set Password"
+msgstr "Nastaviť Heslo"
+
+#: templates/account/signup.html:7 templates/account/signup.html:10
+msgid "Sign up"
+msgstr "Registrácia"
+
+#: templates/account/signup.html:15
+msgid "Already have an account? Sign in."
+msgstr "Už máte u nás účet? Prihláste sa"
+
+#: templates/account/signup.html:17
+msgid "Sign up with a third party"
+msgstr "Zaregistrovanie sa pomocou tretej strany"
+
+#: templates/account/signup_closed.html:5
+#: templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr "Registrácia Uzavretá"
+
+#: templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Ľutujeme, ale registrácia je momentálne uzavretá."
+
+#: templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr "Poznámka"
+
+#: templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr "už ste prihlásený/á ako %(user_display)s."
+
+#: templates/account/snippets/warn_no_email.html:3
+msgid "Warning:"
+msgstr "Upozornenie:"
+
+#: templates/account/snippets/warn_no_email.html:3
+msgid ""
+"You currently do not have any email address set up. You should really add an "
+"email address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Aktuálne nemáte nastavenú žiadnu emailovú adresu. Mali by ste pridať "
+"emailovú adresu, aby ste mohli dostávať oznámenia, obnoviť heslo atď."
+
+#: templates/account/verification_sent.html:5
+#: templates/account/verification_sent.html:10
+msgid "Verify Your E-mail Address"
+msgstr "Overte Svoju Emailovú Adresu"
+
+#: templates/account/verification_sent.html:12
+msgid ""
+"\n"
+"      We have sent an e-mail to you for verification. Follow the link "
+"provided to finalize the signup process.\n"
+"      Please contact us if you do not receive it within a few minutes.\n"
+"      "
+msgstr ""
+"Poslali sme vám e-mail na overenie. Kliknite na poskytnutý odkaz pre "
+"dokončenie procesu registrácie.\n"
+"Prosím, kontaktujte nás, ak ho neobdržíte do niekoľkých minút."
+
+#: templates/account/verified_email_required.html:5
+#: templates/account/verified_email_required.html:8
+msgid "Verify Your Email Address"
+msgstr "Overte Svoju Emailovú Adresu"
+
+#: templates/account/verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your email address. "
+msgstr ""
+"Táto časť stránky vyžaduje overenie, že\n"
+"ste ten, za koho sa vydávate. Pre tento účel vyžadujeme,\n"
+"aby ste overili vlastníctvo svojej emailovej adresy. "
+
+#: templates/account/verified_email_required.html:16
+msgid ""
+"We have sent an email to you for\n"
+"verification. Please click on the link inside that email. If you do not see "
+"the verification email in your main inbox, check your spam folder. "
+"Otherwise\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+"Poslali sme vám e-mail na\n"
+"overenie. Kliknite na odkaz vnútri tohto e-mailu. Ak nevidíte overovací e-"
+"mail v hlavnej schránke, skontrolujte svoj spamový priečinok. Inak\n"
+"nás kontaktujte, ak ho neobdržíte do niekoľkých minút."
+
+#: templates/account/verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
+"email address</a>."
+msgstr ""
+"<strong>Poznámka:</strong> stále môžete <a href=\"%(email_url)s\">zmeniť "
+"vašu emailovú adresu</a>."
+
+#: templates/openid/login.html:9
+msgid "OpenID Sign In"
+msgstr "Prihlásenie cez OpenID"
+
+#: templates/socialaccount/authentication_error.html:5
+#: templates/socialaccount/authentication_error.html:10
+msgid "Social Network Login Failure"
+msgstr "Chyba pri prihlásení cez sociálnu sieť"
+
+#: templates/socialaccount/authentication_error.html:13
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"Počas pokusu o prihlásenie cez váš účet sociálnej siete sa vyskytla chyba."
+
+#: templates/socialaccount/connections.html:4
+#: templates/socialaccount/connections.html:7
+msgid "Account Connections"
+msgstr "Pripojené Účty"
+
+#: templates/socialaccount/connections.html:10
+msgid "You have the following social accounts connected:"
+msgstr "Máte tieto sociálne účty pripojené:"
+
+#: templates/socialaccount/connections.html:34
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr "Aktuálne nemáte žiadne sociálne účty pripojené k tomuto účtu."
+
+#: templates/socialaccount/connections.html:41
+msgid "Add a third party account"
+msgstr "Pridať účet tretích strán"
+
+#: templates/socialaccount/handle_unverified_email_template.html:4
+msgid "An account with this email exists but is not verified."
+msgstr "Účet k tomuto emailu už existuje, ale nie je potvrdený."
+
+#: templates/socialaccount/login.html:9
+#, python-format
+msgid ""
+"\n"
+"    You are about to connect a new third party account from "
+"%(provider_name)s.\n"
+"    "
+msgstr ""
+"\n"
+"    Chystáte sa pripojiť nový účet tretej strany od %(provider_name)s.\n"
+"    "
+
+#: templates/socialaccount/login.html:13
+#, python-format
+msgid ""
+"\n"
+"    You are about to sign in using a third party account from "
+"%(provider_name)s.\n"
+"    "
+msgstr ""
+"\n"
+"    Chystáte sa prihlásiť pomocou účtu tretej strany od %(provider_name)s.\n"
+"    "
+
+#: templates/socialaccount/login_cancelled.html:5
+#: templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr "Prihlásenie Zrušené"
+
+#: templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a "
+"href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"Rozhodli ste sa zrušiť prihlásenie na našu stránku pomocou jedného z vašich "
+"existujúcich účtov. Ak to bol omyl, pokračujte na <a "
+"href=\"%(login_url)s\">prihlásenie</a>."
+
+#: templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr "Sociálny účet bol pripojený."
+
+#: templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr "Sociálny účet je už pripojený k inému účtu."
+
+#: templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr "Sociálny účet bol odpojený."
+
+#: templates/socialaccount/signup.html:11
+#, python-format
+msgid ""
+"\n"
+"  You are about to use your %(provider_name)s account to login to\n"
+"  %(site_name)s. As a final step, please complete the following form:\n"
+msgstr ""
+"Chystáte sa použiť svoj %(provider_name)s účet na prihlásenie na\n"
+"%(site_name)s. Ako posledný krok, prosím, vyplňte nasledujúci formulár:"
+
+#: user_profile/templates/polozka_profile_view.html:22
+msgid "No picture available"
+msgstr "Obrázok nie je dostupný"
+
+#: user_profile/templates/polozka_profile_view.html:44
+msgid "No price"
+msgstr "Bez ceny"
+
+#: user_profile/templates/polozka_profile_view.html:59
+msgid "And more..."
+msgstr "A ďalšie..."
+
+#: user_profile/templates/polozka_profile_view.html:68
+#: user_profile/templates/polozka_profile_view.html:90
+msgid "Function under the development"
+msgstr "Funkcia vo vývoji"
+
+#: user_profile/templates/polozka_profile_view.html:86
+msgid "review_star"
+msgstr "recenzne_hviezdicky"
+
+#: user_profile/templates/user_profile.html:17
+msgid "User profile:"
+msgstr "Profil používateľa:"
+
+#: user_profile/templates/user_profile.html:26
+msgid "Offers"
+msgstr "Ponuka"
+
+#: user_profile/templates/user_profile.html:32
+msgid "Personal Profile"
+msgstr "Osobný profil"
+
+#: user_profile/templates/user_profile.html:38
+msgid "Transport Info"
+msgstr "Info o doprave"
+
+#: user_profile/templates/user_profile.html:75
+msgid "No provided data"
+msgstr "Dáta neboli poskytnuté"
+
+#: user_profile/templates/user_profile.html:78
+#, python-format
+msgid "Profile of %(user_profile.user.username)s"
+msgstr "Profil používateľa %(user_profile.user.username)s"
+
+#: user_profile/templates/user_profile.html:107
+msgid "Phone:"
+msgstr "Mobil:"
+
+#: user_profile/templates/user_profile.html:119
+msgid "Bio"
+msgstr "Životopis:"
+
+#: user_profile/templates/user_profile.html:142
+#, python-format
+msgid ""
+"\n"
+"            Review by %(author)s\n"
+"            "
+msgstr ""
+"\n"
+"            Recenzia od %(author)s\n"
+"            "
+
+#: user_profile/templates/user_profile.html:146
+#, python-format
+msgid ""
+"\n"
+"            <strong>Rating:</strong> %(rating)s/5\n"
+"            "
+msgstr ""
+"\n"
+"            <strong>Hodnotenie:</strong> %(rating)s/5\n"
+"            "
+
+#: user_profile/templates/user_profile_display.html:11
+msgid "Login"
+msgstr "Prihlásenie"
+
+#: user_profile/templates/user_profile_display.html:12
+msgid "Register"
+msgstr "Registrovanie"
+
+#: user_profile/templates/user_profile_display.html:24
+msgid "User profile picture"
+msgstr "Profilový obrázok užívateľa"
+
+#: user_profile/templates/user_profile_display.html:33
+msgid "Logged as:"
+msgstr "Prihlásený ako:"
+
+#: user_profile/templates/user_profile_edit.html:37
+msgid "<h1>Profile of a user:</h1>"
+msgstr "<h1>Profil používateľa:</h1>"

@@ -1,0 +1,49 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ user_profile.theme }}">
+<head>
+  {% if global_css_styles %}
+    {% for css_file in global_css_styles %}
+        <link rel="stylesheet" href="{% static css_file %}">
+    {% endfor %}
+  {% endif %}
+  <!--
+  <link href="{% static 'css/user_profilex.css' %}" rel="stylesheet" media="screen">
+  -->
+  <link href="{% static 'css/search2.css' %}" rel="stylesheet">
+  <link href="{% static 'css/polozka_profile_view.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/polozka_profile_view2.css' %}" rel="stylesheet" media="screen">
+  <!--<link href="../static/css/user_profile.css" rel="stylesheet" media="screen">-->
+    
+  {% block extra_css_edit %}{% endblock %}
+  <meta charset="UTF-8">
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% trans "Farmeris" %}</title>
+  <link rel="stylesheet" href="/static/css/tabler-icons.css">
+</head>
+
+
+<body>
+  <main>
+    {% include 'search_header.html' %}
+    {% include 'sidebar.html' %}
+      
+    <div class="green-main-bg">
+      <div class="blue-main-bg">
+        {% for product in products %}
+          {% include 'polozka_profile_view.html' with username=request.user.username nazov_produktu=product.nazov_produktu polozka=product %}
+        {% endfor %}
+        {% include 'pagination.html' with query_params=query_params %}
+      </div>
+    </div>
+    <footer>
+      {% include 'footer_content.html' %}
+    </footer>
+  </main>
+
+
+</body>
+
+</html>

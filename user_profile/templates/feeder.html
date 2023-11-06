@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product Feed</title>
+</head>
+<body>
+    <h1>Add Product Feed</h1>
+    <form action="{% url 'feeding_data:feeder' %}" method="post">
+        {% csrf_token %}
+        <label for="namefeed">Name:</label>
+        <input type="text" id="namefeed" name="namefeed"><br><br>
+        <label for="textfeed">Text:</label>
+        <textarea id="textfeed" name="textfeed"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

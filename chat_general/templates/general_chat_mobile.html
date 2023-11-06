@@ -1,0 +1,45 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+{% block extra_css_zobrazenie %}
+    <link href="{% static 'css/general_chat_mobile.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block polozka %}
+  <div class="chat-general-container">
+    
+    <div class="chat-main-content">
+        <div class="chat-area">
+          <div class="chat-container">
+            <div class="recipient-username">
+                <a href="{% url 'chat_general:user_chat_general' username=username %}" class="arrow-container">
+                    <div class="back-arrow"></div>
+                </a>
+                <div class="recipient-info">
+                    {% if recipient %}
+                        {% trans "Chat:" %}
+                        <a class="product-info-pouzivatel" href="{% url 'user_profile:user_profile' username=recipient.username %}" target="_blank">{{ recipient.username }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="chats-users">
+              {% for message_general in chat_messages_general %}
+                {% if message_general.content_general %}
+                    <div class="chat-bubble {% if message_general.sender_general == request.user %}right{% else %}left{% endif %}">
+                        <p class="chat-bubble-mess">{{ message_general.content_general }}</p>
+                    </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="input-container">
+              <form method="post" action="{% url 'chat_general:send_message_in_general_chat' username=username sender=query %}" class="obsah-input-form">
+                {% csrf_token %}
+                <input class="obsah-input" type="text" name="message" placeholder="{% trans 'Type your message...' %}">
+                <button class="obsah-input-button" type="submit">{% trans "Send" %}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

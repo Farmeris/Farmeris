@@ -1,0 +1,141 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+
+{% block extra_css_polozka %}
+    <link href="{% static 'css/settings_edit.css' %}"  rel="stylesheet" media="screen">
+    <link href="{% static 'css/popup_styles.css' %}"  rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block polozka %}
+<div class="profile-settings">
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <h2><i class="ti ti-settings"></i>{% trans " Profile Settings" %}</h2>
+
+    <div class="settings-container">
+    
+        <!-- Settings Options (Left) -->
+        <div class="settings-options">
+            <section class="profile-info-option">
+                <a href="#profile-info-content"><h3><i class="ti ti-user-cog"></i>{% trans " Profile Information" %}</h3></a>
+            </section>
+            <section class="address-option">
+                <a href="#address-content"><h3><i class="ti ti-home-cog"></i>{% trans " Address" %}</h3></a>
+            </section>
+            <section class="change-email-option">
+                <a href="{% url 'account_email' %}"><h3><i class="ti ti-mail-exclamation"></i>{% trans " Email" %}</h3></a>
+            </section>
+            <section class="change-password-option">
+                <a href="{% url 'account_change_password' %}"><h3><i class="ti ti-lock-cog"></i>{% trans " Password" %}</h3></a>
+            </section>
+            <section class="account-actions-option">
+                <a href="#account-actions-content"><h3><i class="ti ti-trash"></i>{% trans " Account Actions" %}</h3></a>
+            </section>
+        </div>
+    
+        <!-- Settings Content (Right) -->
+        <div class="settings-content">
+        
+            <section class="profile-info-content settings-content-child" id="profile-info-content">
+                <form method="post" action="{% url 'edit_profile:user_profile_editing' username=user.username %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="first-row">
+                        <h1><i class="ti ti-user-cog"></i>{% trans " Profile Information" %}</h1> 
+                        <button type="submit">{% trans "Save changes" %}</button>
+                    </div>
+
+                    <h2>{% trans "Username:" %} {{ user_profile.user.username }}</h2>
+
+                    <div class="avatar">
+                        <img src="{{ avatar_url }}" alt="{% trans 'Current profile picture' %}" id="current-avatar">
+                    </div>
+
+                    <input type="hidden" name="form_type" value="personal_details">
+
+                    <!--
+                    <input type="text" id="username" name="username" placeholder="Your Username" value="{{ user_profile.user.username }}">
+                    -->
+                    <label for="avatar">{% trans "Profile Picture:" %}</label>
+                    <input type="file" id="avatar" name="avatar">
+                
+                    <label for="website">{% trans "Website:" %}</label>
+                    <input type="url" id="website" name="website" placeholder="{% trans 'https://yourwebsite.com' %}" value="{{ user_profile.website|default:'' }}">
+
+                    <label for="social-media">{% trans "Social Media:" %}</label>
+                    <input type="url" id="social-media" name="social-media" placeholder="{% trans 'https://twitter.com/yourhandle' %}" value="{{ user_profile.social_media|default:'' }}">
+
+                    <label for="phone-number">{% trans "Phone Number:" %}</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="{% trans '123-456-7890' %}" value="{{ user_profile.phone_number|default:'' }}">
+
+                    <label for="languages">{% trans "Languages:" %}</label>
+                    <input type="text" id="languages" name="languages" placeholder="{% trans 'EN, etc...' %}" value="{{ user_profile.languages|default:'' }}">
+
+                    <label for="location">{% trans "Location:" %}</label>
+                    <input type="text" id="location" name="location" placeholder="{% trans 'City, Country' %}" value="{{ user_profile.location|default:'' }}">
+
+                    <label for="bio">{% trans "Bio:" %}</label>
+                    <textarea id="bio" name="bio" placeholder="{% trans 'Tell something about yourself' %}">{{ user_profile.bio|default:'' }}</textarea>
+                    <!--</section>
+        
+                    <section class="address-content settings-content-child" id="address-content">-->
+                    <h1 id="address-content" class="address-id"><i class="ti ti-home-cog"></i>{% trans "Address" %}</h1>
+                    <input type="hidden" name="form_type" value="address_details">
+
+                    <label for="street-address">{% trans "Street Address:" %}</label>
+                    <input type="text" id="street-address" name="street-address" placeholder="{% trans '1234 Main St' %}" value="{{ user_profile.street_address|default:'' }}">
+
+                    <label for="city">{% trans "City:" %}</label>
+                    <input type="text" id="city" name="city" placeholder="{% trans 'Anytown' %}" value="{{ user_profile.city|default:'' }}">
+
+                    <label for="state">{% trans "State/Province:" %}</label>
+                    <input type="text" id="state" name="state" placeholder="{% trans 'State' %}" value="{{ user_profile.state_province|default:'' }}">
+
+                    <label for="zipcode">{% trans "Zip/Postal Code:" %}</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="{% trans '12345' %}" value="{{ user_profile.zip_postal_code|default:'' }}">
+
+                    <label for="country">{% trans "Country:" %}</label>
+                    <input type="text" id="country" name="country" placeholder="{% trans 'Country' %}" value="{{ user_profile.country|default:'' }}">
+                          
+                    <button type="submit">{% trans "Save changes" %}</button>
+                </form>
+                {% if avatar_form.errors %}
+                    <ul class="error-messages">
+                    {% for field, errors in avatar_form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ field }}: {{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+        
+            <section class="change-email-content settings-content-child" id="change-email-content">
+                <h1><i class="ti ti-mail-exclamation"></i>{% trans "Email" %}</h1>
+                <a href="{% url 'account_email' %}"><button type="submit">{% trans "Email settings" %}</button></a>
+            </section>
+        
+            <section class="change-password-content settings-content-child" id="change-password-content">
+                <h1><i class="ti ti-lock-cog"></i>{% trans "Password" %}</h1>
+                <a href="{% url 'account_change_password' %}"><button type="submit">{% trans "Change password" %}</button></a>
+            </section>
+        
+            <section class="account-actions-content settings-content-child" id="account-actions-content">
+                <h1><i class="ti ti-trash"></i>{% trans "Account Actions" %}</h1>
+                <p>{% trans "Are you sure you want to delete your account? This action cannot be undone." %}</p>
+                <button class="danger-btn">{% trans "Confirm Delete" %}</button>
+            </section>
+        
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

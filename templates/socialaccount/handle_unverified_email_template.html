@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<form method="post">
+    <p>{% trans "An account with this email exists but is not verified." %}</p>
+    <input type="submit" name="decision" value="link_with_google" />
+    <input type="submit" name="decision" value="create_with_google" />
+</form>

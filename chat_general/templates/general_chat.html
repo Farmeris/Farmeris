@@ -1,0 +1,84 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+{% block extra_css_zobrazenie %}
+    <link href="{% static 'css/general_chat.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block polozka %}
+  <div class="chat-general-container">
+    <div class="chat-sidebar-container">
+      <div class="chat-sidebar">
+        <div class="search-form-containerx">
+          <form method="GET" action="{% url 'chat_general:user_chat_general' username=username %}" class="search-form-general">
+            <div class="search-container-chat">
+              <input type="text" placeholder="{% trans 'Search usernames...' %}" name="query" class="search-input" value="{% if query %}{{ query }}{% endif %}">
+              <button type="submit" class="search-btn">{% trans "Search" %}</button>
+            </div>
+          </form>
+        </div>
+        <!-- Sidebar content -->
+        <h2>{% trans "Your Chats" %}</h2>
+        <ul class="chat-list">
+          {% for chat_user in combined_senders %}
+            {% if chat_user != request.user.username %}
+              <!-- Desktop Link: Visible on screens wider than 600px -->
+              <a href="?query={{ chat_user }}" class="desktop-link">
+                <li class="chat-list-item {% if chat_user == query %}active{% endif %}">
+                  {{ chat_user }}
+                </li>
+              </a>
+  
+              <!-- Mobile Link: Visible on screens narrower than 600px -->
+              <a href="{% url 'chat_general:chat_general_mobile_with_sender' username=username sender=chat_user %}?query={{ chat_user }}" class="mobile-link">
+                <li class="chat-list-item {% if chat_user == query %}active{% endif %}">
+                  {{ chat_user }}
+                </li>
+              </a>
+            {% endif %}
+          {% endfor %}
+          {% if chat_user %}
+            <p>{% trans "No chats found." %}</p>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="chat-main-content">
+      {% if recipient %}
+        <div class="chat-area">
+          <div class="chat-container">
+            <div class="recipient-username">
+              {% if recipient %}
+                {% trans "Chatting with: " %}<a class="product-info-pouzivatel" href="{% url 'user_profile:user_profile' username=recipient.username %}" target="_blank">{{ recipient.username }}</a>
+              {% endif %}
+            </div>
+            <div class="chats-users">
+              {% for item in all_messages %}
+                {% if item.type == "chat" %}
+                  <div class="chat-bubble {% if item.message.sender == request.user %}right{% else %}left{% endif %}">
+                      <p class="chat-bubble-mess">{{ item.message.content }}</p>
+                  </div>
+                {% else %}
+                  <div class="chat-bubble {% if item.message.sender_general == request.user %}right{% else %}left{% endif %}">
+                      <p class="chat-bubble-mess">{{ item.message.content_general }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="input-container">
+              <form method="post" action="{% url 'chat_general:send_message_in_general_chat' username=username sender=query %}" class="obsah-input-form">
+                {% csrf_token %}
+                <input class="obsah-input" type="text" name="message" placeholder="{% trans 'Type your message...' %}">
+                <button class="obsah-input-button" type="submit">{% trans "Send" %}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="spacer">
+          
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

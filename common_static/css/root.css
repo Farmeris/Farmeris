@@ -1,0 +1,337 @@
+:root {
+  --primary-color: #FFD54F; /* Main accent color for buttons, links, and important elements */
+  --secondary-color: #9FA8DA; /* Secondary accent color for additional elements */
+  --text-color: #fff; /* Main text color */
+  --text-color-inv:black;
+  --text-color-secondary: #B0BEC5; /* Secondary text color for less important text */
+  --background-color: #212121; /* Main background color */
+  --background-color-secondary: #424242; /* Secondary background color for additional elements */
+  --border-color: #757575; /* Color for borders and dividing lines */
+  --link-color: #FFD54F; /* Color for links */
+  --link-color-hover: #9FA8DA; /* Color for links on hover */
+  --heading-color: #FFFFFF; /* Color for headings */
+  --subheading-color: #B0BEC5; /* Color for subheadings */
+  --button-background-color: #FFD54F; /* Background color for buttons */
+  --button-text-color: #212121; /* Text color for buttons */
+  --button-background-color-hover: #9FA8DA; /* Background color for buttons on hover */
+  --button-text-color-hover: #FFFFFF; /* Text color for buttons on hover */
+  --input-background-color: #424242; /* Background color for input fields */
+  --input-text-color: #FFFFFF; /* Text color for input fields */
+  --input-border-color: #757575; /* Border color for input fields */
+  --input-placeholder-color: #B0BEC5; /* Color for input field placeholders */
+  --error-color: #E57373; /* Color for error messages */
+  --success-color: #81C784; /* Color for success messages */
+  --warning-color: #FFB74D; /* Color for warning messages */
+  --info-color: #64B5F6; /* Color for informational messages */
+  --nav-background-color: #333333; /* Background color for navigation menu */
+  --nav-text-color: #FFFFFF; /* Text color for navigation menu items */
+  --nav-text-color-hover: #9FA8DA; /* Text color for navigation menu items on hover */
+  --footer-background-color: #212121; /* Background color for footer */
+  --footer-text-color: #B0BEC5; /* Text color for footer */
+}
+:root {
+  --header-background-color: #212121; /* Background color for header */
+  --header-text-color: #FFFFFF; /* Text color for header */
+  --header-menu-background-color: #333333; /* Background color for header menu */
+  --header-menu-text-color: #FFFFFF; /* Text color for header menu items */
+  --header-menu-text-color-hover: #9FA8DA; /* Text color for header menu items on hover */
+  --header-menu-border-color: #757575; /* Border color for header menu items */
+  --header-menu-li-hover: rgb(187, 184, 171);
+}
+
+/*doprava pridanie display*/
+:root {
+  --doprava_pridanie_display-bdclr: #f7f9fc;
+  --doprava_pridanie_display-border-color: #e3e8ee;
+  --doprava_pridanie_display-box-shadow-color: rgba(0, 0, 0, 0.1);
+  --doprava_pridanie_display-primary-color: #2195f3;
+  --doprava_pridanie_display-delete-button-bg: #f54545;
+  --doprava_pridanie_display-delete-button-hover-bg: #d13434;
+  --doprava_pridanie_display-custom-checkbox-bg: #ccc;
+  --doprava_pridanie_display-custom-checkbox-checked-bg: #4CAF50;
+  --doprava_pridanie_display-checkmark-color: white;
+  --doprava_pridanie_display-text-color: black;
+}
+:root {
+  --doprava_pridanie_display-bdclr: #2a2a2a; 
+  --doprava_pridanie_display-border-color: #444; 
+  --doprava_pridanie_display-box-shadow-color: rgba(0, 0, 0, 0.4);
+  --doprava_pridanie_display-primary-color: #42a5f5;
+  --doprava_pridanie_display-delete-button-bg: #f54545; 
+  --doprava_pridanie_display-delete-button-hover-bg: #d13434; 
+  --doprava_pridanie_display-custom-checkbox-bg: #555; 
+  --doprava_pridanie_display-custom-checkbox-checked-bg: #4CAF50; 
+  --doprava_pridanie_display-checkmark-color: #e5e5e5; 
+  --doprava_pridanie_display-text-color: #e5e5e5; 
+}
+
+:root {
+  --cena-display-bgclr: #333;
+  --cena-display-bdclr: #555;
+  --cena-display-box-shadow: rgba(0, 0, 0, 0.4);
+  --cena-display-price-color: #e5e5e5;
+  --cena-display-currency-unit-color: #ddd;
+}
+
+/*stare farbicky*/
+:root {
+  --nav-li-a-hover-bgclr: #444;
+  --dark-grey: #333;
+  --light-grey: #555;
+  --white: #fff;
+  --dropdown-header:#2b2b2b;
+  --dropdown-nav: #2b2b2b00;
+  --dropdown-menu-button-hover: #363636;
+  --V-drpx-li-hover: rgb(99, 97, 90);
+  --V-drpx-ul:#ff000000;
+  --V-drpx-li: rgb(97, 219, 189);
+  --main-bgclr: #22272e;
+  --V-drpx-button: #333;
+  --product-info1-dropdown-ul:white;
+}
+:root{
+  --sidebar-menu-item-lang-bgclr: #0000;
+  --sidebar-menu-item-lang-bgclr-hvr: #e0e0e0;
+  --footer-background-color: #212121; 
+  --social-media-li-a-bgclr: transparent;
+  --plus-product-icon-hover: #b9b9b9;
+  --plus-product-icon: #929292;
+  --login-signup-bgclr:#337ab7;
+  --login-signup-bgclr-hvr: #23527c;
+  --header-left-menu-nl-box-shadow: 1;
+  --login-signup-box-shadow: rgba(0, 0, 0, 0.4);
+}
+/*text coloring*/
+:root{
+  --footer-text-color: #B0BEC5; 
+  /*--sidebar-menu-item-lang-txtclr: #333; - asi nepotrebne - nahradene text color*/
+  --sidebar-menu-item-lang-txtclr-hvr: #333;
+  --united-link-clr: #0077cc;
+  --united-link-clr-hvr: #0055aa;
+}
+:root{
+  --hamburger-background: #3E4C5E;
+  --sidebar-left-moved: 200px;
+  --footer-height: 500px;
+  --sidebar-width: 200px;
+  --sidebar-width-menu-width: 180px;
+  --header-left-menu-width: calc(200px);
+  --header-left-menu-height: var(--header-left-menu-width);
+  --border-1px: 1px;
+  --border-2px: 2px;
+  --blue-main-bg-bd: 0;
+  --green-main-bg-bd: 0;
+  --sidebar-bd: var(--border-1px);
+  --header-left-menu-bd: var(--border-1px);
+  --footer-bd: var(--border-1px);
+  --product-create-doprava-bd: var(--border-1px);
+  --menu-sticker-button-bd: var(--border-1px);
+  --chat-container-bd: var(--border-1px);
+  --sidebar-butt-widget-bd: 0;
+  --doprava-input-bd: var(--border-1px);
+  --dropdown-header-bd: var(--border-1px);
+  --search-header-bd: var(--border-1px);
+  --sidebar-menu-item-lang-bd: var(--border-1px);
+  --sidebar-menu-button-bd: 0;
+  --sidebar-menu-button-bd-hvr: 0;
+  --sidebar-menu-content-bd: var(--border-1px);
+  --polozka-owner-a-bd: var(--border-1px);
+  --product-bd: var(--border-1px);
+  --settings-options-bd: var(--border-1px);
+  --doprava_pridanie_display-bd: var(--border-1px);
+  --cena-display-bd: var(--border-1px);
+  --search-input-bd: var(--border-1px);
+  --user-profile-snapper-bd: var(--border-1px);
+  --tab-user-profile-bd: var(--border-1px);
+  --profile-header-user-profile-bd: var(--border-1px);
+  --bio-user-profile-bd: var(--border-1px);
+  --content-user-settings-input-bd: var(--border-1px);
+  --chat-sidebar-bd: var(--border-1px);
+  --polozka-pridanie-input-bd: var(--border-1px);
+  --transport-bd: var(--border-1px);
+  --submit-btn-polozka-pridanie-bd: 0;
+  --search-btn-bd: 0;
+  --nav-li-a-hover-bd: 0;
+  --login-signup-bd: 0;
+}
+/*bd width focused*/
+:root{
+  --content-user-settings-input-bd-focus: var(--border-2px);
+}
+:root{
+  --border-5px: 5px;
+  --sidebar-butt-widget-bdrds: var(--border-5px);
+  --header-left-menu-bdrds: var(--border-5px);
+  --sidebar-menu-item-lang-bdradius: var(--border-5px);
+  --product-pic-img-bdrds: 5px;
+}
+:root{
+  --pinkbd: pink;
+  --back: #333;
+  --sidebar: #36404b;
+  --sidebar-bgclr: #212121;
+  --header-left-menu-bgclr: #333333;
+  --header-left-menu-bdclr: var(--pinkbd);
+  --blue-main-bg-bgclr: var(--sidebar);
+  --green-main-bg-bgclr: var(--sidebar);
+  --sidebar-menu-content-bgclr: var(--sidebar);
+  --product-create-doprava-bgclr: rgb(146, 140, 90); 
+  --product-create-doprava-bgclr-hvr: var(--sidebar); 
+  --menu-sticker-button-bdclr: var(--pinkbd);
+  --main-bgclr: var(--sidebar);
+  --sidebar-menu-content-bdclr: var(--pinkbd); 
+  --sidebar-menu-button-bdclr: var(--pinkbd);
+  --sidebar-menu-button-bdclr-hvr: var(--pinkbd);
+  --green-main-bg-bdclr: var(--pinkbd);
+  --blue-main-bg-bdclr: var(--pinkbd);
+  --sidebar-bdclr: var(--pinkbd);
+  --footer-bdclr: var(--pinkbd);
+  --product-create-doprava-bdclr: var(--pinkbd);
+  --sidebar-butt-widget-bdclr: var(--pinkbd);
+  --doprava-input-bdclr: var(--pinkbd);
+  --dropdown-header-bdclr: var(--pinkbd);
+  --login-signup-bdclr: var(--pinkbd);
+  --nav-li-a-hover-bdclr: var(--pinkbd);
+  --polozka-owner-a-bdclr: var(--pinkbd);
+  --product-border-color: var(--pinkbd);
+  --settings-options-bdclr: var(--pinkbd);
+  --search-btn-bdclr: var(--pinkbd);
+  --doprava_pridanie_display-bdclr: var(--pinkbd);
+  --cena-display-bdclr: var(--pinkbd);
+  --search-input-bdclr: var(--pinkbd);
+  --user-profile-snapper-bdclr: var(--pinkbd);
+  --tab-user-profile-bdclr: var(--pinkbd);
+  --profile-header-user-profile-bdclr: var(--pinkbd);
+  --bio-user-profile-bdclr: var(--pinkbd);
+  --product-vlastnosti-popup-bdclr: var(--pinkbd);
+  --content-user-settings-input-bdclr: var(--pinkbd);
+  --chat-sidebar-bdclr: var(--pinkbd);
+  --polozka-pridanie-input-bdclr: var(--pinkbd);
+  --submit-btn-polozka-pridanie-bdclr: var(--pinkbd);
+  --transport-bdclr: var(--pinkbd);
+  --plus-product-icon-hover: #8cc481;
+  --plus-product-icon: #929292;
+  /*--header-bgclr: #212121; */
+  --header-bdclr: var(--pinkbd);
+  --search-header-bdclr: var(--pinkbd);
+  --text-input: green;
+}
+:root{
+  --bdrd: 5px;
+  --doprava-input-bdrd: var(--bdrd);
+  --green-main-bg-padding: 50px;
+  --green-main-bg-padding-sm: 20px;
+  --settings-options-bdrds: var(--bdrd);
+}
+/*chat*/
+:root{
+  --recipient-username-bgclr: #4CAF50;
+  --chat-container-bdclr: var(--pinkbd);
+  --input-container-bgclr: #e0e0e0;
+}
+/*polozka pridanie/zobrazenie*/
+:root{
+  --zob-stick-btn: var(--sidebar-bgclr);
+  --zob-stick-btn-hvr: var(--nav-li-a-hover-bgclr);
+  --polozka-owner-a-hvr: var(--nav-li-a-hover-bgclr);
+  --product-dark-bg: #121212;/*main bgclr of the .product*/
+  --product-lighter-dark-bg: var(--sidebar-bgclr) !important;
+  --product-secondary-color: var(--text-color);
+  --product-primary-color-hvr: #007BFF;
+  --product-vlastnosti-popup-bgclr: var(--sidebar-bgclr);
+}
+/*pagination*/
+:root{
+  --pagination-a-bgclr: transparent;
+  --pagination-a-bgclr-hvr: var(--sidebar-bgclr);
+  --pagination-text: var(--text-color) !important;/*main pagination color*/
+  /*--pagination-disabled
+  --pagination-highlight*/
+}
+/*search*/
+:root{
+  --search-btn-bgclr: var(--sidebar-bgclr);
+  --search-btn-bgclr-hvr: var(--nav-li-a-hover-bgclr);
+  --search-btn-mrgn-hvr: 1px;
+  --search-input-shadow-box: rgba(0, 0, 0, 0.4);
+}
+
+/*profile settings editing*/
+:root{
+  --settings-options-bgclr: var(--sidebar-bgclr);
+}
+/*profile settings*/
+:root{
+  --content-user-settings-rd: 5px;
+  --content-user-settings-bgclr: #1E1E1E;
+  --content-user-settings-inpu-bgclr: #333;
+}
+/*polozka zobrazenie*/
+:root{
+  --menu-sticker-button: var(--text-color);
+  --cena-display-price-color: var(--text-color) !important;
+  --cena-display-currency-unit-color: var(--text-color) !important;
+  --doprava_pridanie_display-text-color: var(--text-color);
+  --doprava_pridanie_display-background-color: var(--sidebar-bgclr);
+  --cena-display-bgclr: var(--sidebar-bgclr);
+  --menu-sticker-box-shadow: rgba(0, 0, 0, 0.4);
+  --delete-btn-user-profile-invert: invert(0);
+}
+/*user profile*/
+:root{
+  --snapper-user-profile-bgclr: var(--sidebar-bgclr);
+  --tab-active-user-profile-clr: var(--text-color);
+  --tab-active-user-profile-bgclr: var(--sidebar-bgclr);
+  --tab-user-profile-clr: var(--text-color);
+  --tab-item-link-user-profile: #C2BDC7;
+  --profile-header-h1-user-profile-clr: var(--text-color);
+  --tab-item-link-hvr-bgclr: #0077cc;
+  --tab-item-link-hvr-bgclr: var(--nav-li-a-hover-bgclr);
+  --tab-user-profile-hvr-clr: var(--text-color);
+  --profile-label-user-profile: var(--text-color);/*#777*/
+}
+/*general chat*/
+:root{
+  --chat-sidebar-bgclr: var(--sidebar-bgclr);
+  --chat-list-item-bgclr: var(--sidebar);
+  --chat-list-item-clr: var(--text-color);
+  --chat-list-item-bdrds: 5px;
+}
+/*profile settins*/
+:root{
+  --content-user-settings-input-clr: var(--text-color);
+  --h5-clr: var(--text-color);
+  --profile-info-bgclr: var(--united-input-display-bgclr);
+}
+/*polozka pridanie*/
+:root{
+  --product-form-polozka-pridanie-box-shadow: 0;
+  --product-form-clr: var(--text-color);
+  --submit-btn-polozka-pridanie-bgclr: var(--sidebar-bgclr);
+  --submit-btn-polozka-pridanie-clr: var(--text-color);
+  --submit-btn-polozka-pridanie-bgclr-hvr: var(--login-signup-bgclr-hvr);
+  --transport-bgclr: var(--sidebar-bgclr);
+}
+
+input,
+textarea,
+option {
+  background-color: var(--united-input-display-bgclr) !important;
+  color: var(--united-input-display-clr) !important;
+}
+
+
+@font-face {
+  font-family: "tabler-icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/tabler-icons.eot?v2.30.0');
+  src: url('/static/fonts/tabler-icons.eot');
+  src: url('/static/fonts/tabler-icons.ttf');
+  src: url('/static/fonts/tabler-icons.woff');
+  src: url('/static/fonts/tabler-icons.woff2');
+  src: url('/static/fonts/tabler-icons.eot?#iefix-v2.30.0') format("embedded-opentype"), 
+       url('/static/fonts/tabler-icons.woff2?v2.30.0') format("woff2"), 
+       url('/static/fonts/tabler-icons.woff?v2.30.0') format("woff"), 
+       url('/static/fonts/tabler-icons.ttf?v2.30.0') format("truetype");
+}

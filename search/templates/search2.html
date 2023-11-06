@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="{% static 'css/user_profile.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/search.css' %}" rel="stylesheet">
+    <!--<link href="../static/css/user_profile.css" rel="stylesheet" media="screen">-->
+    {% block extra_css_edit %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma market</title>
+    <link rel="icon" type="image/png" href="pics/favicon/x.png">
+</head>
+
+
+<body>
+    <header class="dropdown-header">
+        <form method="GET" action="{% url 'search:user_search2' %}">
+          <div class="search-container">
+            <input type="text" placeholder="Search.." name="query" class="search-input" value="{{ request.GET.query }}">
+            <button type="submit" class="search-btn">Search</button>
+            <button type="button" class="options-btn">Options</button>
+          </div>
+        </form>
+    </header>
+
+  <main>
+    <nav class="sidebar">
+      {% include 'user_profile_display.html' %}
+      <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="{% url 'search:user_search' %}">Products</a></li>
+          <li><a href="main.html">People Who Offer</a></li>
+          <li><a href="main.html">Map</a></li>
+          <li><a href="main.html">Contact</a></li>
+      </ul>
+    </nav>
+      
+    <div class="green-main-bg">
+      <div class="blue-main-bg">
+        <ul>
+            {% for product in products %}
+              <li>{{ product.nazov_produktu }}</li>  <!-- Adjust the field based on your model -->
+            {% empty %}
+              <li>No results found.</li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+    <footer>
+      {% include 'footer_content.html' %}
+    </footer>
+  </main>
+
+
+</body>
+
+</html>

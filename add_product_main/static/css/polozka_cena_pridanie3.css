@@ -1,0 +1,47 @@
+/* Using existing variables for general appearance */
+
+:root{
+    --select-crema: rgb(252, 245, 232);
+}
+.cena {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.cena-container-label {
+    color: var(--label-color);
+}
+
+.cena-input {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cena-input label {
+    color: var(--label-color);
+}
+
+input[type="number"], 
+.input-wrapper-dop select {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.input-wrapper-dop select option {
+    color: var(--text-color);
+    background-color: var(--container-bg);
+}
+.input-wrapper-dop select{
+    background-color: var(--select-crema);
+    color: white;
+}
+
+.input-wrapper-dop input{
+    background-color: var(--container-bg);
+}
+
+.input-wrapper-dop .unit-dop {
+    color: white;
+}
+/* Styling for the plus-icon inside the button */

@@ -1,0 +1,331 @@
+
+/*cena*/
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 120px;
+  background-color: var(--transport-bgclr);
+  border: var(--transport-bd) solid var(--transport-bdclr);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.transport{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;  
+  padding: 15px;
+  min-height: 120px;
+  border-radius: 5px;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--transport-bgclr);
+  border: var(--transport-bd) solid var(--transport-bdclr);
+}
+
+.price label, 
+.converted-price{
+  margin-left: 20px;
+}
+
+.price input[type="number"],
+.transport input[type="number"]{
+  width: 100px;
+}
+
+.price select,
+.unit select,
+.transport select,
+.transport-button{
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.transport button{
+  margin-left: 50px;
+}
+.price label.price-first,
+.transport label.doprava-first{
+  margin-left: 0;
+  padding: 0;
+}
+select{
+  cursor: pointer;
+}
+.cena-container-label{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cena-h2,
+.doprava-h2{
+  margin-bottom: 20px;
+}
+.cena-h4{
+  margin-top: 20px;
+}
+.product-info-pouzivatel{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+}
+.transport-textarea {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: both;
+  position: relative;
+  margin-left: 50px;
+  transform: translateY(50%);
+}
+
+.nice-textarea::placeholder {
+  color: #999;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+.moznost-dopravy{
+    margin-left: 350px;
+}
+.doprava-header {
+    display: flex;
+    align-items: center;
+}
+/*end of cena*/
+/*end of obsah*/
+
+
+.form-pridavanie-polozky{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*end of the main style*/
+
+
+.main-transport,
+.main-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  min-height: 150px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.transport_notes{
+  margin-left: 15px;
+}
+.transport-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.dopravax a{
+  text-decoration: none;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.input-wrapper-dop {
+  display: flex;  /* making it flex will ensure the children always stay in a row */
+  align-items: center;  /* vertically center the child elements */
+}
+
+.transport label,
+.price label {
+  margin-right: 10px;  /* space between label and input */
+}
+
+.transport input[type="number"],
+.price input[type="number"]{
+  flex: 1;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  appearance: none;
+  position: relative;
+  width: 120px;
+  color: var(--united-input-display-clr);
+}
+
+.transport .currency-dop,
+.transport .unit-dop,
+.price .currency-dop,
+.price .unit-dop {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  width: 70px;
+  appearance: none;  
+  background: #fff url('arrow.svg') no-repeat right 10px center;  
+  padding-right: 25px;  
+}
+
+
+.transport select::after,
+.price select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: var(--polozka-pridanie-text-reversed-color);
+  background-color: var(--polozka-pridanie-input-bg);
+}
+.cenay,
+.dopravay{
+  padding: 0;
+  margin: 0;
+  width: 1250px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+  
+
+.cena-h2, .dopravax-h2 {
+  color: var(--polozka-pridanie-text-color);
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+.dopravax a {
+  text-decoration: none;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.dopravax {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cena-h2, .dopravax-h2 {
+  color: var(--polozka-pridanie-text-color);
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+.transport label, .price label {
+  color: var(--polozka-pridanie-label-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-wrapper-dop {
+    margin-bottom: 10px;
+}
+
+.input-wrapper-dop input[type="number"],
+.input-wrapper-dop select {
+  flex: 1;
+  background-color: var(--polozka-pridanie-input-bg);
+  color: var(--polozka-pridanie-text-reversed-color);
+  border: 1px solid var(--polozka-pridanie-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  height: 35px;
+}
+.input-wrapper-dop select{
+  background-color: var(--polozka-pridanie-input-bg) !important;
+  color: var(--polozka-pridanie-text-reversed-color) !important;
+  border: 1px solid var(--polozka-pridanie-border-color) !important;
+  border-left: none !important;
+}
+.input-wrapper-dop input[type="number"]{
+  color: var(--polozka-pridanie-text-color);
+}
+.input-wrapper-dop input[type="number"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-wrapper-dop select option{
+  background-color: var(--polozka-pridanie-select-option-bgclr);
+  color: var(--polozka-pridanie-select-option-clr);
+}
+
+.transport_notes {
+  background-color: var(--united-input-display-bgclr);
+  color: var(--polozka-pridanie-text-color);
+  border: 1px solid var(--polozka-pridanie-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.transport-info {
+    margin-top: 20px;
+}
+
+.transport-info .dopravax-h2 {
+  color: var(--polozka-pridanie-text-color);
+  font-weight: normal;
+}
+
+#transport, #currency, #unit {
+    outline: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s;
+}
+
+#transport:focus, #currency:focus, #unit:focus {
+    border-color: #007BFF;
+}
+
+.unit-dop option,
+.currency-dop option,
+#transport option {
+    background-color: #333;
+    color: white;
+    border: 1 solid #fff;
+}
+
+.unit-dop option:hover,
+.currency-dop option:hover,
+#transport option:hover {
+    background-color: #4e4e4e;
+    border-color: #007BFF;
+}
+
+#transport{
+  background-color: transparent;
+}
+.input-wrapper-dop select,
+.input-wrapper-dop input {
+  height: 35px;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .transport-add,
+  .cena-add,
+  .add-button-icon-submit{
+    margin: 0 !important;
+  }
+}

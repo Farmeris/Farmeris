@@ -1,0 +1,791 @@
+/*obsah*/
+.obsah{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative;
+  top: 0;
+  height: 500px;
+}
+.obsah-horna-ciarka{
+  border: none;
+  border-top: 2px solid #333;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 3px;
+}
+.obsah-container {
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 0;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.obsah-column1,
+.info_produktu{
+  width: calc((100% - 50px)*0.55);
+  max-height: 380px;
+  color: #5a5858; 
+  padding: 10px;
+  height: 330px;
+  z-index: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+.obsah-column1{
+  height: calc(420px - 13px);
+}
+.obsah-column1-prvy-text{
+  max-width: calc(100% - 15px);
+}
+.info_produktu{
+  width: 750px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 250px;
+}
+.info_nazov_produktu{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/*vkladanie obrazko*/
+.obrazky-input{
+  position: absolute;
+  background-color: #414141;
+  height: 70px;
+  display: none;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: var(--text-color);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 330px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.upload-text {
+  font-size: 18px;
+}
+/*end of vkladanie obrazko*/
+
+
+.obsah-column2,
+.obsah-column3 {
+  width: calc((100% - 50px)*0.3);
+  padding: 10px;
+  z-index: 1;
+}
+.obsah-column3{
+  width: 15%;
+  transform: translateY(-10px);
+}
+
+.obsah-column2 {
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.obsah-column1 h2,
+.obsah-column2 h2,
+.obsah-column3 h2 {
+  color: var(--text-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.obsah-column1 p,
+.obsah-column2 p,
+.obsah-column3 p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+/*submit polozka*/
+
+.submit-polozku{
+  width: 200px;
+  height: 75px;
+  cursor: pointer;
+}
+.obsah-column2 p {
+  color: var(--text-color);
+}
+
+/*end of submit polozka*/
+
+/*end of obsah*/
+
+/*.product-info-pouzivatel{
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}*/
+.product-info a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+/*chat*/
+.chat-container {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container {
+  max-height: 300px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  height: 300px;
+  top: 0;
+}
+.chat-bubble {
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  max-width: 60%;
+  clear: both;
+  /*overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  hyphenate-character: "-";*/
+}
+
+.right {
+  background-color: #4CAF50;
+  color: rgb(70, 70, 70);
+  align-self: flex-end;
+}
+
+.left {
+  background-color: #2196F3;
+  color: rgb(70, 70, 70);
+  align-self: flex-start;
+}
+.chat-bubble-mess {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  hyphenate-character: "\2010"; /* Use a non-breaking hyphen character */
+}
+
+.chat-bubble-mess::after {
+  content: "-"; /* Display the hyphen character after each line */
+  display: inline-block;
+  width: 1em;
+  white-space: nowrap;
+}
+
+.chat-bubble-mess:last-child::after {
+  content: none; /* Remove the hyphen from the last line of the paragraph */
+}
+
+.chats-users {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.chat-user-button {
+  background-color: #ddd;
+  border: none;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.chat-user-button:hover {
+  background-color: #ccc;
+}
+
+.message-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 10px;
+  bottom: 0;
+}
+
+.obsah-input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  width: calc(100% - 100px);
+}
+
+.obsah-input-button {
+  background-color: #4CAF50;
+  border: none;
+  color: rgb(70, 70, 70);
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 70px;
+}
+.obsah-input-form{
+  width: 100%;
+}
+
+.obsah-input-button:hover {
+  background-color: #3e8e41;
+}
+/*end of chat*/
+
+/*gallery*/
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.image-container img {
+  width: 100%; 
+  transition: width 0.3s ease;
+}
+
+.image-container img.big {
+  width: 200%; 
+}
+.nahradny-obr{
+  position: relative;
+  height: 20px;/*445px;*/
+}
+/*end of gallery*/
+
+
+/*sticker menu*/
+.menu-sticker2{
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 15px;
+}
+.menu-sticker-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  pointer-events: all;
+  cursor: pointer;
+  color: var(--menu-sticker-button);
+  box-shadow: 0 2px 5px var(--menu-sticker-box-shadow);
+}
+.menu-sticker-button:hover{
+  text-decoration: none;
+}
+.zob-stick-btn{
+  height: auto;
+  width: 100%;
+  padding: 25px 15px;
+  background-color: var(--zob-stick-btn);
+  border-radius: 5px;
+  border: var(--menu-sticker-button-bd) solid var(--menu-sticker-button-bdclr);
+}
+.zob-stick-btn:hover{
+  background-color: var(--zob-stick-btn-hvr);
+}
+/*end of sticker menu*/
+.remove-button-pic,
+.add-button-pic {
+  top: 5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  position: absolute;
+  z-index: 999;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-button-pic{
+  background-color: #2196F3;
+}
+.main-image-container {
+  position: relative;
+  display: inline-block;
+}
+.main-image-container img {
+  max-width: 100%; 
+  height: auto;
+  object-fit: contain; 
+  max-height: 400px;
+}
+.product-info h1, .product-info p, .product-info span{
+  color: var(--text-color);
+}
+.product-info span{
+  justify-self: center;
+  align-self: center;
+  margin: 5px;
+}
+.cenax,
+.dopravax{
+  color: var(--text-color);
+}
+.dopravax-h2,
+.cena-h2{
+  color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+  .small-images{
+    display: none;
+  }
+  .form-pridavanie-polozky,
+  .obsah-horna-ciarka,
+  .obsah-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 100px;
+  }
+  .product-info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    min-width: 200px;
+    color: var(--text-color);
+  }
+  .product-info h1, .product-info p{
+    position: relative;
+    width: auto;
+    min-width: none;
+    max-width: 100%;
+    font-size: 28px;
+    white-space: nowrap;
+    overflow-wrap: none;
+    text-overflow: ellipsis;
+  }
+  .product-info p{
+    font-size: 18px;
+  }
+  .nazov_produktu,
+  .product-info-cena{
+    position: relative;
+    transform: translate(0);
+    height: 80px;
+    width: 80%;
+    min-width: 100px;
+    align-self: center;
+    left: 0;
+    top: 0;
+  }
+  .obsah,
+  .obsah-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    padding: 0px;
+  }
+  .obsah{
+    padding: 20px;
+  }
+  .obsah-horna-ciarka *,
+  .obsah-column1 *,
+  .obsah-column-container *,
+  .obsah-horna-ciarka,
+  .obsah-column1,
+  .obsah-column-container{
+    left: 0;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .obsah-column2{
+    border: 0;
+  }
+  .obsah-horna-ciarka{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    left: 0;
+  }
+  .obsah-column1,
+  .obsah-column-container,
+  .obsah-column2,
+  .obsah-column3{
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    left: 0;
+    padding: 0;
+    height: auto;
+  }
+  .obsah-column-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: auto;
+    height: auto;
+    min-width: 100px;
+    width: 100%;
+  }
+  .menu-sticker2,
+  .menu-sticker-button,
+  .obsah-column3{
+    position: relative;
+    min-width: 60px;
+    max-width: 150px;
+    height: 75px;
+  }
+  .nazov_produktu{
+    font-size: 20px;
+    margin: 0;
+    height: 40px;
+  }
+  .product-info-cena{
+    font-size: 18px;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .product-info-cena p{
+    font-size: 18px;
+  }
+  .info_produktu{
+    min-height: 250px;
+  }
+  .info_nazov_produktu,
+  .obsah-horna-ciarka{
+    top: 0;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+  }
+  .cenax,
+  .dopravax{
+    min-width: 200px;
+  }
+  .submit-polozku{
+    min-width: 150px;
+  }
+  .main-image{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: 250px;
+    margin-top: 10px;
+  }
+  .cenax,
+  .dopravax{
+    padding: 5px;
+  }
+  .price{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /*transport*/
+  /* Styles for the main transport div */
+  .main-transport,
+  .transport {
+    flex-direction: column;
+    min-height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .transport * {
+    margin-left: 0;
+    margin: 0;
+    gap: 5px;
+    width: auto;
+    min-width: 50px;
+    max-width: calc(100% - 50px);
+  }
+
+  select,
+  input[type="number"],
+  textarea {
+    flex: 1;
+    padding: 5px;
+  }
+
+  /* Styles for the submit button */
+  /* Styles for the submit button */
+  .transport-add {
+    margin-left: auto;
+    font-size: 18px;
+  }
+
+  .transport {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .transport select,
+  .transport textarea,
+  .transport input[type="number"],
+  .transport_notes{
+    width: 150px; 
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+  }
+  .transport_notes{
+    margin-left: 10px;
+    width: 200px;
+    min-width: 200px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+  }
+
+  /*.transport-textarea {
+    height: auto; 
+    margin-bottom: 3px;
+    padding: 5px;
+  }*/
+
+  .circular-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .transport-add {
+    color: var(--text-color);
+    background-color: green;
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  .doprava-input-form {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .doprava-input {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dopravax .dopravax-h2{
+    margin-top: 30px;
+  }
+  .dopravax-h2{
+    margin-bottom: 5px;
+  }
+  .transport-info{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .transport-info h3{
+    margin-bottom: 10px;
+  }
+  /*end of transport*/
+  .obsah-column3,
+  .obsah-column-container,
+  .submit-polozku{
+    display: none;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+  .submit-polozku2,
+  .submit2-container{
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit2-container{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    height: auto;
+    padding-top: 0;
+  }
+  .submit-polozku2{
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    height: auto; 
+    width: auto;
+  }
+  .image-container,
+  .main-image,
+  .main-image a,
+  .main-image-container{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    min-height: 250px;
+    margin: 0;
+  }
+  .main-image a{
+    width: auto;
+    position: absolute;
+  }
+  .image-container,
+  .main-image{
+    min-width: 100%;
+  }
+  .main-image-container,
+  .main-image-container > *,
+  .main-image/*,
+  .main-image > * */{
+    max-height: 400px;
+    height: 250px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    max-width: 100%; 
+    object-fit: contain; 
+  }
+  .image-container{
+    display: flex; /* Added this so the container will center its child */
+    justify-content: center; /* Center child horizontally */
+    align-items: center; /* Center child vertically */
+    width: 100%; /* Take up full width of parent */
+    padding: 10px;
+  }
+  .main-image-container {
+    max-height: 250px;
+    width: auto; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-image-container img {
+      max-width: 100%; 
+      height: auto;
+      object-fit: contain; 
+      max-height: 250px;
+      width: auto;
+  }
+  .remove-button-icon,
+  .main-image-container a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+  }
+  .icon-anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .remove-button-icon{
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+}

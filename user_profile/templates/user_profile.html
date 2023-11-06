@@ -1,0 +1,162 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+
+{% block extra_css_polozka %}
+  <link href="{% static 'css/user_profile2.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/search2.css' %}" rel="stylesheet">
+  <link href="{% static 'css/polozka_profile_view.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/polozka_profile_view2.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/polozka_profile_mobile.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/user_profile_mobile.css' %}" rel="stylesheet" media="screen">
+  {% endblock %}
+
+{% block polozka %}
+
+<div class="main-container">
+  <div class="profile-header">
+    <h1>{% trans "User profile:" %} {{ user_profile.user.username }}</h1>
+  </div>
+  <div class="profile-content">
+    <!-- Tabs -->
+    <div class="tab-list tab-list-container">
+      <ul class="tab-list">
+        <li data-target="offers" class="tab-item-link active">
+          <div class="li-content-container">
+            <i class="ti ti-shopping-cart"></i> 
+            <div class="li-text-holder">{% trans "Offers" %}</div>
+          </div>
+        </li>
+        <li data-target="personalProfile" class="tab-item-link active">
+          <div class="li-content-container">
+            <i class="ti ti-user"></i> 
+            <div class="li-text-holder">{% trans "Personal Profile" %}</div>
+          </div>
+        </li>
+        <li data-target="transport" class="tab-item-link active">
+          <div class="li-content-container">
+            <i class="ti ti-truck"></i> 
+            <div class="li-text-holder">{% trans "Transport Info" %}</div>
+          </div>
+        </li>
+        <li data-target="reviews" class="tab-item-link active tab-item-link-last">
+          <div class="li-content-container">
+            <i class="ti ti-stars"></i> 
+            <div class="li-text-holder">{% trans "Reviews" %}</div>
+          </div>
+        </li>
+        <li class="li-spacer"></li>
+      </ul>
+    </div>
+
+    <div class="tabs-container">
+      <!-- Offers Tab -->
+      <div class="snapper padding0" id="offers">
+        <div class="tab-item">
+          <div class="offers-container">
+            {% for product in products %}
+              {% include 'polozka_profile_view.html' with username=request.user.username nazov_produktu=product.nazov_produktu polozka=product %}
+            {% endfor %}
+            <div class="pagination-space-holder-x">
+            </div>
+            {% include 'pagination.html' %}
+          </div>
+        </div>
+      </div>
+    
+      <!-- Tab content -->
+      <!-- Personal Profile Tab -->
+      <div class="snapper" id="personalProfile">
+        <div class="tab-item">
+          <div class="profile-section">
+            <h1>{{ user_profile.user.username }}</h5>
+            <div class="profile-header2 flex items-center mt-3">
+              <div class="profile-informations">
+                {% if not user_profile.avatar and not user_profile.city and not user_profile.state_province and not user_profile.country and not user_profile.website and not user_profile.social_media and not user_profile.phone_number and not user_profile.languages and not user_profile.bio %}
+                  <p>{% trans "No provided data" %}</p>
+                {% else %}
+                  {% if user_profile.avatar %}
+                    <img src="{{ user_profile.avatar.url }}" alt="{% blocktrans %}Profile of {{ user_profile.user.username }}{% endblocktrans %}" class="profile-image">
+                  {% endif %}
+                  <div class="profile-info">
+                    {% if user_profile.city or user_profile.state_province or user_profile.country %}
+                      <p>
+                        <span class="profile-label">{% trans "Location:" %}</span>
+                        {% if user_profile.city %}
+                            {{ user_profile.city }},
+                        {% endif %}
+                        
+                        {% if user_profile.state_province %}
+                            {{ user_profile.state_province }},
+                        {% endif %}
+                        
+                        {% if user_profile.country %}
+                            {{ user_profile.country }}
+                        {% endif %}
+                      </p>
+                    {% endif %}
+                  </div>
+                  {% if user_profile.website %}
+                      <p><span class="profile-label">{% trans "Website:" %}</span> <a href="{{ user_profile.website }}" class="profile-link">{{ user_profile.website }}</a></p>
+                  {% endif %}
+                  
+                  {% if user_profile.social_media %}
+                      <p><span class="profile-label">{% trans "Social Media:" %}</span> <a href="{{ user_profile.social_media }}" class="profile-link">{{ user_profile.social_media }}</a></p>
+                  {% endif %}
+                  
+                  {% if user_profile.phone_number %}
+                      <p><span class="profile-label">{% trans "Phone:" %}</span> {{ user_profile.phone_number }}</p>
+                  {% endif %}
+                  
+                  {% if user_profile.languages %}
+                      <p><span class="profile-label">{% trans "Languages:" %}</span> {{ user_profile.languages }}</p>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+            <div class="profile-details mt-4">
+              {% if user_profile.bio %}
+                <div class="profile-bio mt-3">
+                    <h5>{% trans "Bio" %}</h5>
+                    <p class="bio-text">{{ user_profile.bio }}</p>
+                </div>
+              {% endif %}        
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Transport Info Tab -->
+      <div class="snapper" id="transport">
+        <div class="tab-item">
+          <div class="profile-section">
+            {% include 'doprava_pridanie_display.html' with deleting_items=False selecting_items=False show_checkbox=False %}
+          </div>
+        </div>
+      </div>
+    
+      <!-- Reviews Tab -->
+      <div class="snapper" id="reviews">
+        <div class="tab-item">
+          {% for review in reviews %}
+          <div class="review-card mt-3 p-3 border border-gray-200 rounded">
+            {% blocktrans with author=review.author %}
+            Review by {{ author }}
+            {% endblocktrans %}
+            <p>{{ review.content }}</p>
+            {% blocktrans with rating=review.rating %}
+            <strong>Rating:</strong> {{ rating }}/5
+            {% endblocktrans %}
+          </div>
+          {% endfor %}
+          This section is coming soon
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/user_profile.js' %}"></script>
+{% endblock %}
