@@ -1,0 +1,69 @@
+:root {
+    --background-color: #1e1e1e;
+    --text-color: #e5e5e5;
+    --container-bg: #333;
+    --border-color: #555;
+    --label-color: #ddd;
+    --textarea-bg: #444;
+    --input-bg: #444;
+    --select-bg: #444;
+    --text-colorb: #000;
+    --button-red-bg: #f54545;
+    --button-red-hover-bg: #d13434;
+    --button-green-bg: #4CAF50;
+    --button-green-hover-bg: #43A047;
+}
+
+.doprava-input{
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.transport label {
+    color: var(--label-color);
+}
+
+.transport_notes {
+    background-color: var(--textarea-bg);
+    color: var(--text-color);
+}
+
+input[type="number"], .transport select {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.transport-add {
+    background-color: var(--button-green-bg);
+}
+
+.transport-add:hover {
+    background-color: var(--button-green-hover-bg);
+}
+
+.transport-delete {
+    background-color: var(--button-red-bg);
+}
+
+.transport-delete:hover {
+    background-color: var(--button-red-hover-bg);
+}
+
+.input-dop option{
+    color: var(--text-colorb);
+}
+
+.transport select {
+    background-color: var(--input-bg); /* or any other color variable or direct color value */
+    color: var(--text-colorb);
+}
+
+.transport select, .transport select option {
+    color: var(--text-color);
+    background-color: var(--container-bg);
+}
+
+.transport .unit-dop {
+    color: var(--text-colorb);
+}

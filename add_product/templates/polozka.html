@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/polozka.css' %}" rel="stylesheet" media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma market</title>
+    <link rel="icon" type="image/png" href="pics/favicon/x.png">
+</head>
+
+
+<body>
+  <nav class="sidebar">
+      <div class="header-left-menu">
+        <div class="user-profile">
+          <img src="pics/profile.jpg" alt="User profile picture">
+          <p>Logged as:</p>
+          <h2>{{ username }}</h2>
+          <p class="time-now">{{ now }}</p>
+      </div>
+      </div>
+      <ul>
+          <li><a href="main.html">HomeXXX</a></li>
+          <li><a href="produkty.html">Products</a></li>
+          <li><a href="main.html">People Who Offer</a></li>
+          <li><a href="main.html">Map</a></li>
+          <li><a href="main.html">Contact</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <main id="1">
+      <div class="blue-main-bg">
+        <div class="image-container">
+          <div class="main-image">
+              <img src="https://via.placeholder.com/500x300" alt="jajka">
+              <!--<img src="https://via.placeholder.com/500x300" targe="_blank" alt="Main Image">-->
+          </div>
+          <div class="small-images">
+              <div class="small-image">
+                  <img src="https://via.placeholder.com/200x100" alt="Small Image 1">
+              </div>
+              <div class="small-image">
+                  <img src="https://via.placeholder.com/200x100" alt="Small Image 2">
+              </div>
+              <div class="small-image">
+                  <img src="https://via.placeholder.com/200x100" alt="Small Image 3">
+              </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h1>Domace jajka v supis kvalite</h1>
+          <p>xdxdxdxd</p>
+          <div class="product-info-cena">
+            <p>58</p> <p>€/kg</p>
+          </div>
+
+        </div>
+      	<div class="obsah">
+          <div class="obsah-container"><!----
+            <input type="checkbox" id="toggle" class="hidden-checkbox hc1">
+            <input type="checkbox" id="toggle" class="hidden-checkbox hc2">
+            <input type="checkbox" id="toggle" class="hidden-checkbox hc3">
+            <input type="checkbox" id="toggle" class="hidden-checkbox hc4">-->
+            <hr class="obsah-horna-ciarka">
+            <div class="obsah-column1">
+                <h2 class="obsah-column1-prvy">Info o nasich jajkach</h2>
+                <p class="obsah-column1-prvy">Sme veľmi hrdí na vajcia, ktoré ponúkame na našej farme a radi by sme vám predstavili, prečo by ste si mali vybrať práve naše vajcia. Naši zákazníci si našu farmu vyberajú nielen kvôli vynikajúcej kvalite vajec, ale aj kvôli našim šťastným kuriatkom, ktoré sa pohybujú na voľnej lúke a majú priestor pre svoje prirodzené správanie.</p><br>
+                <p class="obsah-column1-prvy">Vajcia, ktoré ponúkame, sú čerstvé a priamo od našich kuriatok, ktoré sú každodenne zásobované výživnou stravou a kvalitnou starostlivosťou. Pri ich spracovaní dbáme na to, aby boli vajcia vždy čerstvé, zdravé a bez akýchkoľvek chemických prísad.</p><br>
+                <p class="obsah-column1-prvy">Jednou z našich najdôležitejších hodnôt je etická a zodpovedná výroba vajec. Naši kuriatka sa pohybujú na voľnej lúke a majú dostatok priestoru pre svoje prirodzené správanie. Naši zákazníci si môžu byť istí, že naše kuriatka sú ošetrené s láskou a starostlivosťou.</p><br>
+                <p class="obsah-column1-prvy">Okrem toho, naši zákazníci sa môžu tešiť na rôzne druhy vajec, ktoré ponúkame. Máme v ponuke bielkové vajcia, ktoré sú ideálne pre ľudí, ktorí sledujú svoju stravu. Máme tiež vajcia od našich kurčiat, ktoré sa pasú na voľnej lúke a kŕmia sa kvalitnou stravou. Tieto vajcia majú plnšiu chuť a sú veľmi výživné.</p><br>
+                <p class="obsah-column1-prvy">Na záver, radi by sme zdôraznili, že naše vajcia sú neodolateľne čerstvé, zdravé a plné života. Sme presvedčení, že naše vajcia sú najlepšou voľbou pre tých, ktorí chcú kúpiť kvalitné vajcia s dobrým svedomím. Tešíme sa na vašu návštevu na našej farme a dúfame, že vás budeme môcť potešiť našimi skvelými vajcami.</p><br>
+            </div>
+            <div class="obsah-column2">
+                <div class="chat-container">
+                    <div class="message-container">
+                        <div class="chat-bubble right">
+                          <p>Hello, how are you doing?</p>
+                        </div>
+                        
+                        <div class="chat-bubble left">
+                          <p>Hi, I'm doing well. Thanks for asking!</p>
+                        </div>
+                        
+                        <div class="chat-bubble right">
+                          <p>That's great to hear!</p>
+                        </div>
+                        
+                        <div class="chat-bubble left">
+                          <p>Yeah, it's been a good day so far.</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                      <input class="obsah-input" type="text" placeholder="Type your message...">
+                      <button class="obsah-input-button">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="obsah-column3">
+            </div>
+          </div>
+        </div>
+        <div class="cena" id="2">
+          
+        </div>
+        <div class="doprava" id="3">
+          
+        </div>
+    </main>
+    <div class="menu-sticker-indent"></div>
+    <div class="menu-sticker">
+      <button class="menu-sticker-button">
+        <a href="#1">Info</a>
+      </button>
+      <button class="menu-sticker-button">
+        <a href="#2">Cena</a>
+      </button>
+      <button class="menu-sticker-button">
+        <a href="#3">Doprava</a>
+      </button>
+      <button class="menu-sticker-button">
+        <a href="#4">Recenzie</a>
+      </button>
+    </div>
+  
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <ul>
+                  <h3>About</h3>
+                  <li>Company</li>
+                  <li>Careers</li>
+                  <li>News &amp; events</li>
+                  <li>Investor relations</li>
+                  <li>Manufacturing</li>
+                  <li>Corporate citizenship</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                  <h3>Quick links</h3>
+                  <li>Contact us</li>
+                  <li>TI E2E™ design support forums</li>
+                  <li>Customer support center</li>
+                  <li>Packaging</li>
+                  <li>Quality &amp; reliability</li>
+                  <li>myTI FAQ</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                  <h3>Buying</h3>
+                  <li>Ordering resources</li>
+                  <li>TI API suite</li>
+                  <li>Ordering help &amp; FAQs</li>
+                  <li>Cross-reference search</li>
+                  <li>Authorized distributors</li>
+                </ul>
+            </div>
+            <div class="col">
+              <h3>Follow Us</h3>
+              <ul class="social-media">
+                <li><a href="https://www.twitter" target="_blank"><input class="icons" type="Image" src="ikona_twitter2.png" width="40" height="40">  </a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><input class="icons" type="Image" src="ikona_facebook2.png" width="40" height="40"></a>  </li>
+                <li><a href="https://www.instagram.com" target="_blank"><input class="icons" type="Image" src="ikona_instagram2.png" width="40" height="40"></a>   </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <p>&copy; 2023 My Farm. All rights reserved. Licensed under 
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="cc-license.png" alt="Creative Commons License"></a></p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

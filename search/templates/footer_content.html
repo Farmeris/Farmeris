@@ -1,0 +1,46 @@
+{% load static i18n %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <ul>
+          <h3>{% trans "About" %}</h3>
+          <!--<li>{% trans "Company" %}</li>
+          <li>{% trans "Careers" %}</li>
+          <li>{% trans "News &amp; events" %}</li>
+          <li>{% trans "Investor relations" %}</li>
+          <li>{% trans "Manufacturing" %}</li>
+          <li>{% trans "Corporate citizenship" %}</li>-->
+          <li></li>
+        </ul>
+    </div>
+    <div class="col">
+        <ul>
+          <h3>{% trans "Current Stats" %}</h3>
+          <li>{% blocktrans with total_users=total_users %}Total registered users: {{ total_users }}{% endblocktrans %}</li>
+        </ul>
+    </div>
+    <div class="col">
+        <ul>
+          <h3>{% trans "Legal" %}</h3>
+          <!--<li>{% trans "Ordering resources" %}</li>
+          <li>{% trans "TI API suite" %}</li>
+          <li>{% trans "Ordering help &amp; FAQs" %}</li>
+          <li>{% trans "Cross-reference search" %}</li>
+          <li>{% trans "Authorized distributors" %}</li>
+        -->
+        <li><a href="{% url 'privacy_policy' %}">{% trans "Privacy policy" %}</a></li>
+        </ul>
+    </div>
+    <div class="col">
+      <h3>{% trans "Follow Us" %}</h3>
+      <ul class="social-media">
+        <!--<li><a href="https://www.twitter" target="_blank"><img class="icons" src="{% static 'images/ikona_twitter2.png' %}" width="40" height="40" alt="{% trans 'Twitter Icon' %}"></a></li>-->
+        <li><a href="https://www.facebook.com" target="_blank"><img class="icons" src="{% static 'images/ikona_facebook2.png' %}" width="40" height="40" alt="{% trans 'Facebook Icon' %}"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank"><img class="icons" src="{% static 'images/ikona_instagram2.png' %}" width="40" height="40" alt="{% trans 'Instagram Icon' %}"></a></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <p>&copy; Farmeris - beta 28.8.2023 - v0.2.9
+</div>

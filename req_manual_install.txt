@@ -1,0 +1,13 @@
+sudo apt-get install zlib1g-dev
+pip install wheel
+pip install psycopg2
+pip install pillow
+pip install python-dotenv
+
+pip install django-allauth
+pip install django-allauth-ui
+pip install django-widget-tweaks
+pip install pytz
+pip install gunicorn
+pip install allauth_ui
+django-environ

@@ -1,0 +1,80 @@
+{% load static %}
+{% load custom_filters i18n %}
+
+<link href="{% static 'css/doprava_pridanie_display.css' %}" rel="stylesheet">
+
+{% for transport in transport_list %}
+<div class="doprava-display-container-holder">         
+    <div class="doprava-display-container">
+        <div class="transport-output">
+            <label for="transport" class="doprava-first">{% trans "Transport type:" %}</label>
+            <div id="transport">
+                {% if transport.transport_name == 'osobne' %}
+                    {% trans "In person" %}
+                {% elif transport.transport_name == 'online' %}
+                    {% trans "Online" %}
+                {% elif transport.transport_name == 'kurier' %}
+                    {% trans "Courier" %}
+                {% elif transport.transport_name == 'vlastne' %}
+                    {% trans "Custom" %}
+                {% endif %}
+            </div>
+            <label for="transport_price">{% trans "Price:" %}</label>
+            <div id="transport_price">
+                {{ transport.price|decimal_places:2 }}
+            </div>
+    
+            <div id="currency" class="currency">
+                {% if transport.currency == 'eur' %}
+                    EUR
+                {% elif transport.currency == 'czk' %}
+                    CZK
+                {% elif transport.currency == 'usd' %}
+                    USD
+                {% endif %}
+            </div>
+    
+            <label for="unit">{% trans "Amount:" %}</label>
+            <div id="transport_amount">
+                {{ transport.amount|decimal_places:5 }}
+            </div>
+            <div id="unit">
+                {% if transport.unit == 'kg' %}
+                    kg
+                {% elif transport.unit == 'ks' %}
+                    ks
+                {% elif transport.unit == 'g' %}
+                    g
+                {% elif transport.unit == 'liter' %}
+                    {% trans "liter" %}
+                {% elif transport.unit == 'litrov' %}
+                    {% trans "litres" %}
+                {% endif %}
+            </div>
+            {% if transport.transport_notes %}
+                <label for="transport_notes">{% trans "Additional notes:" %}</label>
+                <div id="transport_notes" class="transport_notes">
+                    {{ transport.transport_notes }}
+                </div>
+            {% endif %}
+    
+            {% if deleting_items %}
+                <div class="transport-delete-container">
+                    {% include 'transport_delete.html' with transport_id=transport.id %}
+                </div>
+            {% elif selecting_items%}
+                <div class="transport-select-container">
+                    {% include 'transport_select.html' with transport_id=transport.id %}
+                </div>
+            {% endif %}
+            {% if show_checkbox and transport.user_profile.user == request.user %}
+                <label class="checkbox-container-tr">
+                    {% trans "Include:" %}
+                    <input type="checkbox" name="transport_selected" value="{{ transport.id }}">
+                    <span class="checkmark-tr"></span>
+                </label>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,33 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../static/css/login.css" rel="stylesheet" media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+    
+    {% if google_login_url %}
+        <a href="{{ google_login_url }}" class="btn btn-social btn-google">
+            <span class="fa fa-google"></span> Sign in with Google
+        </a>
+    {% endif %}
+    
+    <p class="no_acc">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</body>
+</html>

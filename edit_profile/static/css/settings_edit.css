@@ -1,0 +1,262 @@
+/* Base styles */
+.profile-settings body,
+.profile-settings h2,
+.profile-settings h3,
+.profile-settings p,
+.profile-settings form {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-settings {
+    font-family: 'Roboto', sans-serif; /* using Roboto, a modern font */
+    background-color: #121212;
+    background-color: transparent;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.profile-settings a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.profile-settings {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.profile-settings h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 15px;
+}
+
+.settings-container {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Left Sidebar */
+.settings-options {
+    position: sticky;
+    top: 50px;
+    width: 250px;
+    background-color: var(--settings-options-bgclr);
+    border-radius: var(--settings-options-bdrds);
+    border: var(--settings-options-bd) solid var(--settings-options-bdclr);
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-settings .settings-options h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.profile-settings .settings-options a:hover h3 {
+    color: #007BFF;
+}
+
+/* Right content */
+.settings-content {
+    flex: 1;
+    background-color: var(--settings-options-bgclr);
+    border-radius: var(--settings-options-bdrds);
+    border: var(--settings-options-bd) solid var(--settings-options-bdclr);
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.settings-content-child{
+    background-color: var(--settings-options-bgclr);
+    border-radius: var(--settings-options-bdrds);
+    border: var(--settings-options-bd) solid var(--settings-options-bdclr);
+    padding: 20px;
+}
+.address-id{
+    margin-top: 50px;
+}
+.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.profile-settings form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-settings label {
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+}
+
+.profile-settings input,
+.profile-settings textarea {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #333;
+    background-color: var(--content-user-settings-input-bgclr);
+    color: var(--content-user-settings-input-clr);
+    border: var(--content-user-settings-input-bd) solid var(--content-user-settings-input-bdclr);
+    margin: 1px;
+    font-size: 1rem;
+    width: 100%;
+}
+.profile-settings textarea {
+    min-height: 250px;
+    margin: 0;
+}
+.profile-settings input:focus,
+.profile-settings textarea:focus{
+    border: var(--content-user-settings-input-bd-focus) solid var(--content-user-settings-input-bdclr) !important;
+    margin: 0;
+}
+
+.profile-settings button[type="submit"], .danger-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-settings button[type="submit"]:hover {
+    background-color: #0056b3;
+    color: var(--text-color);
+}
+
+.profile-settings button[type="submit"] {
+    background-color: #007BFF;
+    color: var(--text-color);
+}
+
+.danger-btn:hover {
+    background-color: #b30000;
+    color: var(--text-color);
+}
+
+.danger-btn {
+    background-color: #FF0000;
+    color: var(--text-color);
+}
+
+.avatar img {
+    width: 100px;       
+    height: 100px;      
+    border-radius: 50%; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Spacing for each section */
+.settings-content section[id] {
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: var(--content-user-settings-rd);
+    background-color: var(--content-user-settings-bgclr);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.settings-options section{
+    margin-bottom: 25px;
+}
+/* Adjust the last section so it doesn't have extra bottom margin */
+.settings-content section[id]:last-of-type {
+    margin-bottom: 0;
+}
+.profile-settings .ti {
+    font-size: 24px;  /* Adjust this value to the desired size */
+}
+.profile-settings .ti-settings {
+    font-size: 32px;  /* Adjust this value to the desired size */
+    margin-right: 10px;
+}
+.address-option a{
+    display: flex;
+    flex-direction: row;
+}
+.settings-container .ti {
+    font-size: 35px;  
+}
+.address-option h3{
+    margin: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for screens less than 600px */
+@media (max-width: 600px) {
+    .settings-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .settings-options {
+        width: 100%;
+        position: static; /* Resetting the sticky positioning for mobile */
+        margin-bottom: 20px; /* Giving some space between options and content */
+    }
+    .settings-content {
+        width: 100%;
+    }
+    .profile-settings h2 {
+        font-size: 1.5rem; /* Decrease the font size */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .profile-settings .settings-options h3 {
+        font-size: 1rem; /* Decrease the font size */
+    }
+    .profile-settings form {
+        gap: 10px; /* Decrease the gap for a tighter form layout */
+    }
+    .profile-settings label {
+        margin-bottom: 5px; /* Reduce the margin to save space */
+    }
+    .avatar img {
+        width: 70px;        
+        height: 70px;        
+        margin: 0 auto 15px auto; /* Center the image and provide some margin at the bottom */
+    }
+    .settings-content section[id] {
+        margin-bottom: 10px; /* Reduce the spacing between sections */
+    }
+    .profile-settings .ti-settings, .settings-container .ti {
+        font-size: 24px; /* Adjust the icon sizes for mobile */
+    }
+    .settings-content h1{
+        font-size: 25px;
+    }
+}

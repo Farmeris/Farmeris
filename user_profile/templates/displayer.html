@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Output Product Feed</title>
+</head>
+<body>
+    <h1>Output Product Feed</h1>
+    {% if product_feeds %}
+        <ul>
+            {% for product_feed in product_feeds %}
+                <li>
+                    <h3>{{ product_feed.namefeed }}</h3>
+                    <p>{{ product_feed.textfeed }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No product feeds found.</p>
+    {% endif %}
+</body>
+</html>

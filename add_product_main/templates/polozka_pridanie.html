@@ -1,0 +1,148 @@
+{% extends 'polozka_new.html' %}
+{% load static i18n %}
+{% load custom_filters %}
+
+{% block extra_css_polozka %}
+  <link href="{% static 'css/polozka_pridanie4.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block polozka %}
+<form class="form-pridavanie-polozky" method="post" action="{% url 'add_product_main:user_pridaj_polozku' username=request.user.username %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="product-form">
+    <!-- Image Input -->
+    <div class="input-group">
+        <label for="product-image"><i class="ti ti-camera-plus"></i> {% trans "Add image (max.1)" %}</label>
+        <input type="file" id="main-image-upload" name="image">
+    </div>
+
+    <!-- Title Input -->
+    <div class="input-group">
+        <label for="title">{% trans "Title" %}</label>
+        <input type="text" id="title" name="nazov_produktu" placeholder="{% trans 'Title' %}">
+    </div>
+
+    <!-- Subtitle Input -->
+    <div class="input-group">
+        <label for="subtitle">{% trans "Subtitle" %}</label>
+        <input type="text" id="subtitle" name="info_nazov_produktu" placeholder="{% trans 'Subtitle' %}">
+    </div>
+
+    <!-- Description Input -->
+    <div class="input-group">
+        <label for="description"><i class="ti ti-file-description"></i> {% trans "Description" %}</label>
+        <textarea id="description" name="info_produktu" rows="2" placeholder="{% trans 'Input here description' %}"></textarea>
+    </div>
+    <div class="cenay" id="2">
+        <div class="cena-container-label">
+          <h2 class="cena-h2"><i class="ti ti-shopping-bag-plus"></i> {% trans "Add price" %}</h2>
+        </div>
+        <div class="main-price">
+          {% include '2polozka_cena_pridanie.html' with cena_add=False %}
+        </div>
+        {% url 'user_profile:user_profile' username=username as profile_url %}
+        <p class="cena-h4">
+          {% blocktrans with profile_url=profile_url %}
+          *Adding next prices via <a class="product-info-pouzivatel" href="{{ profile_url }}" target="_blank">profile</a>
+          {% endblocktrans %}
+        </p>
+    </div>
+    <div class="dopravay" id="3">
+        <h2 class="cena-h2"><i class="ti ti-truck-delivery"></i> {% trans "Add transport" %}</h2>
+        <div class="main-transport">
+          {% include '2polozka_doprava_pridanie.html' with transport_add=False %}
+        </div>
+        <div class="transport-info">
+          <h2 class="dopravax-h2">{% trans "Adding other options of transport from global options:" %}</h2> 
+        </div>
+        {% include 'doprava_pridanie_display.html' with deleting_items=False selecting_items=False show_checkbox=True %}
+    </div>
+    <div class="availability-section" id="availability">
+        <h2 class="availability-header"><i class="ti ti-calendar"></i> {% trans "Add availability" %}</h2>
+    
+        <!-- Availability Start Date Input -->
+        <div class="input-group">
+            <label for="availability-start-date">{% trans "Availability start date" %}</label>
+            <input type="date" id="availability-start-date" name="availability_start_date" placeholder="{% trans 'Availability start (optional)' %}">
+        </div>
+    
+        <!-- Availability End Date Input -->
+        <div class="input-group">
+            <label for="availability-end-date">{% trans "Availability end date" %}</label>
+            <input type="date" id="availability-end-date" name="availability_end_date" placeholder="{% trans 'Availability end (optional)' %}">
+        </div>
+    
+        <!-- Stock Count Input -->
+        <div class="input-group">
+            <label for="stock-count">{% trans "Amount in the stock" %}</label>
+            <input type="number" id="stock-count" name="stock_count" placeholder="{% trans 'Amount (optional)' %}">
+        </div>
+    
+        <!-- Checkbox for Available Until Out of Stock -->
+        <div class="input-group checkbox-group">
+            <label for="available-until-out-of-stock">{% trans "Available till out of stock?" %}</label>
+            <input type="checkbox" id="available-until-out-of-stock" name="available_until_out_of_stock">
+        </div>
+    </div>
+    <!-- Submit Button -->
+    <button type="submit" class="submit-button">{% trans "Add item" %}</button>
+  </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+
+const inputs = document.querySelectorAll('input, textarea');
+
+inputs.forEach(input => {
+    // Validate the input when the user types in it
+    input.addEventListener('input', function() {
+        validateInput(input);
+    });
+
+    // Validate the input when the user moves to another field
+    input.addEventListener('blur', function() {
+        validateInput(input);
+    });
+});
+
+function validateInput(input) {
+    if (input.checkValidity()) {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+    } else {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+    }
+}
+
+document.querySelector(".form-pridavanie-polozky").addEventListener('submit', function(e) {
+    let isFormValid = true;
+
+    inputs.forEach(input => {
+        if (input.hasAttribute('required') && input.value.trim() === "") {
+            input.classList.remove('valid');
+            input.classList.add('invalid');
+            isFormValid = false;
+        } else {
+            validateInput(input);
+            if (input.classList.contains('invalid')) {
+                isFormValid = false;
+            }
+        }
+    });
+
+    if (!isFormValid) {
+        e.preventDefault();
+        alert('Please fix the invalid fields before submitting.');
+        return;
+    }
+
+    // If you reach here, the form is valid.
+    // Send your AJAX request or whatever you intend to do upon form submission.
+
+});
+
+</script>
+{% endblock %}

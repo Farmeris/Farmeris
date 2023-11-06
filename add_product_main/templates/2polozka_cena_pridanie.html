@@ -1,0 +1,36 @@
+{% load i18n %}
+
+<div class="price">
+  <label for="price">{% trans "Price:" %}</label>
+  <div class="input-wrapper-dop">
+    <input type="number" id="price" min="0" placeholder="{% trans 'Price:' %}" name="price">
+    
+    <!--<label for="currency">Mena:</label>-->
+    <select id="currency" name="currency" class="unit-dop">
+      <option value="eur">EUR</option>
+      <option value="czk">CZK</option>
+      <option value="usd">USD</option>
+    </select>
+  </div>
+  <label for="amount">{% trans "Amount:" %}</label>
+
+  <div class="input-wrapper-dop">
+    <input type="number" id="amount" name="amount" min="0" value="1" {% if readonly_cena %}readonly{% endif %}>    
+    <!--<label for="unit">Jednotka:</label>-->
+    <select id="unit" name="unit" class="unit-dop">
+      <option value="kg">kg</option>
+      <option value="ks">ks</option>
+      <option value="g">g</option>
+      <option value="l">{% trans "liter" %}</option>
+      <option value="l">{% trans "litres" %}</option>
+    </select>
+  </div>
+  {% if cena_add %}
+    <div class="deselect-button-container">
+        <button for="cena-add" class="cena-add add-button-icon-submit">
+            <div class="plus-icon"></div>
+        </button>
+    </div>
+  {% endif %}
+
+</div>

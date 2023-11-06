@@ -1,0 +1,35 @@
+{% load static %}
+{% load custom_filters i18n %}
+<!--
+<link href="{% static 'css/polozka_cena_display.css' %}" rel="stylesheet">
+-->
+<link href="{% static 'css/polozka_cena_display2.css' %}" rel="stylesheet">
+
+{% for cena in ceny %}
+<div class="polozka-display-container-holder">
+    <div class="polozka-display-container">
+        <div class="polozka-output">
+            <label for="amount">{% trans "Amount:" %}</label>
+            <div id="polozka_amount">
+                {{ cena.amount|decimal_places:2 }}
+            </div>
+            <div id="unit">
+                {{ cena.unit }}
+            </div>
+
+            <label for="price">{% trans "Price:" %}</label>
+            <div id="polozka_price">
+                {{ cena.price|decimal_places:2 }}
+            </div>
+            <div id="currency">
+                {{ cena.currency }}
+            </div>
+            {% if request.user == cena.user_profile.user %}
+            <div class="deselect-button-container">
+                {% include 'cena_delete.html' with cena_id=cena.id %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}

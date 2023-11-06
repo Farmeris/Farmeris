@@ -1,0 +1,283 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: auto;
+}
+
+/*submit polozka*/
+.submit-polozku{
+  width: 200px;
+  height: 75px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*end of submit polozka*/
+/*cena*/
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price input[type="number"]{
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.price select,
+.unit select,
+.transport select,
+.transport-button{
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.transport-button{
+  margin-left: 50px;
+}
+.price label.price-first,
+.transport label.doprava-first{
+  margin-left: 0;
+  padding: 0;
+}
+select{
+  cursor: pointer;
+}
+.cena-h2,
+.doprava-h2{
+  margin-bottom: 20px;
+}
+.transport-textarea {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: both;
+  position: relative;
+  margin-left: 50px;
+  transform: translateY(50%);
+}
+.circular-button{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 0;
+}
+.transport-delete{
+  color: white;
+  background-color: red;
+  margin-left: 50px;
+  position: relative;
+  pointer-events: all;
+  cursor: pointer;
+}
+.transport-add{
+  color: white;
+  background-color: green;
+  margin-left: 20px;
+  position: relative;
+  pointer-events: all;
+  cursor: pointer;
+}
+.nice-textarea::placeholder {
+  color: #999;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.moznost-dopravy{
+  margin-left: 350px;
+}
+.moznost-dopravy2{
+  margin-left: 220px;
+}
+.doprava-header {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 150px;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.doprava-h2{
+  margin-bottom: 0;
+}
+/*end of cena*/
+/*4tlacitka*/
+.obsah-column3-row, .obsah-column3-row:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: rgb(150, 150, 150);
+  background-color: #33333300;
+  text-decoration: none;
+  height: 25%;
+}
+
+.obsah-column3-ciarky {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 0;
+}
+/*end of obsah*/
+
+/*cena*/
+.cena, .doprava-input, .doprava-input-form{
+  height: 472px;
+  width: 100%;
+  padding: 20px;
+}
+.doprava-input{
+  border: var(--doprava-input-bd) solid var(--doprava-input-bdclr);
+  border-radius: var(--doprava-input-bdrd);
+}
+/*end of cena*/
+/*doprava*/
+.doprava-input-form{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.doprava-input{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*end of doprava*/
+
+/*menu-sticker*/
+.transport {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.transport label,
+.transport input,
+.transport select,
+.transport-button,
+.transport-add,
+.transport_notes {
+  margin-bottom: 10px;
+}
+.transport label,
+.transport-button,
+.transport-add,
+.transport_notes {
+  /*margin-right: 10px;*/
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+.transport input,
+.transport select{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 7px;
+}
+
+.transport {
+  display: flex;
+  flex-wrap: wrap;  /* allow wrapping of elements for better responsiveness */
+  gap: 10px;        /* set a gap between each element */
+}
+
+.input-wrapper-dop {
+  display: flex;  /* making it flex will ensure the children always stay in a row */
+  align-items: center;  /* vertically center the child elements */
+}
+
+.transport label {
+  margin-right: 10px;  /* space between label and input */
+}
+
+.transport input[type="number"]{
+  flex: 1;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  appearance: none;
+  position: relative;
+  width: 120px;
+}
+
+.transport .currency-dop,
+.transport .unit-dop {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  width: 70px;
+  appearance: none;  
+  background: #fff url('arrow.svg') no-repeat right 10px center;  
+  padding-right: 25px;  
+}
+
+
+.transport select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #333;
+  background-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+  .transport{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .transport-add{
+    margin: 0;
+  }
+  .doprava-h2{
+    position: relative;
+    font-size: 25px;
+  }
+  .doprava-header{
+    margin-bottom: 0;
+  }
+  .edit_user_profile-a-d{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}

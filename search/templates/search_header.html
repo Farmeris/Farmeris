@@ -1,0 +1,11 @@
+{% load static i18n %}
+
+<header class="dropdown-header">
+  <form method="GET" action="{% url 'search:user_search' %}">
+    <div class="search-container">
+      <input type="text" placeholder="{% trans 'Search..' %}" name="query" class="search-input" value="{{ request.GET.query }}">
+      <button type="submit" class="search-btn">{% trans 'Search' %}</button>
+      <!--<button type="button" class="options-btn">{% trans 'Options' %}</button>-->
+    </div>
+  </form>
+</header>

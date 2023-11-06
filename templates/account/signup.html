@@ -1,0 +1,21 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+
+{% load widget_tweaks %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign up" %}{% endblock %}
+
+{% block whitebox %}
+<h1 class="mb-5 text-3xl text-center">{% trans "Sign up" %}</h1>
+<form id="signup_form" method="post" action="{% url 'account_signup' %}" novalidate>
+  {% include "account/_render_form.html" %}
+  {% include "account/_button.html" with text="Sign up" %}
+</form>
+<a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500" href="{{ login_url }}">{% trans "Already have an account? Sign in." %}</a>
+
+<p class="mt-6 text-xs text-center text-gray-500">{% trans "Sign up with a third party" %}</p>
+{% include "socialaccount/snippets/provider_list.html" with process="login" %}
+{% include "socialaccount/snippets/login_extra.html" %}
+  
+{% endblock %}

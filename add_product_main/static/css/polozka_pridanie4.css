@@ -1,0 +1,122 @@
+.product-form {
+    position: relative;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: var(--product-form-polozka-pridanie-box-shadow);
+    overflow: hidden;
+    color: var(--product-form-clr);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+    position: relative;
+    width: 500px;
+    max-width: calc(500px);
+    max-width: calc(100vw - 350px);
+    padding: 10px;
+    border: var(--polozka-pridanie-input-bd) solid var(--polozka-pridanie-input-bdclr);
+    border-radius: 4px;
+    justify-self: center;
+    min-width: 250px;
+}
+.input-group textarea{
+    width: 500px;
+    height: 150px;
+    max-height: 1500px;
+    max-width: calc(100vw - 350px);
+    min-width: 250px;
+    position: relative;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px 15px;
+    background-color: var(--submit-btn-polozka-pridanie-bgclr); 
+    border: var(--submit-btn-polozka-pridanie-bd) solid var(--submit-btn-polozka-pridanie-bdclr);
+    color: var(--submit-btn-polozka-pridanie-clr);
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: calc(500px);
+    margin-top: 50px;
+}
+
+.submit-button:hover {
+    background-color: var(--submit-btn-polozka-pridanie-bgclr-hvr); 
+}
+
+/* Dark Theme Styles */
+
+.product-form {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    color: var(--text-color) !important;
+}
+.product-info-pouzivatel{
+    color: var(--united-link-clr);
+}
+
+.product-info-pouzivatel:hover{
+    color: var(--united-link-clr-hvr);
+}
+
+
+/*correct wrong input JS*/
+input, textarea {
+    border: 1px solid blue;  /* Default to blue */
+}
+
+input.invalid, textarea.invalid {
+    border: 1px solid red;
+}
+
+input.valid, textarea.valid {
+    border: 1px solid green;
+}
+/*end of correct wrong input JS*/
+
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 600px){
+    .product-form {
+        padding: 20px;
+    }
+    .input-group{
+        width: 100%;
+        min-width: 100px;
+    }
+    .input-group input, .input-group textarea {
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+    .submit-button {
+        max-width: 100%;
+    }
+
+    .input-group textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+}

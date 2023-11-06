@@ -1,0 +1,167 @@
+.add-button-icon {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.add-button-icon::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: transparent; /* Make it transparent to create an empty center */
+  border: 2px solid darkgreen; /* Add a border */
+  border-radius: 50%;
+  top: 2px; 
+  left: 2px; 
+}
+
+.plus-icon {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.plus-icon::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-icon::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+
+
+
+.remove-button-icon {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.remove-button-icon::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: transparent; /* Make it transparent to create an empty center */
+  border: 2px solid darkred; /* Add a border */
+  border-radius: 50%;
+  top: 2px; 
+  left: 2px; 
+}
+
+.minus-icon {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+}
+
+
+
+
+
+
+.plus-product-icon {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+}
+.plus-product-icon:hover,
+.plus-product-icon:hover::before,
+.plus-product-icon:hover::after {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.plus-product-icon::before,
+.plus-product-icon::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 15px;
+}
+
+.plus-product-icon::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-product-icon::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+
+
+
+.load-gear-icon {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+}
+
+.gear-gear-icon {
+  position: absolute;
+  z-index: -10;
+  width: 80px;
+  height: 80px;
+}
+
+.gear-one-gear-icon{
+    fill: #94DDFF
+}
+
+.gear-three-gear-icon{
+    fill: #FFCD5C;
+}
+
+.three-gear-icon {
+  top: -75px;
+  left: 55px;
+  width: 120px;
+  height: 120px;
+  transform: rotate(-10deg);
+}
+.one-gear-icon{
+  transform: rotate(5deg);
+}
