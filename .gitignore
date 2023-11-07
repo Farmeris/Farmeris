@@ -5,7 +5,7 @@ static/*
 *.pyc
 .env
 config/
-login_project/settings_zaloha.py
+farmeris/settings_zaloha.py
 media/*
 .vscode
 git_commands.txt
@@ -13,5 +13,5 @@ my_hashed_passwords.txt
 .oauth
 .secret
 .env
-login_project/settings.py
 generate_secret_key.py
+venv_farmeris
