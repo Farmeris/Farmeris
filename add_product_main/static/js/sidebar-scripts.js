@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
     submitButton.style.display = 'none';
   }
 
-  // Set Slovak as the default language for first-time visitors
-  if (document.cookie.indexOf('visited_before=true') === -1) {
-    var languageSelect = document.querySelector("select[name='language']");
-    if (languageSelect) {
-      languageSelect.value = 'sk';
-      submitForm(); // Use the submitForm function to submit the language change form
+//   // Set Slovak as the default language for first-time visitors
+//   if (document.cookie.indexOf('visited_before=true') === -1) {
+//     var languageSelect = document.querySelector("select[name='language']");
+//     if (languageSelect) {
+//       languageSelect.value = 'sk';
+//       submitForm(); // Use the submitForm function to submit the language change form
 
-      // Set a cookie to mark that the user has visited before
-      var expires = new Date();
-      expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year expiration
-      document.cookie = "visited_before=true; expires=" + expires.toUTCString();
-    }
-  }
-});
+//       // Set a cookie to mark that the user has visited before
+//       var expires = new Date();
+//       expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year expiration
+//       document.cookie = "visited_before=true; expires=" + expires.toUTCString();
+//     }
+//   }
+// });
 
-// Function to submit the language form
+Function to submit the language form
 function submitForm() {
   document.getElementById('languageForm').submit();
 }
