@@ -11,7 +11,6 @@
         <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
       {% endfor %}
     </select>
-    <input type="submit" value="{% trans 'Change Language' %}" id="submitButton">
 </form>
 <form method="post" id="themeSwitcherForm">
   {% csrf_token %}
