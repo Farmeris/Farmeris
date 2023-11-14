@@ -7,6 +7,7 @@
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   <p>{% trans "Are you sure you want to sign out?" %}</p>
-  {% include "account/_button.html" with text="{% trans 'Sign out' %}" %}
+  {% trans "Sign out" as trans_text %}
+  {% include "account/_button.html" with text=trans_text %}
 </form>
 {% endblock %}

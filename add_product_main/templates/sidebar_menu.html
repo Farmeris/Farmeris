@@ -1,19 +1,21 @@
 {% load i18n %}
 {% load static %}
 
+
+<a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
+
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 <form action="{% url 'set_language' %}" method="post" id="languageForm">
     {% csrf_token %}
     <input name="next" type="hidden" value="{{ request.get_full_path }}">
-    <!--    <select name="language" onchange="this.form.submit();" class="sidebar-menu-item-lang">-->
-    <select name="language" class="sidebar-menu-item-lang">
-
+    <select name="language" onchange="this.form.submit();" class="sidebar-menu-item-lang">
       {% for code, name in LANGUAGES %}
         <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
       {% endfor %}
     </select>
 </form>
+
 <form method="post" id="themeSwitcherForm">
   {% csrf_token %}
   <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
