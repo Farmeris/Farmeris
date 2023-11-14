@@ -5,6 +5,8 @@ from django.core.mail import send_mail
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.template.loader import render_to_string
+from . import views
 
 @login_required
 def send_verification_email(request):
