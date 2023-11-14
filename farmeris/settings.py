@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'obrazky',
     'chat_general',
     'main',
+    'email_verification',
 ]
 
 SITE_ID = 1
