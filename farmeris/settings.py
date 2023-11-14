@@ -82,12 +82,13 @@ MIDDLEWARE = [
     #color theme
     'login_app.middlewares.theme_switch_middleware',
     'add_product_main.middlewares.SetUserPreferredLanguageMiddleware',
+    'language.DefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 ]
 
 LANGUAGES = [
     ('sk', _('Slovak')),
-    ('cz', _('Czech')),
+#    ('cz', _('Czech')),
     ('en', _('English')),
 ]
 
