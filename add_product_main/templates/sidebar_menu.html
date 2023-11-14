@@ -1,6 +1,9 @@
 {% load i18n %}
 {% load static %}
 
+
+<a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
+
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 <form action="{% url 'set_language' %}" method="post" id="languageForm">
@@ -12,6 +15,7 @@
       {% endfor %}
     </select>
 </form>
+
 <form method="post" id="themeSwitcherForm">
   {% csrf_token %}
   <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
