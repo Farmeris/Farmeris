@@ -11,8 +11,9 @@ from email_verification.decorators import email_verification_required
 from allauth.account.views import email as allauth_email_view
 from allauth.account.views import EmailView
 from django.utils.decorators import method_decorator
-
+from email_verification.views import CustomEmailView
 from login_app import views as login_views
+from django.contrib.auth.decorators import login_required
 
 @method_decorator(email_verification_required, name='dispatch')
 class ProtectedEmailView(EmailView):
@@ -26,7 +27,7 @@ urlpatterns = [
     re_path(r'^account/confirm-email/(?P<key>[-:\w]+)/$', CustomConfirmEmailView.as_view(), name='account_confirm_email'),
     path('accounts/resend-confirmation/', login_views.resend_confirmation_email, name='resend_confirmation_email'),
     # path('accounts/email/', email_verification_required(allauth_email_view), name='account_email'),
-    path('accounts/email/', ProtectedEmailView.as_view(), name='account_email'),
+    path('accounts/email/', login_required(ProtectedEmailView.as_view()), name='account_email'),
     path('email-verification/', include('email_verification.urls')),
     #path('register/', login_views.register, name='register'),
     #path('mapka/', login_views.mapka, name='mapka'),

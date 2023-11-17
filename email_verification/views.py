@@ -7,7 +7,8 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.template.loader import render_to_string
 from . import views
-
+from allauth.account.views import EmailView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required
 def send_verification_email(request):
@@ -42,15 +43,31 @@ def verify_email(request, token):
     try:
         user_pk = loads(token, max_age=3600)  # Token is valid for 1 hour
         if user_pk == request.user.pk:
-            request.session['email_verified'] = True  # Set the session variable
+            request.session['email_verified'] = True  # Set the session variable to bypass restrictions
             messages.success(request, 'Your email address has been verified.')
             return redirect('account_email')  # Redirect to the allauth email change form
-    except (SignatureExpired, BadSignature):
+    except (SignatureExpired, BadSignature) as e:
         messages.error(request, 'The verification link is invalid or has expired.')
-    return redirect('send_verification_email')
+        # Handle the error, e.g., by logging it or informing the user
+        return redirect('send_verification_email')
+    except Exception as e:
+        # Handle any other exceptions
+        return redirect('send_verification_email')
 
 @login_required
 def verification_email_sent(request):
     # You can simply render a template that shows the message
     context = {'email': request.user.email}
     return render(request, 'email_verification/verification_email_sent.html', context)
+
+class CustomEmailView(LoginRequiredMixin, EmailView):
+    def post(self, request, *args, **kwargs):
+        # Perform the email change operation
+        response = super().post(request, *args, **kwargs)
+
+        # If the email has been changed and the email_verified session variable is set, clear it
+        if 'email_verified' in request.session:
+            request.session.pop('email_verified', None)
+            messages.success(request, "Your email has been updated.")
+
+        return response
