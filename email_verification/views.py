@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.core.signing import dumps
+from django.core.signing import dumps, loads, BadSignature, SignatureExpired
 from django.core.mail import send_mail
 from django.urls import reverse
 from django.shortcuts import render, redirect
@@ -52,5 +52,5 @@ def verify_email(request, token):
 @login_required
 def verification_email_sent(request):
     # You can simply render a template that shows the message
-    context = {'username': request.user.username}
+    context = {'email': request.user.email}
     return render(request, 'email_verification/verification_email_sent.html', context)
