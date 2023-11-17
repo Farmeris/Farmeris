@@ -14,6 +14,10 @@ from django.utils.decorators import method_decorator
 
 from login_app import views as login_views
 
+@method_decorator(email_verification_required, name='dispatch')
+class ProtectedEmailView(EmailView):
+    pass
+
 urlpatterns = [
     path('admin-panel/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
@@ -22,7 +26,7 @@ urlpatterns = [
     re_path(r'^account/confirm-email/(?P<key>[-:\w]+)/$', CustomConfirmEmailView.as_view(), name='account_confirm_email'),
     path('accounts/resend-confirmation/', login_views.resend_confirmation_email, name='resend_confirmation_email'),
     # path('accounts/email/', email_verification_required(allauth_email_view), name='account_email'),
-    path('accounts/email/', email_verification_required(EmailView.as_view()), name='account_email'),
+    path('accounts/email/', ProtectedEmailView.as_view(), name='account_email'),
     path('email-verification/', include('email_verification.urls')),
     #path('register/', login_views.register, name='register'),
     #path('mapka/', login_views.mapka, name='mapka'),
