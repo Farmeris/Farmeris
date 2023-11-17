@@ -8,6 +8,7 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from . import views
 
+
 @login_required
 def send_verification_email(request):
     if request.method == 'GET':
@@ -18,7 +19,7 @@ def send_verification_email(request):
         verify_url = request.build_absolute_uri(reverse('verify_email', args=[token]))
 
         # Render email body with a template
-        message = render_to_string('email_verification/verification_email.txt', {
+        message = render_to_string('email_verification/email_verification.txt', {
             'user': request.user,
             'verify_url': verify_url,
         })
@@ -47,3 +48,9 @@ def verify_email(request, token):
     except (SignatureExpired, BadSignature):
         messages.error(request, 'The verification link is invalid or has expired.')
     return redirect('send_verification_email')
+
+@login_required
+def verification_email_sent(request):
+    # You can simply render a template that shows the message
+    context = {'username': request.user.username}
+    return render(request, 'email_verification/verification_email_sent.html', context)
