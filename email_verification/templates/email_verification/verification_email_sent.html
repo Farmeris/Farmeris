@@ -1,0 +1,8 @@
+<!-- Inside `verification_email_sent.html` -->
+{% block extra_head %}
+    <meta http-equiv="refresh" content="8;url={% url 'main:main' %}">
+{% endblock %}
+
+{% block content %}
+    <p>A verification email has been sent to your current email address.</p>
+{% endblock %}

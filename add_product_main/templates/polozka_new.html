@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{% static css_file %}">
     {% endfor %}
   {% endif %}
+  {% block extra_head %}{% endblock %}
   {% block extra_css_polozka %}{% endblock %}
   {% block extra_css_doprava %}{% endblock %}
   {% block extra_css_zobrazenie %}{% endblock %}

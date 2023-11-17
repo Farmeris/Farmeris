@@ -10,6 +10,7 @@ from django.views.i18n import set_language
 from email_verification.decorators import email_verification_required
 from allauth.account.views import email as allauth_email_view
 from allauth.account.views import EmailView
+from django.utils.decorators import method_decorator
 
 from login_app import views as login_views
 

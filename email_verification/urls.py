@@ -6,4 +6,5 @@ from . import views
 urlpatterns = [
     path('send-verification-email/', views.send_verification_email, name='send_verification_email'),
     path('verify-email/<token>/', views.verify_email, name='verify_email'),
+    path('email-verification/sent/', views.verification_email_sent, name='verification_email_sent'),
 ]
