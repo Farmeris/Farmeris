@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   }
 // });
 
-Function to submit the language form
+// // Function to submit the language form
 function submitForm() {
   document.getElementById('languageForm').submit();
 }
