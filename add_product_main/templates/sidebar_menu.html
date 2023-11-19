@@ -1,8 +1,9 @@
 {% load i18n %}
 {% load static %}
 
-
-<a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
+{% if user.is_authenticated %}
+  <a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
+{% endif %}
 
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
