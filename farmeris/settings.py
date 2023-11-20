@@ -257,11 +257,23 @@ DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 DEBUG = env.bool('DEBUG', default=False)
 
 # Local database settings
+#DATABASES = {
+#    'default': env.db(),
+#}
+
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST', default='db'),
+        'PORT': env('POSTGRES_PORT', default='5432'),
+    }
 }
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='').split(',')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
