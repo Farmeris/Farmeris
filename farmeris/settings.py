@@ -254,12 +254,13 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 
 # Local debug setting
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = bool(os.environ.get("DEBUG", default=0))
 
 # Local database settings
 #DATABASES = {
 #    'default': env.db(),
 #}
+
 
 DATABASES = {
     'default': {
@@ -267,13 +268,12 @@ DATABASES = {
         'NAME': env('POSTGRES_DB'),
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PASSWORD'),
-        'HOST': env('POSTGRES_HOST', default='db'),
-        'PORT': env('POSTGRES_PORT', default='5432'),
+        'HOST': env('POSTGRES_HOST'),
+        'PORT': env('POSTGRES_PORT'),
     }
 }
 
-
-ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
