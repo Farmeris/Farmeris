@@ -135,7 +135,7 @@ Alternatively, see the GitLab documentation on [creating a merge request](https:
 
 ## Contact
 
-If you have any questions or would like to contact the maintainers, please email us at farmeris-sk@proton.me.
+If you have any questions or would like to contact the maintainers, please email us at farmeris@farmeris.sk
 
 ## License
 
