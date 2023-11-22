@@ -99,12 +99,39 @@ For more detailed information on Docker Compose commands, refer to the [Docker C
 To contribute to Farmeris, follow these steps:
 
 1. Fork this repository.
-2. Create a branch: `git checkout -b <my_branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin farmeris/<my_branch_name>`
-5. Create the pull request.
+2. Clone your fork to your local machine:
 
-Alternatively, see the GitHub documentation on [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
+```
+git clone https://gitlab.com/farmeris/farmeris.git
+```
+
+3. Navigate to the directory:
+
+```
+cd farmeris
+```
+
+4. Create a new branch for your feature or fix:
+
+```
+git checkout -b my-feature-branch
+```
+
+5. Make your changes and commit them:
+
+```
+git commit -m "Detailed description of your changes"
+```
+
+6. Push the changes to your fork:
+
+```
+git push origin my-feature-branch
+```
+
+7. Visit the original repository on GitLab and you'll see a prompt to create a pull request from your new branch.
+
+Alternatively, see the GitLab documentation on [creating a merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html).
 
 ## Contact
 
@@ -112,4 +139,5 @@ If you have any questions or would like to contact the maintainers, please email
 
 ## License
 
-This project uses the following license: 
+This project is open-sourced under the GNU Affero General Public License (AGPLv3). For more information, see the [AGPLv3 License](https://www.gnu.org/licenses/agpl-3.0.en.html).
+
