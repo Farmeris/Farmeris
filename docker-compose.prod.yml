@@ -1,19 +1,6 @@
 version: '3.8'
 
 services:
-  web:
-    build: .
-    command: gunicorn farmeris.wsgi:application --bind unix:/run/gunicorn.sock
-    volumes:
-      - .:/app
-      - static_volume:/home/lol/Documents/farmeris/static
-      - media_volume:/home/lol/Documents/farmeris/media
-      - /run/gunicorn:/run/gunicorn
-    environment:
-      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:${POSTGRES_PORT}/${POSTGRES_DB}
-    depends_on:
-      - db
-
   db:
     image: postgres:13
     volumes:
@@ -22,10 +9,35 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_HOST=db
-      - POSTGRES_PORT=${POSTGRES_PORT}
+        #- POSTGRES_HOST=db
+        #- POSTGRES_PORT=${POSTGRES_PORT}
+    networks:
+      - farmeris-net
+
+  web:
+    build: .
+    command: gunicorn farmeris.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
+        #- /run/gunicorn:/run/gunicorn
+    environment:
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:${POSTGRES_PORT}/${POSTGRES_DB}
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    networks:
+      - farmeris-net
+    extra_hosts:
+      - "mail.farmeris.sk:46.28.110.168"
+
+networks:
+  farmeris-net:
+    driver: bridge
 
 volumes:
   postgres_data:
-  static_volume:
-  media_volume:
+  static_volume: {}
+  media_volume: {}
