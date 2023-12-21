@@ -65,7 +65,7 @@ ul li a.sidebar-button-a i.ti {
 }
 
 /*color theme*/
-.switch {
+.switch{
   position: relative;
   width: 60px;
   height: 30px;
@@ -75,7 +75,25 @@ ul li a.sidebar-button-a i.ti {
   transition: background 0.4s;
 }
 
-.switch button {
+.switch2{
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #494949;
+  width: 30px;
+  height: 30px;
+}
+
+.switch2container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.switch button,
+.switch2 button {
   appearance: none; /* removes browser default styling */
   background: none;
   border: none;
@@ -92,12 +110,20 @@ ul li a.sidebar-button-a i.ti {
   border: 1px solid rgb(0, 183, 255);
 }
 
-.switch .checked {
+.switch .checked{
   left: 32px;
   background: #333;
   border: 1px solid rgb(30, 255, 0);
 }
 
+.switch2 .checked{
+  background: #333;
+  border: 1px solid rgb(30, 255, 0);
+}
+
+.switch2 .checked button{
+  background-color: black;
+}
 
 /* Sidebar menu style */
 
