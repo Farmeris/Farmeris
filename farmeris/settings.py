@@ -85,6 +85,7 @@ MIDDLEWARE = [
     'add_product_main.middlewares.SetUserPreferredLanguageMiddleware',
     'language.DefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'add_product_main.middleware.UpdateFilterTrustedMiddleware',
 ]
 
 LANGUAGES = [

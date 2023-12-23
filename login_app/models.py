@@ -26,7 +26,10 @@ class UserProfile(models.Model):
 
     #color theme
     theme = models.CharField(max_length=10, choices=[('light', 'Light'), ('dark', 'Dark')], default='light')
-    
+
+    is_trusted = models.BooleanField(_('trusted user'), default=False)
+    filter_trusted = models.BooleanField(_('filter trusted'), default=True)
+
     # Personal details
     avatar = models.ImageField(upload_to=upload_to2, null=True, blank=True)
     website = models.URLField(_('website'), blank=True, null=True)

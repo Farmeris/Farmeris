@@ -17,21 +17,14 @@
     </select>
 </form>
 
-<form method="post" id="themeSwitcherForm">
-  {% csrf_token %}
-  <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
-  <div class="switch">
-    <button id="themeSwitch" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
-  </div>
-</form>
-
-<form method="post" id="themeSwitcherForm">
-  {% csrf_token %}
-  <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
-  <div class="switch">
-    <button id="themeSwitch" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
-  </div>
-</form>
+<!-- <form method="post" id="themeSwitcherForm">
+     {% csrf_token %}
+     <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
+     <div class="switch">
+     <button id="themeSwitch" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
+     </div>
+     </form>
+-->
 
 <form method="post" id="themeSwitcherForm2">
   {% csrf_token %}
@@ -41,4 +34,19 @@
       <button id="themeswitch2" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
     </div>
   </div>
+</form>
+
+<form method="post" id="filterTrustedForm">
+  {% csrf_token %}
+  <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
+  <div class="switch2container">
+    <div class="switch2">
+      {% if user.userprofile.filter_trusted %}
+        <span id="filterSwitch2" class="filtered">Filtered</span>
+      {% else %}
+        <span id="filterSwitch2" class="unfiltered">Unfiltered</span>
+      {% endif %}
+    </div>
+  </div>
+  <button type="submit">Toggle Filter</button>
 </form>

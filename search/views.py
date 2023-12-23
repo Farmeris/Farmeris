@@ -18,20 +18,32 @@ import pytz
 def search(request):
     if request.user.is_authenticated:
         user_profile = UserProfile.objects.get(user=request.user)
+        filter_trusted = user_profile.filter_trusted
     else:
         user_profile = None
+        filter_trusted = True
+
     #all_products = Polozka.objects.all()
     query = request.GET.get('query')
 
     if query:
-        # Filter the records based on the query
-        all_products = Polozka.objects.filter(
-            Q(nazov_produktu__icontains=query) | 
+        base_query = Polozka.objects.filter(
+            Q(nazov_produktu__icontains=query) |
             Q(user_profile__user__username__icontains=query)
-        ).order_by('-created_at')
+        )
+        if filter_trusted:
+            # Filter to only show products from trusted users
+            all_products = base_query.filter(user_profile__is_trusted=True)
+        else:
+            all_products = base_query
     else:
-        all_products = Polozka.objects.all().order_by('-created_at')
-
+        if filter_trusted:
+            # Show only products from trusted users
+            all_products = Polozka.objects.filter(user_profile__is_trusted=True)
+        else:
+            # Show all products
+            all_products = Polozka.objects.all()
+    all_products = all_products.order_by('-created_at')
     
     #pagination
     if request.user.is_authenticated:
