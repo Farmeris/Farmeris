@@ -2,6 +2,7 @@ from django.utils import translation
 from django.urls import reverse
 from django.conf import settings
 from .models import UserProfile
+from django.shortcuts import redirect
 
 class SetUserPreferredLanguageMiddleware:
     def __init__(self, get_response):
@@ -44,7 +45,7 @@ class UpdateFilterTrustedMiddleware:
                 user_profile = UserProfile.objects.get(user=request.user)
                 user_profile.filter_trusted = request.POST.get('filter_trusted') == 'True'
                 user_profile.save()
-                return redirect(request.path)
+                return redirect(request.get_full_path())
 
         response = self.get_response(request)
         return response

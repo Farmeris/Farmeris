@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load static %}
 
+
 {% if user.is_authenticated %}
   <a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
 {% endif %}
@@ -36,17 +37,15 @@
   </div>
 </form>
 
+
 <form method="post" id="filterTrustedForm">
   {% csrf_token %}
   <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
-  <div class="switch2container">
-    <div class="switch2">
-      {% if user.userprofile.filter_trusted %}
-        <span id="filterSwitch2" class="filtered">Filtered</span>
-      {% else %}
-        <span id="filterSwitch2" class="unfiltered">Unfiltered</span>
-      {% endif %}
-    </div>
-  </div>
-  <button type="submit">Toggle Filter</button>
+  <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-filter">
+    {% if user.userprofile.filter_trusted %}
+      Filtered
+    {% else %}
+      Unfiltered
+    {% endif %}
+  </button>
 </form>

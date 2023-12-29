@@ -83,9 +83,9 @@ MIDDLEWARE = [
     #color theme
     'login_app.middlewares.theme_switch_middleware',
     'add_product_main.middlewares.SetUserPreferredLanguageMiddleware',
+    'add_product_main.middlewares.UpdateFilterTrustedMiddleware',
     'language.DefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'add_product_main.middleware.UpdateFilterTrustedMiddleware',
 ]
 
 LANGUAGES = [
