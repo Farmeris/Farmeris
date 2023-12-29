@@ -1,0 +1,46 @@
+.rec_farm_container{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: yellow;
+    color: black ;
+    border-radius: 5px;
+}
+
+
+
+.product-pic2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 210px;
+  max-height: 210px;
+  margin: 20px;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  overflow: hidden; /* Add this line to hide any overflow */
+}
+
+.product-pic2 img,
+.product-pic2 p{
+  position: absolute;
+  width: 100%; /* Set width to 100% to occupy full width */
+  height: auto; /* Let the height be determined by the aspect ratio */
+  object-fit: cover; /* Scale and crop the image to cover the entire element */
+  max-height: calc(100% - 5px);
+}
+
+.product-pic2 p{
+  height: calc(100% - 5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sidebar-bgclr);
+}
