@@ -18,6 +18,7 @@ static-dev:
 
 migrate-dev:
 	docker-compose run web python manage.py migrate
+	docker-compose run web python manage.py makemigrations
 
 # Production-specific commands using docker-compose.prod.yml
 static-prod:
