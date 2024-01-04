@@ -1,46 +1,46 @@
-.rec_farm_container{
-    height: 150px;
-    width: 150px;
+.rec_farm_container {
+    height: 250px;
+    width: 200px;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid black;
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    padding: 10px; /* Padding added around the container */
+}
+
+.product-pic2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    background-color: yellow;
-    color: black ;
+    position: relative;
+    width: 180px; /* Adjusted width to allow for equal padding/margin */
+    height: 180px; /* Adjusted height to allow for equal padding/margin */
     border-radius: 5px;
-}
-
-
-
-.product-pic2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  max-width: 210px;
-  max-height: 210px;
-  margin: 20px;
-  border-radius: 5px;
-  top: 0;
-  left: 0;
-  margin-bottom: 10px;
-  overflow: hidden; /* Add this line to hide any overflow */
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 10px; /* Margin to match the padding of the container */
+    margin-left: 10px; /* Margin to match the padding of the container */
+    margin-right: 10px; /* Margin to match the padding of the container */
 }
 
 .product-pic2 img,
-.product-pic2 p{
-  position: absolute;
-  width: 100%; /* Set width to 100% to occupy full width */
-  height: auto; /* Let the height be determined by the aspect ratio */
-  object-fit: cover; /* Scale and crop the image to cover the entire element */
-  max-height: calc(100% - 5px);
+.product-pic2 p {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0; /* Resetting margin for image and paragraph */
 }
 
-.product-pic2 p{
-  height: calc(100% - 5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--sidebar-bgclr);
+.product-pic2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sidebar-bgclr);
+    border-radius: 5px;
 }

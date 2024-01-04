@@ -128,7 +128,7 @@ ul li a.sidebar-button-a i.ti {
 .button-filter{
   border: 0;
   background-color: transparent;
-  color: black;
+  color: var(--text-color);
   cursor: pointer;
 }
 

@@ -9,33 +9,27 @@
 {% endblock %}
 
 {% block polozka %}
-    {% include 'rec_farm.html' %}
 
-
-
-
-
-
-    <!-- <div class="main-container">
-         <h1>Farmeris</h1>
-         <br><br>
-         <p>Pre navrhy a akekolvek pripomienky prosime o kontaktovanie podpory na </p>
-         <h3>farmeris-sk@proton.me</h3>
-         </div>
-         <div class="recommended-product">
+    <div class="main-container">
+        <h1>Farmeris</h1>
+        <br><br>
+        <p>Pre navrhy a akekolvek pripomienky prosime o kontaktovanie podpory na </p>
+        <h3>farmeris-sk@proton.me</h3>
+    </div>
+    <!-- <div class="recommended-product">
          <div class="">
          <p>Odporucane polozky</p>
          </div>
-         {% comment %}
-         {% for product in products %}
-         {% include 'polozka_profile_view.html' with username=request.user.username nazov_produktu=product.nazov_produktu polozka=product %}
-         {% endfor %}
-         {% endcomment %}
-
          </div> -->
     <!--
          <div class="recommended-farm">
          <p>Odporucana farma</p>
          </div>
+        {% comment %}
+        {% for product in products %}
+        {% include 'polozka_profile_view.html' with username=request.user.username nazov_produktu=product.nazov_produktu polozka=product %}
+        {% endfor %}
+        {% endcomment %}
+
     -->
 {% endblock %}

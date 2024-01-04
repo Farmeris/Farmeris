@@ -3,14 +3,12 @@
 <link href="{% static 'css/rec_farm.css' %}" rel="stylesheet" media="screen">
 
 <div class="rec_farm_container">
-
+    <!-- <div class="rec_nadpis"><p>Farma</p></div> -->
     <div class="product-pic2">
-      {% if polozka.image %}
-        <img src="{{ polozka.image.url }}" alt="{{ polozka.nazov_produktu }}">
-      {% else %}
-        <p>{% trans "No picture available" %}</p>
-      {% endif %}
+         {% if polozka.image %}
+         <img src="{{ polozka.image.url }}" alt="{{ polozka.nazov_produktu }}">
+         {% else %}
+         <p>{% trans "No picture available" %}</p>
+         {% endif %}
     </div>
-
-   youky douky
 </div>

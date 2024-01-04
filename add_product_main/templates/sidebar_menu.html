@@ -6,6 +6,20 @@
   <a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
 {% endif %}
 
+{% if user.is_authenticated %}
+  <form method="post" id="filterTrustedForm">
+    {% csrf_token %}
+    <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
+    <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-filter">
+      {% if user.userprofile.filter_trusted %}
+        Filtered
+      {% else %}
+        Unfiltered
+      {% endif %}
+    </button>
+  </form>
+{% endif %}
+
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 <form action="{% url 'set_language' %}" method="post" id="languageForm">
@@ -37,15 +51,3 @@
   </div>
 </form>
 
-
-<form method="post" id="filterTrustedForm">
-  {% csrf_token %}
-  <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
-  <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-filter">
-    {% if user.userprofile.filter_trusted %}
-      Filtered
-    {% else %}
-      Unfiltered
-    {% endif %}
-  </button>
-</form>
