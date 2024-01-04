@@ -1,9 +1,10 @@
 {% load i18n %}
+{% load custom_filters %}
 {% load static %}
 
 
 {% if user.is_authenticated %}
-  <a href="{% url 'account_logout' %}" class="button-logout">Logout</a>
+  <a href="{% url 'account_logout' %}" class="button-logout">{% trans "Logout" %}</a>
 {% endif %}
 
 {% if user.is_authenticated %}
@@ -12,24 +13,47 @@
     <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
     <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-filter">
       {% if user.userprofile.filter_trusted %}
-        Filtered
+        {% trans "Filtered" %}
       {% else %}
-        Unfiltered
+        {% trans "Unfiltered" %}
       {% endif %}
     </button>
   </form>
 {% endif %}
 
-{% get_available_languages as LANGUAGES %}
-{% get_current_language as LANGUAGE_CODE %}
+<!--
+     {% comment %}
+     {% get_available_languages as LANGUAGES %}
+     {% get_current_language as LANGUAGE_CODE %}
+     <form action="{% url 'set_language' %}" method="post" id="languageForm">
+     {% csrf_token %}
+     <input name="next" type="hidden" value="{{ request.get_full_path }}">
+     <select name="language" onchange="this.form.submit();" class="sidebar-menu-item-lang">
+     {% for code, name in LANGUAGES %}
+     <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
+     {% endfor %}
+     </select>
+     </form>
+     {% endcomment %}
+-->
+
 <form action="{% url 'set_language' %}" method="post" id="languageForm">
     {% csrf_token %}
     <input name="next" type="hidden" value="{{ request.get_full_path }}">
-    <select name="language" onchange="this.form.submit();" class="sidebar-menu-item-lang">
-      {% for code, name in LANGUAGES %}
-        <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
-      {% endfor %}
-    </select>
+
+    {% if user.is_authenticated %}
+        {% if user.userprofile.preferred_language == 'sk' %}
+            <button class="sidebar-lang-change-btn" type="submit" name="language" value="en">EN</button>
+        {% else %}
+            <button class="sidebar-lang-change-btn" type="submit" name="language" value="sk">SK</button>
+        {% endif %}
+    {% else %}
+        {% if current_language == 'sk' %}
+            <button class="sidebar-lang-change-btn" type="submit" name="language" value="en">EN</button>
+        {% else %}
+            <button class="sidebar-lang-change-btn" type="submit" name="language" value="sk">SK</button>
+        {% endif %}
+    {% endif %}
 </form>
 
 <!-- <form method="post" id="themeSwitcherForm">

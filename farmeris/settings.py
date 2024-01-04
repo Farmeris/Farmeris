@@ -138,6 +138,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'add_product_main.context_processors.user_preferred_language',
+                'add_product_main.context_processors.current_language',
                 'user_profile.context_processors.user_stats',
                 'user_profile.context_processors.css_styles',
                 # that contains the 'context_processors.py' file.
