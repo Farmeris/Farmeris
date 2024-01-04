@@ -1,10 +1,10 @@
 // Event listener for hiding the submit button and setting the default language
-document.addEventListener('DOMContentLoaded', function() {
-  // Hide the submit button
-  var submitButton = document.getElementById('submitButton');
-  if (submitButton) {
-    submitButton.style.display = 'none';
-  }
+//document.addEventListener('DOMContentLoaded', function() {
+// Hide the submit button
+// var submitButton = document.getElementById('submitButton');
+// if (submitButton) {
+//   submitButton.style.display = 'none';
+// }
 
 //   // Set Slovak as the default language for first-time visitors
 //   if (document.cookie.indexOf('visited_before=true') === -1) {
@@ -22,9 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 // // Function to submit the language form
-function submitForm() {
-  document.getElementById('languageForm').submit();
-}
+// function submitForm() {
+//   document.getElementById('languageForm').submit();
+// }
+
 
 // Event listener for sidebar menu interactions
 document.addEventListener('click', function(e) {
