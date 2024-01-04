@@ -46,8 +46,13 @@
   <div class="switch2container">
     <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
     <div class="switch2">
-      <button id="themeswitch2" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
+      <button id="themeswitch2" type="submit" class="{% if theme == 'dark' %}checked{% endif %}">
+        {% if theme == 'dark' %}
+          <img src="{% static 'media/icons/live-photo-off-inverted.svg' %}" alt="Live Photo On" class="theme-icon">
+        {% else %}
+          <img src="{% static 'media/icons/live-photo.svg' %}" alt="Live Photo Off" class="theme-icon">
+        {% endif %}
+      </button>
     </div>
   </div>
 </form>
-

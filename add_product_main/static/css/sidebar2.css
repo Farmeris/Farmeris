@@ -79,7 +79,7 @@ ul li a.sidebar-button-a i.ti {
   position: relative;
   display: inline-block;
   border-radius: 15px;
-  background-color: #494949;
+  #background-color: #494949;
   width: 30px;
   height: 30px;
 }
@@ -89,7 +89,6 @@ ul li a.sidebar-button-a i.ti {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
 }
 
 .switch button,
@@ -105,10 +104,17 @@ ul li a.sidebar-button-a i.ti {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: white;
+  #background: white;
   transition: 0.4s;
-  border: 1px solid rgb(0, 183, 255);
+  #border: 1px solid rgb(0, 183, 255);
 }
+
+.switch2 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .switch .checked{
   left: 32px;
@@ -117,12 +123,18 @@ ul li a.sidebar-button-a i.ti {
 }
 
 .switch2 .checked{
-  background: #333;
-  border: 1px solid rgb(30, 255, 0);
+  #background: #333;
+  #border: 1px solid rgb(30, 255, 0);
 }
 
 .switch2 .checked button{
-  background-color: black;
+  #background-color: black;
+}
+
+.theme-icon {
+  width: 20px; /* Adjust size as needed */
+  height: auto;
+  display: block; /* To ensure it fills the button */
 }
 
 .button-filter{
