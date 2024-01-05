@@ -11,7 +11,7 @@
   <form method="post" id="filterTrustedForm">
     {% csrf_token %}
     <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
-    <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-filter">
+    <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-logout">
       {% if user.userprofile.filter_trusted %}
         {% trans "Filtered" %}
       {% else %}
@@ -43,15 +43,15 @@
 
     {% if user.is_authenticated %}
         {% if user.userprofile.preferred_language == 'sk' %}
-            <button class="sidebar-lang-change-btn" type="submit" name="language" value="en">EN</button>
+            <button class="button-logout" type="submit" name="language" value="en">EN</button>
         {% else %}
-            <button class="sidebar-lang-change-btn" type="submit" name="language" value="sk">SK</button>
+            <button class="button-logout" type="submit" name="language" value="sk">SK</button>
         {% endif %}
     {% else %}
         {% if current_language == 'sk' %}
-            <button class="sidebar-lang-change-btn" type="submit" name="language" value="en">EN</button>
+            <button class="button-logout" type="submit" name="language" value="en">EN</button>
         {% else %}
-            <button class="sidebar-lang-change-btn" type="submit" name="language" value="sk">SK</button>
+            <button class="button-logout" type="submit" name="language" value="sk">SK</button>
         {% endif %}
     {% endif %}
 </form>
