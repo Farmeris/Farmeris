@@ -142,13 +142,17 @@ ul li a.sidebar-button-a i.ti {
 .sidebar-lang-change-btn{
   border: 0;
   background-color: transparent;
-  color: var(--text-color);
+  color: var(--sidebar-menu-txtclr);
   cursor: pointer;
   margin: 0;
   font-size: 16px;
 }
 .inverted-photo{
   filter: invert(100%);
+}
+
+.sidebar-lang-change-btn{
+  color: var(--text-color) !important;
 }
 
 /* Sidebar menu style */
