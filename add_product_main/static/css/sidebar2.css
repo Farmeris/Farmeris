@@ -147,6 +147,9 @@ ul li a.sidebar-button-a i.ti {
   margin: 0;
   font-size: 16px;
 }
+.inverted-photo{
+  filter: invert(100%);
+}
 
 /* Sidebar menu style */
 
