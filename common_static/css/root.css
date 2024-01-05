@@ -1,7 +1,7 @@
 :root {
   --primary-color: #FFD54F; /* Main accent color for buttons, links, and important elements */
   --secondary-color: #9FA8DA; /* Secondary accent color for additional elements */
-  --text-color: #fff; /* Main text color */
+  #--text-color: #fff; /* Main text color */
   --text-color-inv:black;
   --text-color-secondary: #B0BEC5; /* Secondary text color for less important text */
   --background-color: #212121; /* Main background color */
