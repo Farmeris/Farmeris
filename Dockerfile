@@ -30,12 +30,12 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Collect static files
+# Copy the init script and project files
+COPY init-static.sh /app/
 COPY . /app/
-RUN python manage.py collectstatic --noinput
 
-# Copy project
-COPY . /app/
+# Execute the init script
+RUN chmod +x /app/init-static.sh && /app/init-static.sh
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
