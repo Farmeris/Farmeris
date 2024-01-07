@@ -3,8 +3,8 @@
 {% load static %}
 
 <!-- Stylesheets -->
-<link href="{% static 'css/sidebar2.css' %}" rel="stylesheet" media="screen">
-<link href="{% static 'css/sidebar_mobile2.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/sidebar.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/sidebar_mobile.css' %}" rel="stylesheet" media="screen">
 {% if user.is_authenticated %}
     {% if user.userprofile.theme == 'dark' %}
         <link rel="stylesheet" href="{% static 'css/dark-theme.css' %}">
