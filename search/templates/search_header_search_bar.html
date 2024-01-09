@@ -1,0 +1,10 @@
+{% load static i18n %}
+<!-- css sa nachazda v polozka_newx mimo search objektu -->
+
+<div class="search-absolute-container">
+    <form method="GET" action="{% url 'search:user_search' %}">
+        <input type="text" placeholder="{% trans 'Search..' %}" name="query" class="search-input" value="{{ request.GET.query }}">
+        <button type="submit" class="search-btn">{% trans 'Search' %}</button>
+        <!--<button type="button" class="options-btn">{% trans 'Options' %}</button>-->
+    </form>
+</div>
