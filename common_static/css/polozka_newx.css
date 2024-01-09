@@ -177,12 +177,12 @@ ul {
 .search-absolute-container{
   position: relative;
   width: 350px;
-  height: 50px;
-  left: 0;
-  top: 0;
+  height: 40px;
+  left: -10px;
+  top: -10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* Search input */
