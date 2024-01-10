@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'chat_general',
     'main',
     'email_verification',
+    'texts',
 ]
 
 SITE_ID = 1

@@ -36,6 +36,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', RedirectView.as_view(url='/main/')), # root URL redirect
     path('main/', include('main.urls')),
+    path('', include('texts.urls', namespace='texts')),
     path('', include('search.urls', namespace='search')),
     path('', include('user_profile.urls', namespace='user_profile')),
     path('', include('add_product_main.urls', namespace='add_product_main')),
