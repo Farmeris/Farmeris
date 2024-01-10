@@ -1,5 +1,7 @@
 
 #+AUTHOR: Tím Farmeris
+#+DATE: 2024-12-31 Ne 12:30
+#+HTML_POSTAMBLE: Author: %a
 #+title: Manifesto pre Podporu Surového Mlieka na Slovensku
 
 * Úvod
@@ -12,7 +14,7 @@ Inšpirovaní Aajonusom Vonderplanitzom, jeho úspechy v oblasti práv za surov�
 Veríme v právo každého občana Slovenskej Republiky ku prístupu k prírodným, nespracovaným potravinám, vrátane surového mlieka a jeho produktov. Našou misiou je vzdelávať občanov v oblasti výhod konzumácie surového mlieka a presadzovať legislatívne zmeny, ktoré umožnia predaj surového mlieka a produktov z neho, zabezpečujúc tak práva všetkých spotrebiteľov.
 
 ** Prečo surové mlieko?
-Surové mlieko má dlhú tradíciu a je cené pre svoje výživné hodnoty a charakteristickú chuť. Naším cieľom je umožniť každému dospelému človeku na Slovensku, aby mal možnosť zvoliť si surové mlieko, ak je správne a bezpečne vyrobené.
+Surové mlieko má dlhú tradíciu a je cené pre svoje výživné hodnoty a charakteristickú chuť. Naším cieľom je umožniť každému dospelému človeku na Slovensku, aby mal možnosť sa rozhodnúť pre surové mlieko, ktoré bude voľne distribuovateľné na ľudskú konzumáciu.
 
 ** Naše ciele:
    - Legislatívna zmena: Spolupracovať so zákonodarcami na Slovensku na príprave a implementácii zákonov, ktoré umožnia predaj surového mlieka a mliečnych výrobkov pre ľudskú spotrebu s primeraným označením surových produktov.
