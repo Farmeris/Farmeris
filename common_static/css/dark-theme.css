@@ -75,6 +75,7 @@
 :root{
   --sidebar-menu-item-lang-txtclr: rgb(199, 199, 199);
   --login-signup-bgclr: var(--sidebar-bgclr);
+  --sidebar-menu-txtclr: var(--text-color) !important;
 }
 :root{
   --login-signup-bd: 1px;

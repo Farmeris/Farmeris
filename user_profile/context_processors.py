@@ -17,7 +17,7 @@ def css_styles(request):
         'global_css_styles': [
             'css/polozka_newx.css',
             'css/root.css',
-            'css/root2.css',
+            #'css/root2.css',
             'css/general_mobile_styles.css',
             'css/merged_icons.css',
             'css/footer.css',

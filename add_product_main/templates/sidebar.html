@@ -1,9 +1,10 @@
 {% load i18n %}
+{% load custom_filters %}
 {% load static %}
 
 <!-- Stylesheets -->
-<link href="{% static 'css/sidebar2.css' %}" rel="stylesheet" media="screen">
-<link href="{% static 'css/sidebar_mobile2.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/sidebar.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'css/sidebar_mobile.css' %}" rel="stylesheet" media="screen">
 {% if user.is_authenticated %}
     {% if user.userprofile.theme == 'dark' %}
         <link rel="stylesheet" href="{% static 'css/dark-theme.css' %}">
@@ -65,6 +66,10 @@
 
 <!-- Scripts -->
 {% block extra_js %}
-  <script src="{% static 'js/theme_switch.js' %}"></script> 
-  <script src="{% static 'js/sidebar-scripts.js' %}"></script>
+ {% comment %}
+  <!-- <script src="{% static 'js/theme_switch.js' %}"></script>
+       <script src="{% static 'js/changes-scripts.js' %}"></script>
+       <script src="{% static 'js/menu-hide.js' %}"></script> -->
+ {% endcomment %}
+       <script src="{% static 'js/menu-hide.js' %}"></script>
 {% endblock %}

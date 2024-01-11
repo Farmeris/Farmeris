@@ -27,7 +27,7 @@
   align-items: center;
   /*background-color: #f38630;*/
   z-index: 500;
-  padding: calc(100% - 18px) 10px;
+  padding: 10px;
 }
 .sidebar-button-a > * {
   align-self: flex-start; 
@@ -65,9 +65,9 @@ ul li a.sidebar-button-a i.ti {
 }
 
 /*color theme*/
-.switch {
+.switch{
   position: relative;
-  width: 60px;
+  width: 40px;
   height: 30px;
   display: inline-block;
   border-radius: 15px;
@@ -75,7 +75,24 @@ ul li a.sidebar-button-a i.ti {
   transition: background 0.4s;
 }
 
-.switch button {
+.switch2{
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  #background-color: #494949;
+  width: 30px;
+  height: 30px;
+}
+
+.switch2container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch button,
+.switch2 button {
   appearance: none; /* removes browser default styling */
   background: none;
   border: none;
@@ -87,17 +104,56 @@ ul li a.sidebar-button-a i.ti {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: white;
+  #background: white;
   transition: 0.4s;
-  border: 1px solid rgb(0, 183, 255);
+  #border: 1px solid rgb(0, 183, 255);
 }
 
-.switch .checked {
+.switch2 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.switch .checked{
   left: 32px;
   background: #333;
   border: 1px solid rgb(30, 255, 0);
 }
 
+.switch2 .checked{
+  #background: #333;
+  #border: 1px solid rgb(30, 255, 0);
+}
+
+.switch2 .checked button{
+  #background-color: black;
+}
+
+.theme-icon {
+  width: 20px; /* Adjust size as needed */
+  height: auto;
+  display: block; /* To ensure it fills the button */
+}
+
+.button-filter,
+.button-logout,
+.sidebar-lang-change-btn{
+  border: 0;
+  background-color: transparent;
+  color: var(--text-color) !important;
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+}
+.inverted-photo{
+  filter: invert(100%);
+}
+
+.sidebar-lang-change-btn{
+  color: var(--text-color) !important;
+}
 
 /* Sidebar menu style */
 

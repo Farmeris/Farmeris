@@ -1,22 +1,82 @@
 {% load i18n %}
+{% load custom_filters %}
 {% load static %}
 
-{% get_available_languages as LANGUAGES %}
-{% get_current_language as LANGUAGE_CODE %}
+
+{% if user.is_authenticated %}
+  <a href="{% url 'account_logout' %}" class="button-logout">{% trans "Logout" %}</a>
+{% endif %}
+
+{% if user.is_authenticated %}
+  <form method="post" id="filterTrustedForm">
+    {% csrf_token %}
+    <input type="hidden" name="filter_trusted" value="{% if user.userprofile.filter_trusted %}False{% else %}True{% endif %}">
+    <button type="submit" id="filterSwitchButton" class="{% if user.userprofile.filter_trusted %}filtered{% else %}unfiltered{% endif %} button-logout">
+      {% if user.userprofile.filter_trusted %}
+        {% trans "Filtered" %}
+      {% else %}
+        {% trans "Unfiltered" %}
+      {% endif %}
+    </button>
+  </form>
+{% endif %}
+
+<!--
+     {% comment %}
+     {% get_available_languages as LANGUAGES %}
+     {% get_current_language as LANGUAGE_CODE %}
+     <form action="{% url 'set_language' %}" method="post" id="languageForm">
+     {% csrf_token %}
+     <input name="next" type="hidden" value="{{ request.get_full_path }}">
+     <select name="language" onchange="this.form.submit();" class="sidebar-menu-item-lang">
+     {% for code, name in LANGUAGES %}
+     <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
+     {% endfor %}
+     </select>
+     </form>
+     {% endcomment %}
+-->
+
 <form action="{% url 'set_language' %}" method="post" id="languageForm">
     {% csrf_token %}
     <input name="next" type="hidden" value="{{ request.get_full_path }}">
-    <select name="language" onchange="submitForm();" class="sidebar-menu-item-lang">
-      {% for code, name in LANGUAGES %}
-        <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{{ code|upper }}</option>
-      {% endfor %}
-    </select>
-    <input type="submit" value="{% trans 'Change Language' %}" id="submitButton">
+
+    {% if user.is_authenticated %}
+        {% if user.userprofile.preferred_language == 'sk' %}
+            <button class="button-logout" type="submit" name="language" value="en">EN</button>
+        {% else %}
+            <button class="button-logout" type="submit" name="language" value="sk">SK</button>
+        {% endif %}
+    {% else %}
+        {% if current_language == 'sk' %}
+            <button class="button-logout" type="submit" name="language" value="en">EN</button>
+        {% else %}
+            <button class="button-logout" type="submit" name="language" value="sk">SK</button>
+        {% endif %}
+    {% endif %}
 </form>
-<form method="post" id="themeSwitcherForm">
+
+<!-- <form method="post" id="themeSwitcherForm">
+     {% csrf_token %}
+     <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
+     <div class="switch">
+     <button id="themeSwitch" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
+     </div>
+     </form>
+-->
+
+<form method="post" id="themeSwitcherForm2">
   {% csrf_token %}
-  <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
-  <div class="switch">
-    <button id="themeSwitch" type="submit" class="{% if theme == 'dark' %}checked{% endif %}"></button>
+  <div class="switch2container">
+    <input type="hidden" name="theme" value="{% if theme == 'light' %}dark{% else %}light{% endif %}">
+    <div class="switch2">
+      <button id="themeswitch2" type="submit" class="{% if theme == 'dark' %}checked{% endif %}">
+        {% if theme == 'dark' %}
+          <img src="{% static 'media/icons/live-photo-off.svg' %}" alt="Live Photo On" class="theme-icon inverted-photo">
+        {% else %}
+          <img src="{% static 'media/icons/live-photo.svg' %}" alt="Live Photo Off" class="theme-icon">
+        {% endif %}
+      </button>
+    </div>
   </div>
 </form>

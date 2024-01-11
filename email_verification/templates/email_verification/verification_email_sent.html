@@ -1,0 +1,8 @@
+<!-- Inside `verification_email_sent.html` -->
+{% block extra_head %}
+    <meta http-equiv="refresh" content="8;url={% url 'main:main' %}">
+{% endblock %}
+
+{% block content %}
+    <p>Link was sent to you {{ email }} address to verify ownership of this account and grant access to email settings.</p>
+{% endblock %}

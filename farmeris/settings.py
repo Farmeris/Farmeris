@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'obrazky',
     'chat_general',
     'main',
+    'email_verification',
+    'texts',
 ]
 
 SITE_ID = 1
@@ -82,12 +84,14 @@ MIDDLEWARE = [
     #color theme
     'login_app.middlewares.theme_switch_middleware',
     'add_product_main.middlewares.SetUserPreferredLanguageMiddleware',
+    'add_product_main.middlewares.UpdateFilterTrustedMiddleware',
+    'language.DefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 ]
 
 LANGUAGES = [
     ('sk', _('Slovak')),
-    ('cz', _('Czech')),
+#    ('cz', _('Czech')),
     ('en', _('English')),
 ]
 
@@ -135,6 +139,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'add_product_main.context_processors.user_preferred_language',
+                'add_product_main.context_processors.current_language',
                 'user_profile.context_processors.user_stats',
                 'user_profile.context_processors.css_styles',
                 # that contains the 'context_processors.py' file.
@@ -204,6 +209,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ['https://*.farmeris.sk', 'https://farmeris.sk']
+CSRF_COOKIE_DOMAIN = '.farmeris.sk'
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
@@ -244,22 +252,34 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = 'account_email_verification_sent'
 EMAIL_BACKEND = env('EMAIL_BACKEND')
 EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = env.int('EMAIL_PORT')  # Converts to an integer
-EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')  # Converts to a boolean
-EMAIL_USE_SSL = env.bool('EMAIL_USE_SSL')  # Converts to a boolean
+EMAIL_PORT = env.int('EMAIL_PORT')  
+EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')  
+EMAIL_USE_SSL = env.bool('EMAIL_USE_SSL') 
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 
 # Local debug setting
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = bool(os.environ.get("DEBUG", default=0))
 
 # Local database settings
+#DATABASES = {
+#    'default': env.db(),
+#}
+
+
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST'),
+        'PORT': env('POSTGRES_PORT'),
+    }
 }
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')

@@ -1,6 +1,8 @@
 from django.utils import translation
 from django.urls import reverse
 from django.conf import settings
+from .models import UserProfile
+from django.shortcuts import redirect
 
 class SetUserPreferredLanguageMiddleware:
     def __init__(self, get_response):
@@ -30,5 +32,20 @@ class SetUserPreferredLanguageMiddleware:
         translation.activate(language_to_set)
         request.session['django_language'] = language_to_set
         
+        response = self.get_response(request)
+        return response
+
+class UpdateFilterTrustedMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        if request.method == "POST" and 'filter_trusted' in request.POST:
+            if request.user.is_authenticated:
+                user_profile = UserProfile.objects.get(user=request.user)
+                user_profile.filter_trusted = request.POST.get('filter_trusted') == 'True'
+                user_profile.save()
+                return redirect(request.get_full_path())
+
         response = self.get_response(request)
         return response

@@ -3,13 +3,34 @@
 {% load custom_filters %}
 {% block extra_css_polozka %}
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/search2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/polozka_profile_view.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'css/polozka_profile_view2.css' %}" rel="stylesheet" media="screen">
 {% endblock %}
 
 {% block polozka %}
+    {% include 'search_header_search_bar.html' %}
+
     <div class="main-container">
         <h1>Farmeris</h1>
         <br><br>
         <p>Pre navrhy a akekolvek pripomienky prosime o kontaktovanie podpory na </p>
         <h3>farmeris-sk@proton.me</h3>
     </div>
+    <!-- <div class="recommended-product">
+         <div class="">
+         <p>Odporucane polozky</p>
+         </div>
+         </div> -->
+    <!--
+         <div class="recommended-farm">
+         <p>Odporucana farma</p>
+         </div>
+         {% comment %}
+         {% for product in products %}
+         {% include 'polozka_profile_view.html' with username=request.user.username nazov_produktu=product.nazov_produktu polozka=product %}
+         {% endfor %}
+         {% endcomment %}
+
+    -->
 {% endblock %}

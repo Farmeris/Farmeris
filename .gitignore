@@ -15,3 +15,8 @@ my_hashed_passwords.txt
 .env
 generate_secret_key.py
 venv_farmeris
+*~
+gitlab
+requirements_old.txt
+test_venv/
+
